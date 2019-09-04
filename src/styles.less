@@ -1,0 +1,82 @@
+@green: #2D7A29;
+@darker-green: #276923;
+
+html, body {
+  height: 100%;
+}
+
+.overlay-legend {
+  img {
+    margin: 0.5em;
+  }
+}
+
+.sidebar {
+  a {
+    color: @green;
+  }
+
+  .btn.btn-primary {
+    color: #fff;
+    background-color: @green;
+    border-color: @green;
+  }
+
+  .btn.btn-primary.focus,
+  .btn.btn-primary:focus,
+  .btn.btn-primary:hover,
+  .btn.btn-primary.active,
+  .btn.btn-primary:active {
+    color: #fff;
+    background-color: @darker-green;
+    border-color: @darker-green;
+    outline: none;
+    box-shadow: none;
+  }
+  .btn.btn-primary.active.focus,
+  .btn.btn-primary.active:focus,
+  .btn.btn-primary.active:hover,
+  .btn.btn-primary:active.focus,
+  .btn.btn-primary:active:focus,
+  .btn.btn-primary:active:hover {
+    color: #fff;
+    background-color: @darker-green;
+    border-color: @darker-green;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.sidebar-layers {
+  padding: 2em 1em 2em 0.5em;
+  
+  .legend {
+    margin: 1.2em 1em 1.2em 1em;
+
+    .legend-step {
+      margin-bottom: 0em;
+    }
+
+    i {
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+  }
+}
+
+.sidebar-home {
+  padding: 2em 1em 0em 0em;
+
+  h2 {
+    margin-bottom: 0.6em;
+  }
+
+  .start {
+    margin: 1em 0 1em 0;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}

@@ -1,0 +1,270 @@
+{
+    "info_panel": {
+        "title": {
+            "en": "Colombia mapper",
+            "es": "Spanish Colombia mapper"
+        },
+        "description": {
+            "en": "<p>Colombia mapper</p>",
+            "es": "<p>Spanish Colombia mapper</p>"
+        },
+        "button_text": {
+            "en": "Get started",
+            "es": "Get started"
+        }
+    },
+    "base_layers": {
+        "no_layer": {
+            "title": {
+                "en": "No layer selected",
+                "es": "No layer selected"
+            },
+            "description": {
+                "en": "",
+                "es": ""
+            },
+            "attribution": {
+                "en": "",
+                "es": ""
+            }
+        },
+        "habitat_map": {
+            "title": {
+                "en": "Habitat Map",
+                "es": "Mapa de hábitat"
+            },
+            "description": {
+                "en": "<p>Habitat Map</p>",
+                "es": "<p>Mapa de hábitat</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "water_runoff_opportunities": {
+            "title": {
+                "en": "Ability of the land to moderate surface water runoff",
+                "es": "La habilidad del suelo para regular la escorrentía superficial"
+            },
+            "description": {
+                "en": "<p>Ability of the land to moderate surface water runoff</p>",
+                "es": "<p>La habilidad del suelo para regular la escorrentía superficial</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "water_regulation_opportunities": {
+            "title": {
+                "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment",
+                "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío"
+            },
+            "description": {
+                "en": "<p>Opportunities to enhance surface water regulation in the Rio Frio catchment</p>",
+                "es": "<p>Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "water_regulation_opportunities_high_volume": {
+            "title": {
+                "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment: places receiving high volumes of surface water flow",
+                "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío: sitios limítrofes de los principales canales de drenaje"
+            },
+            "description": {
+                "en": "<p>Opportunities to enhance surface water regulation in the Rio Frio catchment: places receiving high volumes of surface water flow</p>",
+                "es": "<p>Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío: sitios limítrofes de los principales canales de drenaje</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "precipitation_erosion_risk": {
+            "title": {
+                "en": "Risk of soil erosion in the Sierra Nevada caused by precipitation",
+                "es": "Riesgo de erosión del suelo en la Sierra Nevada causado por lluvias"
+            },
+            "description": {
+                "en": "<p>Risk of soil erosion in the Sierra Nevada caused by precipitation</p>",
+                "es": "<p>Riesgo de erosión del suelo en la Sierra Nevada causado por lluvias</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "wind_erosion_risk": {
+            "title": {
+                "en": "Risk of soil erosion caused by wind",
+                "es": "Riesgo de erosión del suelo causado por el viento"
+            },
+            "description": {
+                "en": "<p>Risk of soil erosion caused by wind</p>",
+                "es": "<p>Riesgo de erosión del suelo causado por el viento</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "key_biodiversity_habitats": {
+            "title": {
+                "en": "Places with habitat of key importance for biodiversity",
+                "es": "Sitios con hábitat de importancia clave para la biodiversidad"
+            },
+            "description": {
+                "en": "<p>Places with habitat of key importance for biodiversity</p>",
+                "es": "<p>Sitios con hábitat de importancia clave para la biodiversidad</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "key_ecosystem_service_areas": {
+            "title": {
+                "en": "Places delivering multiple ecosystem service benefits: key areas for biodiversity and surface water regulation",
+                "es": "Sitios que ofrecen múltiples beneficios de servicios ecosistémicos: áreas clave para la biodiversidad y la regulación de aguas superficiales"
+            },
+            "description": {
+                "en": "<p>Places delivering multiple ecosystem service benefits: key areas for biodiversity and surface water regulation</p>",
+                "es": "<p>Sitios que ofrecen múltiples beneficios de servicios ecosistémicos: áreas clave para la biodiversidad y la regulación de aguas superficiales</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "woodland_ecological_connectivity": {
+            "title": {
+                "en": "Ecological Network Connectivity - Woodland Ecosystem",
+                "es": "Conectividad de red ecológica – Ecosistema forestal"
+            },
+            "description": {
+                "en": "<p>Ecological Network Connectivity - Woodland Ecosystem</p>",
+                "es": "<p>Conectividad de red ecológica – Ecosistema forestal</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "wetland_ecological_connectivity": {
+            "title": {
+                "en": "Ecological Network Connectivity - Wetland Ecosystem",
+                "es": "Conectividad de red ecológica – Ecosistema de humedales"
+            },
+            "description": {
+                "en": "<p>Ecological Network Connectivity - Wetland Ecosystem</p>",
+                "es": "<p>Conectividad de red ecológica – Ecosistema de humedales</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "grassland_ecological_connectivity": {
+            "title": {
+                "en": "Ecological Network Connectivity - Grassland Ecosystem",
+                "es": "Conectividad de red ecológica – Ecosistema de pastizales"
+            },
+            "description": {
+                "en": "<p>Ecological Network Connectivity - Grassland Ecosystem</p>",
+                "es": "<p>Conectividad de red ecológica – Ecosistema de pastizales</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "ecological_opportunities": {
+            "title": {
+                "en": "Opportunities to strengthen ecological networks",
+                "es": "Oportunidades para fortalecer las redes ecológicas"
+            },
+            "description": {
+                "en": "<p>Opportunities to strengthen ecological networks</p>",
+                "es": "<p>Oportunidades para fortalecer las redes ecológicas</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "priority_ecological_opportunities": {
+            "title": {
+                "en": "Opportunities to strengthen ecological networks: priority places for action (those adjoining existing key habitats of highbiodiversity value)",
+                "es": "Oportunidades para fortalecer las redes ecológicas: lugares prioritarios para tomar acción (sitios adyacentes a hábitats clave existentes de alto valor de biodiversidad)"
+            },
+            "description": {
+                "en": "<p>Opportunities to strengthen ecological networks: priority places for action (those adjoining existing key habitats of highbiodiversity value)</p>",
+                "es": "<p>Oportunidades para fortalecer las redes ecológicas: lugares prioritarios para tomar acción (sitios adyacentes a hábitats clave existentes de alto valor de biodiversidad)</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "multi_benefit_ecological_opportunities": {
+            "title": {
+                "en": "Opportunities to deliver multiple ecosystem services: ecological connectivity and surface water regulation",
+                "es": "Oportunidades para generar múltiples servicios ecosistémicos: conectividad ecológica y regulación de las aguas superficiales"
+            },
+            "description": {
+                "en": "<p>Opportunities to deliver multiple ecosystem services: ecological connectivity and surface water regulation</p>",
+                "es": "<p>Oportunidades para generar múltiples servicios ecosistémicos: conectividad ecológica y regulación de las aguas superficiales</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        }
+    },
+    "overlay_layers": {
+        "zona_bananera": {
+            "title": {
+                "en": "Zona bananera",
+                "es": "Zona bananera"
+            },
+            "description": {
+                "en": "<p>Zona bananera</p>",
+                "es": "<p>Zona bananera</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        },
+        "rio_frio": {
+            "title": {
+                "en": "Rio Frio catchment",
+                "es": "Rio Frio catchment"
+            },
+            "description": {
+                "en": "<p>Rio Frio catchment</p>",
+                "es": "<p>Rio Frio catchment</p>"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        }
+    },
+    "underlay_layers": {
+        "satellite_imagery": {
+            "title": {
+                "en": "Satellite imagery",
+                "es": "Capa satelital"
+            },
+            "attribution": {
+                "en": "???",
+                "es": "???"
+            }
+        }
+    }
+}    

@@ -1,0 +1,35 @@
+{
+  "name": "colombia-mapper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "tsc": "tsc --noEmit",
+    "dev": "parcel ./src/index.html --port 4001 --open",
+    "lint": "tslint --project .",
+    "clean": "rimraf ./dist",
+    "build": "yarn clean && yarn tsc && yarn lint && parcel build ./src/index.html"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/leaflet": "1.4.4",
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4",
+    "@types/node": "^12.7.4",
+    "less": "3.9.0",
+    "parcel-bundler": "1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rimraf": "2.6.3",
+    "tslint": "5.17.0",
+    "typescript": "3.5.1"
+  },
+  "dependencies": {
+    "config.js": "^0.1.0",
+    "es6-object-assign": "^1.1.0",
+    "leaflet": "1.5.1",
+    "ts-polyfill": "3.5.1",
+    "url-search-params-polyfill": "6.0.0"
+  }
+}
