@@ -5,7 +5,7 @@
   "description": "",
   "scripts": {
     "tsc": "tsc --noEmit",
-    "dev": "parcel ./src/index.html --port 4001 --open",
+    "dev": "parcel ./src/index.html --port 4000 --open",
     "lint": "tslint --project .",
     "clean": "rimraf ./dist",
     "build": "yarn clean && yarn tsc && yarn lint && parcel build ./src/index.html"
