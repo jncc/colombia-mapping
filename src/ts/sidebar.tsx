@@ -22,8 +22,15 @@ export function createSidebar(map: L.Map, config: Config) {
       homeContainer.innerHTML += '<h3><span id="close-home" class="sidebar-close">'
         + '<i class="fas fa-caret-left"></i></span></h3>'
       homeContainer.innerHTML += '<h2>'+content.info_panel.title[config.language]+'</h2>'
-      homeContainer.innerHTML += content.info_panel.description[config.language]
-
+      for (let section of content.info_panel.info_sections) {
+        if (section.section_title[config.language]) {
+          homeContainer.innerHTML += '<h5>'+section.section_title[config.language]+'</h5>'
+        }
+        if (section.section_content[config.language]) {
+          homeContainer.innerHTML += '<p>'+section.section_content[config.language]+'</p>'
+        }
+      }
+      
       let getStartedButton = L.DomUtil.create('button', 'btn btn-primary start')
       getStartedButton.innerHTML += content.info_panel.button_text[config.language]
       getStartedButton.addEventListener('click', function() {
@@ -100,7 +107,7 @@ export default class LayerControls extends React.Component {
         underlays: this.state.underlays
       })
       map.updateBaseLayer(event.target.value as keyof typeof layers.baseLayers)
-      for (let overlay of layers.keys(this.state.overlays)) {
+      for (let overlay of keys(this.state.overlays)) {
         if (this.state.overlays[overlay]){
           map.refreshOverlay(overlay as keyof typeof layers.overlayLayers)
         }
@@ -131,7 +138,7 @@ export default class LayerControls extends React.Component {
     })
     map.updateUnderlay(event.target.value as keyof typeof layers.underlayLayers, event.target.checked)
     map.refreshBaseLayer(this.state.baseLayer)
-    for (let overlay of layers.keys(this.state.overlays)) {
+    for (let overlay of keys(this.state.overlays)) {
       if (this.state.overlays[overlay]){
         map.refreshOverlay(overlay as keyof typeof layers.overlayLayers)
       }
@@ -140,52 +147,38 @@ export default class LayerControls extends React.Component {
 
   render() {
     let baseLayerOptions = []
-    for (let layer of layers.keys(layers.baseLayers)){
+    for (let layer of keys(layers.baseLayers)){
       baseLayerOptions.push(
         <option key={layer} value={layer}>
-          {content.base_layers[layer].title[getConfig(window.location.search).language]}
+          {content.base_layers[layer].short_title[getConfig(window.location.search).language]}
         </option>
       )
     }
 
     let overlayOptions = []
-    for (let layer of layers.keys(layers.overlayLayers)) {
+    for (let layer of keys(layers.overlayLayers)) {
       overlayOptions.push(
         <div key={layer} className="checkbox">
           <div className="form-inline">
             <label className="form-check-label">
               <input id={layer+'-checkbox'} className="form-check-input" type="checkbox"
                 onChange={this.changeOverlay} value={layer} checked={this.state.overlays[layer]}/>
-              {content.overlay_layers[layer].title[getConfig(window.location.search).language]}
+              {content.overlay_layers[layer].short_title[getConfig(window.location.search).language]}
             </label>
           </div>
         </div>
       )
-      if (this.state.overlays[layer] && layers.overlayLayers[layer].display_legend) {
-        let legendUrl = legendBaseUrl+'&LAYER='
-          + layers.overlayLayers[layer].wms_name
-          + '&STYLE='
-          + layers.overlayLayers[layer].legend_style[getConfig(window.location.search).language]
-        overlayOptions.push(
-          <div className="overlay-legend">
-            <img src={legendUrl} />
-            <div dangerouslySetInnerHTML={
-              {__html: content.overlay_layers[layer].description[getConfig(window.location.search).language]}}>
-            </div>
-          </div>
-        )
-      }
     }
 
     let underlayOptions = []
-    for (let layer of layers.keys(layers.underlayLayers)) {
+    for (let layer of keys(layers.underlayLayers)) {
       underlayOptions.push(
         <div key={layer} className="checkbox">
           <div className="form-inline">
             <label className="form-check-label">
               <input id={layer+'-checkbox'} className="form-check-input" type="checkbox"
                 onChange={this.changeUnderlay} value={layer} checked={this.state.underlays[layer]}/>
-              {content.underlay_layers[layer].title[getConfig(window.location.search).language]}
+              {content.underlay_layers[layer].short_title[getConfig(window.location.search).language]}
             </label>
           </div>
         </div>
@@ -204,12 +197,21 @@ export default class LayerControls extends React.Component {
 
     let info = []
     if (!this.state.hideBaseLayer) {
-      info.push(
-        <div dangerouslySetInnerHTML={
-          {__html: content.base_layers[this.state.baseLayer as keyof typeof layers.baseLayers]
-          .description[getConfig(window.location.search).language]}}>
-        </div>
-      )
+      for (let section of content.base_layers[this.state.baseLayer as keyof typeof content.base_layers].info_sections) {
+        if (section.section_title) {
+          info.push(
+            <h5 dangerouslySetInnerHTML={
+              {__html: section.section_title[getConfig(window.location.search).language]}}>
+            </h5>
+          )
+        }
+        info.push(
+          <p dangerouslySetInnerHTML={
+            {__html: section.section_content[getConfig(window.location.search).language]}}>
+          </p>
+        )
+      }
+      
     }
 
     return (
@@ -234,3 +236,5 @@ export default class LayerControls extends React.Component {
     )
   }
 }
+
+export const keys = Object.keys as <T>(o: T) => (Extract<keyof T, string>)[]

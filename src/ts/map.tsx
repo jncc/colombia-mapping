@@ -3,21 +3,19 @@ import * as L from 'leaflet'
 import { Config } from './config.js'
 import * as content from '../content.json'
 import * as layers from './layers'
-import { keys } from './layers'
 import '../js/leaflet-sidebar.min.js'
 
 let overlayMaps = {} as any
 let underlayMaps = {} as any
 let baseMaps = {} as any
 let map: L.Map
-let tileLayer: L.TileLayer
 export function createMap(container: HTMLElement, config: Config) {
   
   map = L.map(container, {zoomControl: false, wheelDebounceTime: 300})
     .setView([10.8034027, -74.15481], 11)
   new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
   
-  tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map)
 
@@ -99,3 +97,5 @@ export function removeBaselayer() {
     map.removeLayer(baseMaps[baseLayer])
   }
 }
+
+export const keys = Object.keys as <T>(o: T) => (Extract<keyof T, string>)[]

@@ -36,7 +36,7 @@ export const baseLayers = {
     }
   },
   precipitation_erosion_risk: {
-    wms_name: 'colombia_eo4_cultivar:colombia_precip_erosion_risk',
+    wms_name: 'colombia_eo4_cultivar:colombia_precip_soil_erosion_risk',
     legend_style: {
       en: null,
       es: null
@@ -132,5 +132,3 @@ export const underlayLayers = {
     display_legend: false
   }
 }
-
-export const keys = Object.keys as <T>(o: T) => (Extract<keyof T, string>)[]
