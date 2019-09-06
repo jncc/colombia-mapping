@@ -7,7 +7,7 @@ import * as map from './map'
 
 const legendBaseUrl = process.env.GEOSERVER_URL+'/colombia_eo4_cultivar/wms'
   + '?REQUEST=GetLegendGraphic&FORMAT=image/png&TRANSPARENT=true&WIDTH=20'
-  + '&LEGEND_OPTIONS=dx:10;fontName:Arial;fontSize:12;fontStyle:normal;forceLabels:on'
+  + '&LEGEND_OPTIONS=dx:10;my:0.5;fontName:Arial;fontSize:12;fontStyle:normal;forceLabels:on'
 
 export function createSidebar(map: L.Map, config: Config) {
   let sidebarControl = L.control.sidebar('sidebar', {position: 'left'})
