@@ -852,8 +852,8 @@
                 "es": "Capa satelital"
             },
             "attribution": {
-                "en": "???",
-                "es": "???"
+                "en": "Contains modified Copernicus Sentinel data made available through ESA. 2019. Processed by JNCC (Barbosa et al. 2019).",
+                "es": "Contiene datos modificados de Copernicus Sentinel disponibles a través de ESA. 2019. Procesado por JNCC (Barbosa et al. 2019)."
             }
         }
     }
