@@ -195,5 +195,45 @@
                 ]
             }
         ]
+    },
+    "key_ecosystem_service_areas": {
+        "legends": [
+            {
+                "legend_id": "important_areas",
+                "legend_title": {
+                    "en": "Areas important for both biodiversity and surface water regulation",
+                    "es": "Spanish legend title"
+                },
+                "entries": [
+                    {
+                        "entry_id": "important_areas",
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Areas important for both biodiversity and surface water regulation",
+                            "es": "Spanish areas important for both biodiversity and surface water regulation"
+                        }
+                    }
+                ]
+            },
+            {
+                "legend_id": "urban_and_roads",
+                "legend_title": {
+                    "en": "Urban and roads",
+                    "es": "Spanish legend title"
+                },
+                "entries": [
+                    {
+                        "entry_id": "urban_and_roads",
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Urban and roads",
+                            "es": "Spanish urban and roads"
+                        }
+                    }
+                ]
+            }
+        ]
     }
 }

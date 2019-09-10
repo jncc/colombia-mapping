@@ -47,6 +47,18 @@
                                 "legend_entries": ["mid"]
                             }
                         ]
+                    },
+                    "key_ecosystem_service_areas": {
+                        "legends": [
+                            {
+                                "legend_id": "important_areas",
+                                "legend_entries": ["important_areas"]
+                            },
+                            {
+                                "legend_id": "urban_and_roads",
+                                "legend_entries": ["urban_and_roads"]
+                            }
+                        ]
                     }
                 }
             },
