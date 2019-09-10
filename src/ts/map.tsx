@@ -3,6 +3,8 @@ import * as L from 'leaflet'
 import { Config } from './config.js'
 import * as content from '../content.json'
 import * as layers from './layers'
+import * as grid from '../grid.json'
+import * as legends from '../legends.json'
 import '../js/leaflet-sidebar.min.js'
 
 let overlayMaps = {} as any
@@ -17,6 +19,28 @@ export function createMap(container: HTMLElement, config: Config) {
   
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map)
+
+  // tslint:disable-next-line:no-console
+  L.geoJSON(grid as GeoJSON.GeoJsonObject, {
+    style: function(feature) {
+      return {color: 'blue'}
+    },
+
+    onEachFeature: function (feature, layer) {
+      if (feature.properties.layers) {
+        let popupText = ''
+        for (let layer of keys(feature.properties.layers) as Array<keyof typeof legends>) {
+          for (let layerLegend of keys(feature.properties.layers[layer]) as Array<'habitats' | 'opportunities'>) {
+            popupText += legends[layer].legends[layerLegend].legend_title[config.language]
+            
+            // tslint:disable-next-line:no-console
+            console.log(popupText)
+          }
+        }
+        layer.bindPopup(popupText)
+      }
+    }
   }).addTo(map)
 
   // setup base maps

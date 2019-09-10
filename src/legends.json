@@ -1,0 +1,194 @@
+{
+    "habitat_map": {
+        "legends": {
+            "habitats": {
+                "legend_title": {
+                    "en": "Habitat map",
+                    "es": "Spanish legend title"
+                },
+                "entries": {
+                    "no_data": {
+                        "colour": null,
+                        "icon": "no_data",
+                        "label": {
+                            "en": "No data",
+                            "es": "Sin datos"
+                        }
+                    },
+                    "agriculture": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Agriculture",
+                            "es": "Spanish agriculture"
+                        }
+                    },
+                    "banana": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Banana",
+                            "es": "Spanish banana"
+                        }
+                    },
+                    "bare_ground": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Bare ground",
+                            "es": "Spanish bare ground"
+                        }
+                    },
+                    "forest": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Forest",
+                            "es": "Spanish forest"
+                        }
+                    },
+                    "forest_agriculture": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Forest/agriculture mix",
+                            "es": "Spanish forest/agriculture mix"
+                        }
+                    },
+                    "forest_agriculture_grassland": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Forests/agriculture/grassland mix",
+                            "es": "Spanish Forests/agriculture/grassland mix"
+                        }
+                    },
+                    "grassland": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Grassland",
+                            "es": "Spanish grassland"
+                        }
+                    },
+                    "mangrove": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Mangrove",
+                            "es": "Spanish mangrove"
+                        }
+                    },
+                    "palm": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Palm",
+                            "es": "Spanish palm"
+                        }
+                    },
+                    "rivers": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Rivers",
+                            "es": "Spanish rivers"
+                        }
+                    },
+                    "scrub": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Scrub",
+                            "es": "Spanish scrub"
+                        }
+                    },
+                    "snow": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Snow",
+                            "es": "Spanish snow"
+                        }
+                    },
+                    "urban": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Urban",
+                            "es": "Spanish urban"
+                        }
+                    },
+                    "waterbodies": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Waterbodies",
+                            "es": "Spanish waterbodies"
+                        }
+                    },
+                    "wetland": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Wetland",
+                            "es": "Spanish wetland"
+                        }
+                    },
+                    "wetland_open_water": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Wetland (open water)",
+                            "es": "Spanish wetland (open water)"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "water_regulation_opportunities": {
+        "legends": {
+            "opportunities": {
+                "legend_title": {
+                    "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment",
+                    "es": "Spanish legend title"
+                },
+                "entries": {
+                    "no_data": {
+                        "colour": null,
+                        "icon": "no_data",
+                        "label": {
+                            "en": "No data",
+                            "es": "Sin datos"
+                        }
+                    },
+                    "lower_catchment": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Opportunities in the lower catchment",
+                            "es": "Spanish lower catchment opportunities"
+                        }
+                    },
+                    "mid_catchment": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Opportunities in the mid catchment",
+                            "es": "Spanish mid catchment opportunities"
+                        }
+                    },
+                    "upper_catchment": {
+                        "colour": "blue",
+                        "icon": "square",
+                        "label": {
+                            "en": "Opportunities in the upper catchment",
+                            "es": "Spanish upper catchment opportunities"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

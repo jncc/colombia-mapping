@@ -1,0 +1,52 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "layers": {
+                    "habitat_map": {
+                        "habitats": ["agriculture", "mangrove", "urban"]
+                    },
+                    "water_regulation_opportunities": {
+                        "opportunities": ["mid_catchment"]
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [-74.2767437, 10.7278643],
+                        [-74.2524317, 10.7278643],
+                        [-74.2524317, 10.7135283],
+                        [-74.2767437, 10.7135283],
+                        [-74.2767437, 10.7278643]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "legends": {
+                    "water_regulation_opportunities": {
+                        "opportunities": ["upper_catchment"]
+                    }
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [-74.2524317, 10.7278643],
+                        [-74.2324317, 10.7278643],
+                        [-74.2324317, 10.7135283],
+                        [-74.2524317, 10.7135283],
+                        [-74.2524317, 10.7278643]
+                    ]
+                ]
+            }
+        }
+    ]
+}
