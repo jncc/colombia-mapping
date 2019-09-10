@@ -4,7 +4,7 @@
             {
                 "legend_id": "habitats",
                 "legend_title": {
-                    "en": "Habitat map",
+                    "en": "Habitats",
                     "es": "Spanish legend title"
                 },
                 "entries": [
@@ -161,7 +161,7 @@
             {
                 "legend_id": "opportunities",
                 "legend_title": {
-                    "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment",
+                    "en": "Opportunities",
                     "es": "Spanish legend title"
                 },
                 "entries": [

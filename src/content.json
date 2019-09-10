@@ -21,6 +21,20 @@
             "es": "Get started"
         }
     },
+    "grid_panel": {
+        "info_sections": [
+            {
+                "section_title": {
+                    "en": "A summary of the data available in the selected area on the map",
+                    "es": ""
+                },
+                "section_content": {
+                    "en": "Use the layer selection on the left of the map to view the individual datasets in more detail.",
+                    "es": ""
+                }
+            }
+        ]
+    },
     "base_layers": {
         "no_layer": {
             "short_title": {

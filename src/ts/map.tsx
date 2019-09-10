@@ -6,6 +6,7 @@ import * as layers from './layers'
 import * as grid from '../grid.json'
 import * as legends from '../legends.json'
 import '../js/leaflet-sidebar.min.js'
+import { ChangeGrid as LoadGridTab, GridLayer } from './sidebar'
 
 let overlayMaps = {} as any
 let underlayMaps = {} as any
@@ -21,29 +22,43 @@ export function createMap(container: HTMLElement, config: Config) {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map)
 
-  // tslint:disable-next-line:no-console
-  L.geoJSON(grid as GeoJSON.GeoJsonObject, {
+  // set up interactive grid layer
+  let mapGrid = L.geoJSON(grid as GeoJSON.GeoJsonObject, {
     style: function(feature) {
-      return {color: 'blue'}
+      return {color: '#1DA0E7'}
     },
 
     onEachFeature: function (feature, layer) {
       if (feature.properties.layers) {
-        let popupText = ''
+        let gridLayers: Array<GridLayer> = []
+
+        // add layers
         for (let featureLayer of keys(feature.properties.layers) as Array<keyof typeof legends>) {
-          for (let featureLegend of feature.properties.layers[featureLayer].legends) {
-            for (let featureEntry of featureLegend.legend_entries) {
-              let entryLabel = legends[featureLayer]
-                .legends.filter(legend => legend.legend_id === featureLegend.legend_id)[0]
-                .entries.filter(legendEntry => legendEntry.entry_id === featureEntry)[0].label[config.language]
-              popupText += entryLabel+'<br />'
-            }
-            
-            // tslint:disable-next-line:no-console
-            console.log(popupText)
+          let layer: GridLayer = {
+            layerName: content.base_layers[featureLayer].short_title[config.language],
+            legends: []
           }
+          gridLayers.push(layer)  
+
+          // add layer legends
+          for (let featureLayerLegend of feature.properties.layers[featureLayer].legends) {
+            let legend = legends[featureLayer].legends
+              .filter(legend => legend.legend_id === featureLayerLegend.legend_id)[0]
+            let gridLegend = {
+              legendTitle: legend.legend_title[config.language],
+              entries: [] as Array<string>
+            }
+            layer.legends.push(gridLegend)
+
+            // add legend entries
+            for (let featureLayerLegendEntry of featureLayerLegend.legend_entries) {
+              let entry = legend.entries.filter(entry => entry.entry_id === featureLayerLegendEntry)[0]
+              gridLegend.entries.push(entry.label[config.language])
+            }
+          }     
         }
-        layer.bindPopup(popupText)
+
+        layer.on({click: () => LoadGridTab(gridLayers)})
       }
     }
   }).addTo(map)

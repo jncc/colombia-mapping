@@ -10,8 +10,15 @@ const legendBaseUrl = process.env.GEOSERVER_URL+'/colombia_eo4_cultivar/wms'
   + '&LEGEND_OPTIONS=dx:10;my:0.5;fontName:Arial;fontSize:12;fontStyle:normal;forceLabels:on'
 
 export function createSidebar(map: L.Map, config: Config) {
-  let sidebarControl = L.control.sidebar('sidebar', {position: 'left'})
-  sidebarControl.addTo(map)
+  let sidebarLeft = L.control.sidebar('sidebar-left', {position: 'left'})
+  sidebarLeft.addTo(map)
+
+  let sidebarRight = L.control.sidebar('sidebar-right', {position: 'right'})
+  sidebarRight.close()
+  sidebarRight.addTo(map)
+
+  // set up grid tab contents using react component
+  ChangeGrid([])
 
   // setup home tab
   let sidebarHome: HTMLElement | null = document.getElementById('home')
@@ -78,7 +85,75 @@ export function createSidebar(map: L.Map, config: Config) {
   }
 }
 
-export default class LayerControls extends React.Component {
+export function ChangeGrid(props: GridProps['gridLayers']) {
+  let gridControls: HTMLElement | null = document.getElementById('grid')
+  if (gridControls) {
+    render(<GridTab gridLayers={props}/>, gridControls)
+  }
+}
+
+export type GridProps = {
+  gridLayers: Array<GridLayer>
+}
+export type GridLayer = {
+  layerName: string,
+  legends: Array<GridLegend>
+}
+export type GridLegend = {
+  legendTitle: string,
+  entries: Array<string>
+}
+
+function GridTab(props: GridProps) {
+  let gridInfoText = []
+  for (let section of content.grid_panel.info_sections){
+    if (section.section_title) {
+      gridInfoText.push(
+        <h5 key={section.section_title.en} dangerouslySetInnerHTML={
+          {__html: section.section_title[getConfig(window.location.search).language]}}>
+        </h5>
+      )
+    }
+    gridInfoText.push(
+      <p dangerouslySetInnerHTML={
+        {__html: section.section_content[getConfig(window.location.search).language]}}>
+      </p>
+    )
+  }
+
+  let gridLayers = []
+  for (let gridLayer of props.gridLayers){
+    gridLayers.push(<hr />)
+    gridLayers.push(
+      <h5 dangerouslySetInnerHTML={
+        {__html: gridLayer.layerName}}>
+      </h5>
+    )
+    for (let gridLegend of gridLayer.legends){
+      gridLayers.push(
+        <b><p dangerouslySetInnerHTML={
+          {__html: gridLegend.legendTitle}}>
+        </p></b>
+      )
+      for (let gridEntry of gridLegend.entries) {
+        gridLayers.push(
+          <p dangerouslySetInnerHTML={
+            {__html: gridEntry}}>
+          </p>
+        )
+      }
+    }
+  }
+
+  return (
+    <div>
+      {gridInfoText}
+      {gridLayers}
+    </div>
+  )
+}
+
+export class LayerControls extends React.Component {
   state = {
     hideBaseLayer: true,
     baseLayer: 'no_layer' as keyof typeof layers.baseLayers,
