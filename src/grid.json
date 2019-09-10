@@ -6,10 +6,20 @@
             "properties": {
                 "layers": {
                     "habitat_map": {
-                        "habitats": ["agriculture", "mangrove", "urban"]
+                        "legends": [
+                            {
+                                "legend_id": "habitats",
+                                "legend_entries": ["scrub", "rivers"]
+                            }
+                        ]
                     },
                     "water_regulation_opportunities": {
-                        "opportunities": ["mid_catchment"]
+                        "legends": [
+                            {
+                                "legend_id": "opportunities",
+                                "legend_entries": ["lower"]
+                            }
+                        ]
                     }
                 }
             },
@@ -29,9 +39,14 @@
         {
             "type": "Feature",
             "properties": {
-                "legends": {
+                "layers": {
                     "water_regulation_opportunities": {
-                        "opportunities": ["upper_catchment"]
+                        "legends": [
+                            {
+                                "legend_id": "opportunities",
+                                "legend_entries": ["mid"]
+                            }
+                        ]
                     }
                 }
             },

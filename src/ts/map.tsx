@@ -30,9 +30,14 @@ export function createMap(container: HTMLElement, config: Config) {
     onEachFeature: function (feature, layer) {
       if (feature.properties.layers) {
         let popupText = ''
-        for (let layer of keys(feature.properties.layers) as Array<keyof typeof legends>) {
-          for (let layerLegend of keys(feature.properties.layers[layer]) as Array<'habitats' | 'opportunities'>) {
-            popupText += legends[layer].legends[layerLegend].legend_title[config.language]
+        for (let featureLayer of keys(feature.properties.layers) as Array<keyof typeof legends>) {
+          for (let featureLegend of feature.properties.layers[featureLayer].legends) {
+            for (let featureEntry of featureLegend.legend_entries) {
+              let entryLabel = legends[featureLayer]
+                .legends.filter(legend => legend.legend_id === featureLegend.legend_id)[0]
+                .entries.filter(legendEntry => legendEntry.entry_id === featureEntry)[0].label[config.language]
+              popupText += entryLabel+'<br />'
+            }
             
             // tslint:disable-next-line:no-console
             console.log(popupText)
