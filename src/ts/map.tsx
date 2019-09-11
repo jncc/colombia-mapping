@@ -11,6 +11,7 @@ import { ChangeGrid as LoadGridTab, GridLayer } from './sidebar'
 let overlayMaps = {} as any
 let underlayMaps = {} as any
 let baseMaps = {} as any
+let gridLayer = {} as any
 let map: L.Map
 export function createMap(container: HTMLElement, config: Config) {
   
@@ -23,7 +24,7 @@ export function createMap(container: HTMLElement, config: Config) {
   }).addTo(map)
 
   // set up interactive grid layer
-  let mapGrid = L.geoJSON(grid as GeoJSON.GeoJsonObject, {
+  gridLayer = L.geoJSON(grid as GeoJSON.GeoJsonObject, {
     style: function(feature) {
       return {color: '#1DA0E7'}
     },
@@ -57,11 +58,15 @@ export function createMap(container: HTMLElement, config: Config) {
             }
           }     
         }
-
-        layer.on({click: () => LoadGridTab(gridLayers)})
+        
+        layer.on({
+          mouseover: highlightFeature,
+	      	mouseout: resetHighlight,
+          click: (e: L.LeafletEvent) => onGridSquareclick(e, gridLayers),
+        })
       }
     }
-  }).addTo(map)
+  })
 
   // setup base maps
   for (let baseLayer of keys(layers.baseLayers)) {
@@ -103,6 +108,34 @@ export function createMap(container: HTMLElement, config: Config) {
   return map
 }
 
+function highlightFeature(e: L.LeafletEvent) {
+	var layer = e.target
+
+	layer.setStyle({
+		weight: 5,
+		color: '#1DA0E7',
+		dashArray: '',
+		fillOpacity: 0.7
+	})
+
+	if (!L.Browser.ie && !L.Browser.edge) {
+		layer.bringToFront()
+	}
+}
+
+function resetHighlight(e: L.LeafletEvent) {
+	gridLayer.resetStyle(e.target)
+}
+
+function onGridSquareclick(e: L.LeafletEvent, gridLayers: Array<GridLayer>) {
+  LoadGridTab(gridLayers)
+  zoomToFeature(e)
+}
+
+function zoomToFeature(e: L.LeafletEvent) {
+  map.fitBounds(e.target.getBounds(), {maxZoom: 15})
+}
+
 export function refreshOverlay(layer : keyof typeof layers.overlayLayers) {
   overlayMaps[layer].bringToFront()
 }
@@ -139,6 +172,14 @@ export function updateBaseLayer(layer : keyof typeof layers.baseLayers) {
 export function removeBaselayer() {
   for (let baseLayer of keys(baseMaps)) {
     map.removeLayer(baseMaps[baseLayer])
+  }
+}
+
+export function updateGridLayer(checked: boolean) {
+  if (checked) {
+    gridLayer.addTo(map)
+  } else {
+    map.removeLayer(gridLayer)
   }
 }
 

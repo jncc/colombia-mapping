@@ -9,16 +9,18 @@ const legendBaseUrl = process.env.GEOSERVER_URL+'/colombia_eo4_cultivar/wms'
   + '?REQUEST=GetLegendGraphic&FORMAT=image/png&TRANSPARENT=true&WIDTH=20'
   + '&LEGEND_OPTIONS=dx:10;my:0.5;fontName:Arial;fontSize:12;fontStyle:normal;forceLabels:on'
 
+let sidebarLeft: L.Control.Sidebar
+let sidebarRight: L.Control.Sidebar
 export function createSidebar(map: L.Map, config: Config) {
-  let sidebarLeft = L.control.sidebar('sidebar-left', {position: 'left'})
+  sidebarLeft = L.control.sidebar('sidebar-left', {position: 'left'})
   sidebarLeft.addTo(map)
 
-  let sidebarRight = L.control.sidebar('sidebar-right', {position: 'right'})
-  sidebarRight.close()
-  sidebarRight.addTo(map)
-
+  sidebarRight = L.control.sidebar('sidebar-right', {position: 'right'})
+  
   // set up grid tab contents using react component
   ChangeGrid([])
+  sidebarRight.close()
+  sidebarRight.addTo(map)
 
   // setup home tab
   let sidebarHome: HTMLElement | null = document.getElementById('home')
@@ -41,10 +43,7 @@ export function createSidebar(map: L.Map, config: Config) {
       let getStartedButton = L.DomUtil.create('button', 'btn btn-primary start')
       getStartedButton.innerHTML += content.info_panel.button_text[config.language]
       getStartedButton.addEventListener('click', function() {
-        let sidebarLayers: HTMLElement | null = document.getElementsByClassName('fas fa-layer-group')[0] as HTMLElement
-        if (sidebarLayers) {
-          sidebarLayers.click()
-        }
+        sidebarLeft.open('layers')
       })
       homeContainer.appendChild(getStartedButton)
 
@@ -62,33 +61,25 @@ export function createSidebar(map: L.Map, config: Config) {
   let homeClose: HTMLElement | null = document.getElementById('close-home')
   if (homeClose) {
     homeClose.addEventListener('click', function() {
-      let homeTab: HTMLElement | null = document.getElementById('home-tab')
-      if (homeTab) {
-        homeTab.click()
-      }
+      sidebarLeft.close()
     })
   }
 
   let layersClose: HTMLElement | null = document.getElementById('close-layers')
   if (layersClose) {
     layersClose.addEventListener('click', function() {
-      let layersTab: HTMLElement | null = document.getElementById('layers-tab')
-      if (layersTab) {
-        layersTab.click()
-      }
+      sidebarLeft.close()
     })
   }
 
-  let homeTab: HTMLElement | null = document.getElementById('home-tab')
-  if (homeTab) {
-    homeTab.click() // default
-  }
+  sidebarLeft.open('home')
 }
 
 export function ChangeGrid(props: GridProps['gridLayers']) {
   let gridControls: HTMLElement | null = document.getElementById('grid')
   if (gridControls) {
     render(<GridTab gridLayers={props}/>, gridControls)
+    sidebarRight.open('grid')
   }
 }
 
@@ -162,7 +153,8 @@ export class LayerControls extends React.Component {
     } as any,
     underlays: {
       'satellite_imagery': true
-    } as any
+    } as any,
+    showGridLayer: false
   }
 
   changeBaseLayer = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -170,16 +162,12 @@ export class LayerControls extends React.Component {
       map.removeBaselayer()
       this.setState({
         hideBaseLayer: true,
-        baseLayer: event.target.value,
-        overlays: this.state.overlays,
-        underlays: this.state.underlays
+        baseLayer: event.target.value
       })
     } else {
       this.setState({
         hideBaseLayer: false,
-        baseLayer: event.target.value,
-        overlays: this.state.overlays,
-        underlays: this.state.underlays
+        baseLayer: event.target.value
       })
       map.updateBaseLayer(event.target.value as keyof typeof layers.baseLayers)
       for (let overlay of keys(this.state.overlays)) {
@@ -195,9 +183,7 @@ export class LayerControls extends React.Component {
     updatedOverlays[event.target.value] = event.target.checked
 
     this.setState({
-      baseLayer: this.state.baseLayer,
-      overlays: updatedOverlays,
-      underlays: this.state.underlays
+      overlays: updatedOverlays
     })
     map.updateOverlay(event.target.value as keyof typeof layers.overlayLayers, event.target.checked)
   }
@@ -207,8 +193,6 @@ export class LayerControls extends React.Component {
     updatedUnderlays[event.target.value] = event.target.checked
 
     this.setState({
-      baseLayer: this.state.baseLayer,
-      overlays: this.state.overlays,
       underlays: updatedUnderlays
     })
     map.updateUnderlay(event.target.value as keyof typeof layers.underlayLayers, event.target.checked)
@@ -217,6 +201,16 @@ export class LayerControls extends React.Component {
       if (this.state.overlays[overlay]){
         map.refreshOverlay(overlay as keyof typeof layers.overlayLayers)
       }
+    }
+  }
+
+  changeGridLayer = (event: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({
+      showGridLayer: event.target.checked
+    })
+    map.updateGridLayer(event.target.checked)
+    if (!event.target.checked) {
+      sidebarRight.close()
     }
   }
 
@@ -293,6 +287,15 @@ export class LayerControls extends React.Component {
       <div className="sidebar-layers">
         <h3><span id="close-layers" className="sidebar-close"><i className="fas fa-caret-left"></i></span></h3>
         <div className="layer-select">
+        <div key="grid" className="checkbox">
+          <div className="form-inline">
+            <label className="form-check-label">
+              <input id="grid-checkbox" className="form-check-input" type="checkbox"
+                onChange={this.changeGridLayer} value="grid" checked={this.state.showGridLayer}/>
+              5k grid squares
+            </label>
+          </div>
+        </div>
           {underlayOptions}
           {overlayOptions}
           <hr />
