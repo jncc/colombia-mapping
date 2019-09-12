@@ -8,7 +8,7 @@ export const baseLayers = {
     wms_name: 'colombia_eo4_cultivar:colombia_habitat_map_20190326_final',
     legend_styles: []
   },
-  water_runoff_opportunities: {
+  water_runoff_moderation: {
     wms_name: 'colombia_eo4_cultivar:colombia_surface_water_regulation_stock',
     legend_styles: []
   },
