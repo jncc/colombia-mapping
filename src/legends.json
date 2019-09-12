@@ -10,8 +10,8 @@
                 "entries": [
                     {
                         "entry_id": "agriculture",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#73e2ec",
+                        "type": "value",
                         "label": {
                             "en": "Agriculture",
                             "es": "Spanish agriculture"
@@ -19,8 +19,8 @@
                     },
                     {
                         "entry_id": "banana",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#c1bc15",
+                        "type": "value",
                         "label": {
                             "en": "Banana",
                             "es": "Spanish banana"
@@ -28,8 +28,8 @@
                     },
                     {
                         "entry_id": "bare_ground",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#e9d4e6",
+                        "type": "value",
                         "label": {
                             "en": "Bare ground",
                             "es": "Spanish bare ground"
@@ -37,35 +37,35 @@
                     },
                     {
                         "entry_id": "forest",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#266b3a",
+                        "type": "value",
                         "label": {
                             "en": "Forest",
                             "es": "Spanish forest"
                         }
                     },
                     {
-                        "entry_id": "forest_agriculture",
-                        "colour": "blue",
-                        "icon": "square",
+                        "entry_id": "forest_agriculture_mix",
+                        "fill": "#1ede45",
+                        "type": "value",
                         "label": {
                             "en": "Forest/agriculture mix",
                             "es": "Spanish forest/agriculture mix"
                         }
                     },
                     {
-                        "entry_id": "forest_agriculture_grassland",
-                        "colour": "blue",
-                        "icon": "square",
+                        "entry_id": "forest_agriculture_grassland_mix",
+                        "fill": "#e26e7b",
+                        "type": "value",
                         "label": {
-                            "en": "Forests/agriculture/grassland mix",
+                            "en": "Forest/agriculture/grassland mix",
                             "es": "Spanish Forests/agriculture/grassland mix"
                         }
                     },
                     {
                         "entry_id": "grassland",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#e77919",
+                        "type": "value",
                         "label": {
                             "en": "Grassland",
                             "es": "Spanish grassland"
@@ -73,8 +73,8 @@
                     },
                     {
                         "entry_id": "mangrove",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#9f148f",
+                        "type": "value",
                         "label": {
                             "en": "Mangrove",
                             "es": "Spanish mangrove"
@@ -82,8 +82,8 @@
                     },
                     {
                         "entry_id": "palm",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#0ddd9f",
+                        "type": "value",
                         "label": {
                             "en": "Palm",
                             "es": "Spanish palm"
@@ -91,8 +91,8 @@
                     },
                     {
                         "entry_id": "rivers",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#480df8",
+                        "type": "value",
                         "label": {
                             "en": "Rivers",
                             "es": "Spanish rivers"
@@ -100,8 +100,8 @@
                     },
                     {
                         "entry_id": "scrub",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#643913",
+                        "type": "value",
                         "label": {
                             "en": "Scrub",
                             "es": "Spanish scrub"
@@ -109,8 +109,8 @@
                     },
                     {
                         "entry_id": "snow",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#fafff7",
+                        "type": "value",
                         "label": {
                             "en": "Snow",
                             "es": "Spanish snow"
@@ -118,8 +118,8 @@
                     },
                     {
                         "entry_id": "urban",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#232323",
+                        "type": "value",
                         "label": {
                             "en": "Urban",
                             "es": "Spanish urban"
@@ -127,8 +127,8 @@
                     },
                     {
                         "entry_id": "waterbodies",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#480df8",
+                        "type": "value",
                         "label": {
                             "en": "Waterbodies",
                             "es": "Spanish waterbodies"
@@ -136,8 +136,8 @@
                     },
                     {
                         "entry_id": "wetland",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#7f2edb",
+                        "type": "value",
                         "label": {
                             "en": "Wetland",
                             "es": "Spanish wetland"
@@ -145,15 +145,15 @@
                     },
                     {
                         "entry_id": "wetland_open_water",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#4868d2",
+                        "type": "value",
                         "label": {
                             "en": "Wetland (open water)",
                             "es": "Spanish wetland (open water)"
                         }
                     }
                 ]
-            }
+            }    
         ]
     },
     "water_regulation_opportunities": {
@@ -167,8 +167,8 @@
                 "entries": [
                     {
                         "entry_id": "lower",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#306b10",
+                        "type": "value",
                         "label": {
                             "en": "Opportunities in the lower catchment",
                             "es": "Spanish lower catchment opportunities"
@@ -176,8 +176,8 @@
                     },
                     {
                         "entry_id": "mid",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#38b6f4",
+                        "type": "value",
                         "label": {
                             "en": "Opportunities in the mid catchment",
                             "es": "Spanish mid catchment opportunities"
@@ -185,8 +185,8 @@
                     },
                     {
                         "entry_id": "upper",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#4623e4",
+                        "type": "value",
                         "label": {
                             "en": "Opportunities in the upper catchment",
                             "es": "Spanish upper catchment opportunities"
@@ -207,8 +207,9 @@
                 "entries": [
                     {
                         "entry_id": "important_areas",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#4aa933",
+                        "stroke": "black",
+                        "type": "line",
                         "label": {
                             "en": "Areas important for both biodiversity and surface water regulation",
                             "es": "Spanish areas important for both biodiversity and surface water regulation"
@@ -225,8 +226,8 @@
                 "entries": [
                     {
                         "entry_id": "urban_and_roads",
-                        "colour": "blue",
-                        "icon": "square",
+                        "fill": "#bbbbbb",
+                        "type": "value",
                         "label": {
                             "en": "Urban and roads",
                             "es": "Spanish urban and roads"

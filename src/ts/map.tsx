@@ -6,12 +6,14 @@ import * as layers from './layers'
 import * as grid from '../grid.json'
 import * as legends from '../legends.json'
 import '../js/leaflet-sidebar.min.js'
-import { ChangeGrid as LoadGridTab, GridLayer } from './sidebar'
+import { ChangeGrid as LoadGridTab, GridLayer, GridLegendEntry } from './sidebar'
+import { object } from 'prop-types'
 
 let overlayMaps = {} as any
 let underlayMaps = {} as any
 let baseMaps = {} as any
 let map: L.Map
+
 export function createMap(container: HTMLElement, config: Config) {
   
   map = L.map(container, {zoomControl: false, wheelDebounceTime: 300})
@@ -46,14 +48,14 @@ export function createMap(container: HTMLElement, config: Config) {
               .filter(legend => legend.legend_id === featureLayerLegend.legend_id)[0]
             let gridLegend = {
               legendTitle: legend.legend_title[config.language],
-              entries: [] as Array<string>
+              entries: [] as Array<GridLegendEntry>
             }
             layer.legends.push(gridLegend)
 
             // add legend entries
             for (let featureLayerLegendEntry of featureLayerLegend.legend_entries) {
               let entry = legend.entries.filter(entry => entry.entry_id === featureLayerLegendEntry)[0]
-              gridLegend.entries.push(entry.label[config.language])
+              gridLegend.entries.push(entry)
             }
           }     
         }
