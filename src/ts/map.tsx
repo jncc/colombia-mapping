@@ -6,7 +6,7 @@ import * as layers from './layers'
 import * as grid from '../grid.json'
 import * as legends from '../legends.json'
 import '../js/leaflet-sidebar.min.js'
-import { ChangeGrid as LoadGridTab, GridLayer, GridLegendEntry } from './sidebar'
+import { ChangeGrid as LoadGridTab, MapLegendGroup, MapLegend, Legend, LegendEntry } from './sidebar'
 import { object } from 'prop-types'
 
 let overlayMaps = {} as any
@@ -32,11 +32,11 @@ export function createMap(container: HTMLElement, config: Config) {
 
     onEachFeature: function (feature, layer) {
       if (feature.properties.layers) {
-        let gridLayers: Array<GridLayer> = []
+        let gridLayers: Array<MapLegend> = []
 
         // add layers
         for (let featureLayer of keys(feature.properties.layers) as Array<keyof typeof legends>) {
-          let layer: GridLayer = {
+          let layer: MapLegend = {
             layerName: content.base_layers[featureLayer].short_title[config.language],
             legends: []
           }
@@ -44,17 +44,18 @@ export function createMap(container: HTMLElement, config: Config) {
 
           // add layer legends
           for (let featureLayerLegend of feature.properties.layers[featureLayer].legends) {
-            let legend = legends[featureLayer].legends
-              .filter(legend => legend.legend_id === featureLayerLegend.legend_id)[0]
-            let gridLegend = {
-              legendTitle: legend.legend_title[config.language],
-              entries: [] as Array<GridLegendEntry>
+            let legend = legends[featureLayer].legends.filter(legend => legend.legend_id === featureLayerLegend.legend_id)[0]
+            let gridLegend: Legend = {
+              legend_id: legend.legend_id,
+              legend_title: legend.legend_title,
+              entries: [] as Array<LegendEntry>
             }
             layer.legends.push(gridLegend)
 
             // add legend entries
+            let entries: Array<LegendEntry> = legend.entries
             for (let featureLayerLegendEntry of featureLayerLegend.legend_entries) {
-              let entry = legend.entries.filter(entry => entry.entry_id === featureLayerLegendEntry)[0]
+              let entry = entries.filter(entry => entry.entry_id === featureLayerLegendEntry)[0]
               gridLegend.entries.push(entry)
             }
           }     

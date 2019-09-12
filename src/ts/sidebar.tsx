@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { Config, getConfig } from './config'
 import * as layers from './layers'
 import * as content from '../content.json'
+import * as legends from '../legends.json'
 import * as map from './map'
 
 const legendBaseUrl = process.env.GEOSERVER_URL + '/colombia_eo4_cultivar/wms'
@@ -85,53 +86,52 @@ export function createSidebar(map: L.Map, config: Config) {
   }
 }
 
-export function ChangeGrid(props: GridProps['gridLayers']) {
+export function ChangeGrid(props: Array<MapLegend>) {
   let gridControls: HTMLElement | null = document.getElementById('grid')
   if (gridControls) {
-    render(<GridTab gridLayers={props} />, gridControls)
+    render(<GridTab mapLegends={props} />, gridControls)
   }
 }
 
-export type GridProps = {
-  gridLayers: Array<GridLayer>
+export type MapLegendGroup = {
+  mapLegends: Array<MapLegend>
 }
-export type GridLayer = {
+export type MapLegend = {
   layerName: string,
-  legends: Array<GridLegend>
+  legends: Array<Legend>
 }
-export type GridLegend = {
-  legendTitle: string,
-  entries: Array<GridLegendEntry>
+export type Legend = {
+  legend_id: string,
+  legend_title: I8lnObj,
+  entries: Array<LegendEntry>
 }
-
-export type GridLegendEntry = {
+export type LegendEntry = {
   entry_id: string,
   type: string,
-  label: GridEntryLabel
+  label?: I8lnObj,
   fill?: string,
   stroke?: string,
   stops?: Array<string>,
-  labels?: GridLegendRampEntryLabels
+  labels?: I8lnLabelsObj  
 }
-export type GridEntryLabel = {
+export type I8lnObj = {
   [key: string]: string
 }
-export type GridLegendRampEntryLabels = {
+export type I8lnLabelsObj = {
   [key: string]: Array<string>
 }
 
-
-function createLineLegendEntry(gridEntry: GridLegendEntry, lang: string) {
+function createLineLegendEntry(legendEntry: LegendEntry, lang: string) {
   var line = [
     <line x1={0} y1={10} x2={10} y2={0}
-      stroke={gridEntry.fill} strokeWidth={2}>
+      stroke={legendEntry.fill} strokeWidth={2}>
     </line>
   ]
 
-  if (gridEntry.stroke !== undefined) {
+  if (legendEntry.stroke !== undefined) {
     line.unshift(
       <line x1={0} y1={10} x2={10} y2={0}
-        stroke={gridEntry.stroke} strokeWidth={3}>
+        stroke={legendEntry.stroke} strokeWidth={3}>
       </line>
     )
   }
@@ -143,39 +143,39 @@ function createLineLegendEntry(gridEntry: GridLegendEntry, lang: string) {
       </svg>
     </td>
     <td className="legend" dangerouslySetInnerHTML={
-      { __html: gridEntry.label[lang] }}>
+      { __html: legendEntry.label ? legendEntry.label[lang] : "UNDEFINED"}}>
     </td>
   </tr>
 }
 
-function createValueLegendEntry(gridEntry: GridLegendEntry, lang: string) {
+function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
   return <tr>
     <td className="legend-iconography">
       <svg className="legend" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         <rect width={8} height={8} x={1} y={1} rx={1} 
-          fill={gridEntry.fill !== undefined ? gridEntry.fill : "none"} 
-          stroke={gridEntry.stroke !== undefined ? gridEntry.stroke : "none"}>
+          fill={legendEntry.fill !== undefined ? legendEntry.fill : "none"} 
+          stroke={legendEntry.stroke !== undefined ? legendEntry.stroke : "none"}>
         </rect>
       </svg>
     </td>
     <td className="legend" dangerouslySetInnerHTML={
-      { __html: gridEntry.label[lang] }}>
+      { __html: legendEntry.label ? legendEntry.label[lang] : "UNDEFINED"}}>
     </td>
   </tr>
 }
 
-function createRampLegendEntry(gridEntry: GridLegendEntry, lang: string) {
-  if (gridEntry.stops && gridEntry.labels) {
-    var overallHeight = gridEntry.stops.length * 20
+function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
+  if (legendEntry.stops && legendEntry.labels) {
+    var overallHeight = legendEntry.stops.length * 20
     const style = {
       width: '20px'
     }
 
-    var interval = 100 / (gridEntry.stops.length - 1)
+    var interval = 100 / (legendEntry.stops.length - 1)
     var current = 0
     var stops : Array<JSX.Element> = []
 
-    gridEntry.stops.forEach(stop => {
+    legendEntry.stops.forEach(stop => {
       stops.push(
         <stop offset={current + '%'} stopColor={stop}></stop>
       )
@@ -184,21 +184,21 @@ function createRampLegendEntry(gridEntry: GridLegendEntry, lang: string) {
     
 
     var output = [<tr>
-      <td style={style} rowSpan={gridEntry.stops.length}>
+      <td style={style} rowSpan={legendEntry.stops.length}>
         <svg viewBox={"0 0 10 " + overallHeight} xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id={gridEntry.entry_id} x1="0%" y1="0%" x2="0%" y2="100%">
+            <linearGradient id={legendEntry.entry_id} x1="0%" y1="0%" x2="0%" y2="100%">
               {stops}
             </linearGradient>
           </defs>
-          <rect x={1} y={1} width={8} height={overallHeight} rx={0.1} fill={'url("#' + gridEntry.entry_id + '")'}></rect>
+          <rect x={1} y={1} width={8} height={overallHeight} rx={0.1} fill={'url("#' + legendEntry.entry_id + '")'}></rect>
         </svg>
       </td>
-      <td>{gridEntry.labels[lang][0]}</td>
+      <td>{legendEntry.labels[lang][0]}</td>
     </tr>]
 
-    for (var i = 1; i < gridEntry.labels[lang].length; i++) {
-      var text = gridEntry.labels[lang][i];
+    for (var i = 1; i < legendEntry.labels[lang].length; i++) {
+      var text = legendEntry.labels[lang][i];
 
       if (text === undefined || text.length === 0 || !text.trim()) {
           text = '\u00A0';
@@ -215,7 +215,25 @@ function createRampLegendEntry(gridEntry: GridLegendEntry, lang: string) {
   return <tr><td>BAD RAMP!</td></tr>
 }
 
-function GridTab(props: GridProps) {
+function createLegendEntry(entry: LegendEntry) {
+  if (entry.type === "value") {
+    return createValueLegendEntry(entry, getConfig(window.location.search).language)
+  }
+  else if (entry.type === "line") {
+    return createLineLegendEntry(entry, getConfig(window.location.search).language)
+  }
+  else if (entry.type === "ramp") {
+    return createRampLegendEntry(entry, getConfig(window.location.search).language)
+  }
+  else {
+    return <tr>
+      <td className="legend-iconography"></td>
+      <td>Unkown Legend Entry Type [{entry.type}]</td>
+    </tr>
+  }
+}
+
+function GridTab(props: MapLegendGroup) {
   let gridInfoText = []
   for (let section of content.grid_panel.info_sections) {
     if (section.section_title) {
@@ -233,7 +251,7 @@ function GridTab(props: GridProps) {
   }
 
   let gridLayers = []
-  for (let gridLayer of props.gridLayers) {
+  for (let gridLayer of props.mapLegends) {
     gridLayers.push(<hr />)
     gridLayers.push(
       <h5 dangerouslySetInnerHTML={
@@ -243,32 +261,14 @@ function GridTab(props: GridProps) {
     for (let gridLegend of gridLayer.legends) {
       gridLayers.push(
         <b><p dangerouslySetInnerHTML={
-          { __html: gridLegend.legendTitle }}>
+          { __html: gridLegend.legend_title[getConfig(window.location.search).language] }}>
         </p></b>
       )
       var legendEntries = []
       for (let gridEntry of gridLegend.entries) {
-        if (gridEntry.type === "value") {
           legendEntries.push(
-            createValueLegendEntry(gridEntry, getConfig(window.location.search).language)
+            createLegendEntry(gridEntry)
           )
-        }
-        else if (gridEntry.type === "line") {
-          legendEntries.push(
-            createLineLegendEntry(gridEntry, getConfig(window.location.search).language)
-          )
-        }
-        else if (gridEntry.type === "ramp") {
-          legendEntries.push(
-            createRampLegendEntry(gridEntry, getConfig(window.location.search).language)
-          )
-        }
-        else {
-          legendEntries.push(<tr>
-            <td className="legend-iconography"></td>
-            <td>Unkown Legend Entry Type [{gridEntry.type}]</td>
-          </tr>)
-        }
       }
       gridLayers.push(<table><tbody>{legendEntries}</tbody></table>)
     }
@@ -295,7 +295,7 @@ export class LayerControls extends React.Component {
   }
 
   changeBaseLayer = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    if (event.target.value == 'no_layer') {
+    if (event.target.value === 'no_layer') {
       map.removeBaselayer()
       this.setState({
         hideBaseLayer: true,
@@ -391,12 +391,25 @@ export class LayerControls extends React.Component {
 
     let legend = []
     if (!this.state.hideBaseLayer) {
-      legend.push(
-        <img key={this.state.baseLayer + '-legend'} src={
-          legendBaseUrl
-          + '&LAYER='
-          + layers.baseLayers[this.state.baseLayer as keyof typeof layers.baseLayers].wms_name} />
-      )
+      for (let layerLegend of legends[this.state.baseLayer].legends) {
+        var layerLegendEntries = []
+        for (let layerLegendEntry of layerLegend.entries) {
+          layerLegendEntries.push(createLegendEntry(layerLegendEntry))
+        }
+
+        legend.push(<table>
+          <tbody>
+            {layerLegendEntries}
+          </tbody>
+        </table>)
+      }
+
+      // legend.push(
+      //   <img key={this.state.baseLayer + '-legend'} src={
+      //     legendBaseUrl
+      //     + '&LAYER='
+      //     + layers.baseLayers[this.state.baseLayer as keyof typeof layers.baseLayers].wms_name} />
+      // )
     }
 
     let info = []
