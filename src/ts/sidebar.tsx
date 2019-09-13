@@ -143,7 +143,7 @@ function createLineLegendEntry(legendEntry: LegendEntry, lang: string) {
       </svg>
     </td>
     <td className="legend" dangerouslySetInnerHTML={
-      { __html: legendEntry.label ? legendEntry.label[lang] : "UNDEFINED"}}>
+      { __html: legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}}>
     </td>
   </tr>
 }
@@ -153,13 +153,13 @@ function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
     <td className="legend-iconography">
       <svg className="legend" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         <rect width={8} height={8} x={1} y={1} rx={1} 
-          fill={legendEntry.fill !== undefined ? legendEntry.fill : "none"} 
-          stroke={legendEntry.stroke !== undefined ? legendEntry.stroke : "none"}>
+          fill={legendEntry.fill !== undefined ? legendEntry.fill : 'none'} 
+          stroke={legendEntry.stroke !== undefined ? legendEntry.stroke : 'none'}>
         </rect>
       </svg>
     </td>
     <td className="legend" dangerouslySetInnerHTML={
-      { __html: legendEntry.label ? legendEntry.label[lang] : "UNDEFINED"}}>
+      { __html: legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}}>
     </td>
   </tr>
 }
@@ -181,27 +181,28 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
       )
       current = Math.min(100, current + interval)
     })
-    
 
     var output = [<tr>
       <td style={style} rowSpan={legendEntry.stops.length}>
-        <svg viewBox={"0 0 10 " + overallHeight} xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox={'0 0 10 ' + overallHeight} xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id={legendEntry.entry_id} x1="0%" y1="0%" x2="0%" y2="100%">
               {stops}
             </linearGradient>
           </defs>
-          <rect x={1} y={1} width={8} height={overallHeight} rx={0.1} fill={'url("#' + legendEntry.entry_id + '")'}></rect>
+          <rect 
+            x={1} y={1} width={8} height={overallHeight} rx={0.1} 
+            fill={'url("#' + legendEntry.entry_id + '")'}></rect>
         </svg>
       </td>
       <td>{legendEntry.labels[lang][0]}</td>
     </tr>]
 
     for (var i = 1; i < legendEntry.labels[lang].length; i++) {
-      var text = legendEntry.labels[lang][i];
+      var text = legendEntry.labels[lang][i]
 
       if (text === undefined || text.length === 0 || !text.trim()) {
-          text = '\u00A0';
+          text = '\u00A0'
       }
 
       output.push(<tr>
@@ -216,13 +217,13 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
 }
 
 function createLegendEntry(entry: LegendEntry) {
-  if (entry.type === "value") {
+  if (entry.type === 'value') {
     return createValueLegendEntry(entry, getConfig(window.location.search).language)
   }
-  else if (entry.type === "line") {
+  else if (entry.type === 'line') {
     return createLineLegendEntry(entry, getConfig(window.location.search).language)
   }
-  else if (entry.type === "ramp") {
+  else if (entry.type === 'ramp') {
     return createRampLegendEntry(entry, getConfig(window.location.search).language)
   }
   else {

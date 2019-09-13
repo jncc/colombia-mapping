@@ -44,7 +44,8 @@ export function createMap(container: HTMLElement, config: Config) {
 
           // add layer legends
           for (let featureLayerLegend of feature.properties.layers[featureLayer].legends) {
-            let legend = legends[featureLayer].legends.filter(legend => legend.legend_id === featureLayerLegend.legend_id)[0]
+            let legend = legends[featureLayer].legends
+              .filter(legend => legend.legend_id === featureLayerLegend.legend_id)[0]
             let gridLegend: Legend = {
               legend_id: legend.legend_id,
               legend_title: legend.legend_title,
