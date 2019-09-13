@@ -8,7 +8,7 @@
                 "legend_id": "habitats",
                 "legend_title": {
                     "en": "Habitats",
-                    "es": "Spanish legend title"
+                    "es": "Hábitats"
                 },
                 "entries": [
                     {
@@ -217,7 +217,7 @@
                 "legend_id": "opportunities",
                 "legend_title": {
                     "en": "Opportunities",
-                    "es": "Spanish legend title"
+                    "es": "Oportunidad"
                 },
                 "entries": [
                     {
@@ -226,7 +226,7 @@
                         "type": "value",
                         "label": {
                             "en": "Opportunities in the lower catchment",
-                            "es": "Spanish lower catchment opportunities"
+                            "es": "Oportunidad en la cuenca baja"
                         }
                     },
                     {
@@ -235,7 +235,7 @@
                         "type": "value",
                         "label": {
                             "en": "Opportunities in the mid catchment",
-                            "es": "Spanish mid catchment opportunities"
+                            "es": "Oportunidad en la cuenca media"
                         }
                     },
                     {
@@ -244,7 +244,7 @@
                         "type": "value",
                         "label": {
                             "en": "Opportunities in the upper catchment",
-                            "es": "Spanish upper catchment opportunities"
+                            "es": "Oportunidad en la cuenca alta"
                         }
                     }
                 ]
@@ -288,7 +288,7 @@
                 "legend_id": "area_excluded_from_erosion_risk_analysis",
                 "legend_title": {
                     "en": "Area excluded from erosion risk analysis",
-                    "es": "SPANISH Area excluded from erosion risk analysis"
+                    "es": "Zona no evaluada"
                 },
                 "entries": [
                     {
@@ -297,7 +297,7 @@
                         "fill": "#67766c",
                         "label": {
                             "en": "Area excluded from erosion risk analysis",
-                            "es": "SPANISH Area excluded from erosion risk analysis"
+                            "es": "Zona no evaluada"
                         }
                     }
                 ]
@@ -342,7 +342,7 @@
                 "legend_id": "colombia_precip_erosion_risk",
                 "legend_title": {
                     "en": "Precipitaiton Erosion Risk",
-                    "es": "SPANISH Precipitaiton Erosion Risk"
+                    "es": "Riesgo de erosión por precipitación"
                 },
                 "entries": [
                     {
@@ -498,7 +498,7 @@
                 "legend_id": "important_areas",
                 "legend_title": {
                     "en": "Areas important for both biodiversity and surface water regulation",
-                    "es": "Spanish legend title"
+                    "es": "Áreas importantes tanto para la biodiversidad como para la regulación de aguas superficiales"
                 },
                 "entries": [
                     {
@@ -507,7 +507,7 @@
                         "type": "value",
                         "label": {
                             "en": "Areas important for both biodiversity and surface water regulation",
-                            "es": "Spanish areas important for both biodiversity and surface water regulation"
+                            "es": "Áreas importantes tanto para la biodiversidad como para la regulación de aguas superficiales"
                         }
                     }
                 ]
@@ -538,7 +538,7 @@
                 "legend_id": "colombia_network_source_habitat_woodland",
                 "legend_title": {
                     "en": "Woodland Network Sources",
-                    "es": "SPANISH Woodland Network Sources"
+                    "es": "Bosque fuente"
                 },
                 "entries": [
                     {
@@ -608,7 +608,7 @@
                 "legend_id": "colombia_network_source_habitat_wetland",
                 "legend_title": {
                     "en": "Wetland Network Source",
-                    "es": "SPANISH Wetland Network Source"
+                    "es": "Humedal fuente"
                 },
                 "entries": [
                     {
@@ -678,7 +678,7 @@
                 "legend_id": "colombia_network_source_habitat_grassland",
                 "legend_title": {
                     "en": "Grassland Network Sources",
-                    "es": "SPANISH Grassland Network Sources"
+                    "es": "Pastizales fuente"
                 },
                 "entries": [
                     {
