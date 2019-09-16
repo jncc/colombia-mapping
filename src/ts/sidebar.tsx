@@ -3,9 +3,10 @@ import { render } from 'react-dom'
 import { Config, getConfig } from './config'
 import * as layers from './layers'
 import * as content from '../content.json'
+import * as legends from '../legends.json'
 import * as map from './map'
 
-const legendBaseUrl = process.env.GEOSERVER_URL+'/colombia_eo4_cultivar/wms'
+const legendBaseUrl = process.env.GEOSERVER_URL + '/colombia_eo4_cultivar/wms'
   + '?REQUEST=GetLegendGraphic&FORMAT=image/png&TRANSPARENT=true&WIDTH=20'
   + '&LEGEND_OPTIONS=dx:10;my:0.5;fontName:Arial;fontSize:12;fontStyle:normal;forceLabels:on'
 
@@ -30,16 +31,16 @@ export function createSidebar(map: L.Map, config: Config) {
       let homeContainer = L.DomUtil.create('div', 'sidebar-home')
       homeContainer.innerHTML += '<h3><span id="close-home" class="sidebar-close">'
         + '<i class="fas fa-caret-left"></i></span></h3>'
-      homeContainer.innerHTML += '<h2>'+content.info_panel.title[config.language]+'</h2>'
+      homeContainer.innerHTML += '<h2>' + content.info_panel.title[config.language] + '</h2>'
       for (let section of content.info_panel.info_sections) {
         if (section.section_title[config.language]) {
-          homeContainer.innerHTML += '<h5>'+section.section_title[config.language]+'</h5>'
+          homeContainer.innerHTML += '<h5>' + section.section_title[config.language] + '</h5>'
         }
         if (section.section_content[config.language]) {
-          homeContainer.innerHTML += '<p>'+section.section_content[config.language]+'</p>'
+          homeContainer.innerHTML += '<p>' + section.section_content[config.language] + '</p>'
         }
       }
-      
+
       let getStartedButton = L.DomUtil.create('button', 'btn btn-primary start')
       getStartedButton.innerHTML += content.info_panel.button_text[config.language]
       getStartedButton.addEventListener('click', function() {
@@ -53,7 +54,7 @@ export function createSidebar(map: L.Map, config: Config) {
     // set up layers tab using react component
     let layerControls: HTMLElement | null = document.getElementById('layers')
     if (layerControls) {
-      render(<LayerControls/>, layerControls)
+      render(<LayerControls />, layerControls)
     }
   }
 
@@ -75,64 +76,193 @@ export function createSidebar(map: L.Map, config: Config) {
   sidebarLeft.open('home')
 }
 
-export function ChangeGrid(props: GridProps['gridLayers']) {
+export function ChangeGrid(props: Array<MapLegend>) {
   let gridControls: HTMLElement | null = document.getElementById('grid')
   if (gridControls) {
-    render(<GridTab gridLayers={props}/>, gridControls)
+    render(<GridTab mapLegends={props} />, gridControls)
     sidebarRight.open('grid')
   }
 }
 
-export type GridProps = {
-  gridLayers: Array<GridLayer>
+export type MapLegendGroup = {
+  mapLegends: Array<MapLegend>
 }
-export type GridLayer = {
+export type MapLegend = {
   layerName: string,
-  legends: Array<GridLegend>
+  legends: Array<Legend>
 }
-export type GridLegend = {
-  legendTitle: string,
-  entries: Array<string>
+export type Legend = {
+  legend_id: string,
+  legend_title: I8lnObj,
+  entries: Array<LegendEntry>
+}
+export type LegendEntry = {
+  entry_id: string,
+  type: string,
+  label?: I8lnObj,
+  fill?: string,
+  stroke?: string,
+  stops?: Array<string>,
+  labels?: I8lnLabelsObj  
+}
+export type I8lnObj = {
+  [key: string]: string
+}
+export type I8lnLabelsObj = {
+  [key: string]: Array<string>
 }
 
-function GridTab(props: GridProps) {
+function createLineLegendEntry(legendEntry: LegendEntry, lang: string) {
+  var line = [
+    <line x1={0} y1={10} x2={10} y2={0}
+      stroke={legendEntry.fill} strokeWidth={2}>
+    </line>
+  ]
+
+  if (legendEntry.stroke !== undefined) {
+    line.unshift(
+      <line x1={0} y1={10} x2={10} y2={0}
+        stroke={legendEntry.stroke} strokeWidth={3}>
+      </line>
+    )
+  }
+
+  return <tr>
+    <td className="legend-iconography">
+      <svg className="legend" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+        {line}
+      </svg>
+    </td>
+    <td className="legend" dangerouslySetInnerHTML={
+      { __html: legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}}>
+    </td>
+  </tr>
+}
+
+function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
+  return <tr>
+    <td className="legend-iconography">
+      <svg className="legend" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+        <rect width={8} height={8} x={1} y={1} rx={1} 
+          fill={legendEntry.fill !== undefined ? legendEntry.fill : 'none'} 
+          stroke={legendEntry.stroke !== undefined ? legendEntry.stroke : 'none'}>
+        </rect>
+      </svg>
+    </td>
+    <td className="legend" dangerouslySetInnerHTML={
+      { __html: legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}}>
+    </td>
+  </tr>
+}
+
+function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
+  if (legendEntry.stops && legendEntry.labels) {
+    var overallHeight = legendEntry.stops.length * 20
+    const style = {
+      width: '20px'
+    }
+
+    var interval = 100 / (legendEntry.stops.length - 1)
+    var current = 0
+    var stops : Array<JSX.Element> = []
+
+    legendEntry.stops.forEach(stop => {
+      stops.push(
+        <stop offset={current + '%'} stopColor={stop}></stop>
+      )
+      current = Math.min(100, current + interval)
+    })
+
+    var output = [<tr>
+      <td style={style} rowSpan={legendEntry.stops.length}>
+        <svg viewBox={'0 0 10 ' + overallHeight} xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id={legendEntry.entry_id} x1="0%" y1="0%" x2="0%" y2="100%">
+              {stops}
+            </linearGradient>
+          </defs>
+          <rect 
+            x={1} y={1} width={8} height={overallHeight} rx={0.1} 
+            fill={'url("#' + legendEntry.entry_id + '")'}></rect>
+        </svg>
+      </td>
+      <td>{legendEntry.labels[lang][0]}</td>
+    </tr>]
+
+    for (var i = 1; i < legendEntry.labels[lang].length; i++) {
+      var text = legendEntry.labels[lang][i]
+
+      if (text === undefined || text.length === 0 || !text.trim()) {
+          text = '\u00A0'
+      }
+
+      output.push(<tr>
+        <td>{text}</td>
+      </tr>)
+    }
+
+    return output
+  }
+
+  return <tr><td>BAD RAMP!</td></tr>
+}
+
+function createLegendEntry(entry: LegendEntry) {
+  if (entry.type === 'value') {
+    return createValueLegendEntry(entry, getConfig(window.location.search).language)
+  }
+  else if (entry.type === 'line') {
+    return createLineLegendEntry(entry, getConfig(window.location.search).language)
+  }
+  else if (entry.type === 'ramp') {
+    return createRampLegendEntry(entry, getConfig(window.location.search).language)
+  }
+  else {
+    return <tr>
+      <td className="legend-iconography"></td>
+      <td>Unkown Legend Entry Type [{entry.type}]</td>
+    </tr>
+  }
+}
+
+function GridTab(props: MapLegendGroup) {
   let gridInfoText = []
-  for (let section of content.grid_panel.info_sections){
+  for (let section of content.grid_panel.info_sections) {
     if (section.section_title) {
       gridInfoText.push(
         <h5 key={section.section_title.en} dangerouslySetInnerHTML={
-          {__html: section.section_title[getConfig(window.location.search).language]}}>
+          { __html: section.section_title[getConfig(window.location.search).language] }}>
         </h5>
       )
     }
     gridInfoText.push(
       <p dangerouslySetInnerHTML={
-        {__html: section.section_content[getConfig(window.location.search).language]}}>
+        { __html: section.section_content[getConfig(window.location.search).language] }}>
       </p>
     )
   }
 
   let gridLayers = []
-  for (let gridLayer of props.gridLayers){
+  for (let gridLayer of props.mapLegends) {
     gridLayers.push(<hr />)
     gridLayers.push(
       <h5 dangerouslySetInnerHTML={
-        {__html: gridLayer.layerName}}>
+        { __html: gridLayer.layerName }}>
       </h5>
     )
-    for (let gridLegend of gridLayer.legends){
+    for (let gridLegend of gridLayer.legends) {
       gridLayers.push(
         <b><p dangerouslySetInnerHTML={
-          {__html: gridLegend.legendTitle}}>
+          { __html: gridLegend.legend_title[getConfig(window.location.search).language] }}>
         </p></b>
       )
+      var legendEntries = []
       for (let gridEntry of gridLegend.entries) {
-        gridLayers.push(
-          <p dangerouslySetInnerHTML={
-            {__html: gridEntry}}>
-          </p>
-        )
+          legendEntries.push(
+            createLegendEntry(gridEntry)
+          )
       }
+      gridLayers.push(<table><tbody>{legendEntries}</tbody></table>)
     }
   }
 
@@ -158,7 +288,7 @@ export class LayerControls extends React.Component {
   }
 
   changeBaseLayer = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    if (event.target.value == 'no_layer') {
+    if (event.target.value === 'no_layer') {
       map.removeBaselayer()
       this.setState({
         hideBaseLayer: true,
@@ -171,7 +301,7 @@ export class LayerControls extends React.Component {
       })
       map.updateBaseLayer(event.target.value as keyof typeof layers.baseLayers)
       for (let overlay of keys(this.state.overlays)) {
-        if (this.state.overlays[overlay]){
+        if (this.state.overlays[overlay]) {
           map.refreshOverlay(overlay as keyof typeof layers.overlayLayers)
         }
       }
@@ -198,7 +328,7 @@ export class LayerControls extends React.Component {
     map.updateUnderlay(event.target.value as keyof typeof layers.underlayLayers, event.target.checked)
     map.refreshBaseLayer(this.state.baseLayer)
     for (let overlay of keys(this.state.overlays)) {
-      if (this.state.overlays[overlay]){
+      if (this.state.overlays[overlay]) {
         map.refreshOverlay(overlay as keyof typeof layers.overlayLayers)
       }
     }
@@ -216,7 +346,7 @@ export class LayerControls extends React.Component {
 
   render() {
     let baseLayerOptions = []
-    for (let layer of keys(layers.baseLayers)){
+    for (let layer of keys(layers.baseLayers)) {
       baseLayerOptions.push(
         <option key={layer} value={layer}>
           {content.base_layers[layer].short_title[getConfig(window.location.search).language]}
@@ -230,8 +360,8 @@ export class LayerControls extends React.Component {
         <div key={layer} className="checkbox">
           <div className="form-inline">
             <label className="form-check-label">
-              <input id={layer+'-checkbox'} className="form-check-input" type="checkbox"
-                onChange={this.changeOverlay} value={layer} checked={this.state.overlays[layer]}/>
+              <input id={layer + '-checkbox'} className="form-check-input" type="checkbox"
+                onChange={this.changeOverlay} value={layer} checked={this.state.overlays[layer]} />
               {content.overlay_layers[layer].short_title[getConfig(window.location.search).language]}
             </label>
           </div>
@@ -245,8 +375,8 @@ export class LayerControls extends React.Component {
         <div key={layer} className="checkbox">
           <div className="form-inline">
             <label className="form-check-label">
-              <input id={layer+'-checkbox'} className="form-check-input" type="checkbox"
-                onChange={this.changeUnderlay} value={layer} checked={this.state.underlays[layer]}/>
+              <input id={layer + '-checkbox'} className="form-check-input" type="checkbox"
+                onChange={this.changeUnderlay} value={layer} checked={this.state.underlays[layer]} />
               {content.underlay_layers[layer].short_title[getConfig(window.location.search).language]}
             </label>
           </div>
@@ -256,12 +386,25 @@ export class LayerControls extends React.Component {
 
     let legend = []
     if (!this.state.hideBaseLayer) {
-      legend.push(
-        <img key={this.state.baseLayer+'-legend'} src={
-          legendBaseUrl
-          +'&LAYER='
-          + layers.baseLayers[this.state.baseLayer as keyof typeof layers.baseLayers].wms_name} />
-      )
+      for (let layerLegend of legends[this.state.baseLayer].legends) {
+        var layerLegendEntries = []
+        for (let layerLegendEntry of layerLegend.entries) {
+          layerLegendEntries.push(createLegendEntry(layerLegendEntry))
+        }
+
+        legend.push(<table>
+          <tbody>
+            {layerLegendEntries}
+          </tbody>
+        </table>)
+      }
+
+      // legend.push(
+      //   <img key={this.state.baseLayer + '-legend'} src={
+      //     legendBaseUrl
+      //     + '&LAYER='
+      //     + layers.baseLayers[this.state.baseLayer as keyof typeof layers.baseLayers].wms_name} />
+      // )
     }
 
     let info = []
@@ -270,17 +413,17 @@ export class LayerControls extends React.Component {
         if (section.section_title) {
           info.push(
             <h5 dangerouslySetInnerHTML={
-              {__html: section.section_title[getConfig(window.location.search).language]}}>
+              { __html: section.section_title[getConfig(window.location.search).language] }}>
             </h5>
           )
         }
         info.push(
           <p dangerouslySetInnerHTML={
-            {__html: section.section_content[getConfig(window.location.search).language]}}>
+            { __html: section.section_content[getConfig(window.location.search).language] }}>
           </p>
         )
       }
-      
+
     }
 
     return (
@@ -306,7 +449,7 @@ export class LayerControls extends React.Component {
         <div className="legend">
           {legend}
         </div>
-        
+
         <div className="info">
           {info}
         </div>
