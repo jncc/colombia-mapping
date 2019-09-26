@@ -128,8 +128,8 @@ function createLineLegendEntry(legendEntry: LegendEntry, lang: string) {
   }
 
   return <tr>
-    <td className="legend-iconography">
-      <svg className="legend" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+    <td className="legend-iconography-row">
+      <svg className="legend-iconography" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         {line}
       </svg>
     </td>
@@ -141,8 +141,8 @@ function createLineLegendEntry(legendEntry: LegendEntry, lang: string) {
 
 function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
   return <tr>
-    <td className="legend-iconography">
-      <svg className="legend" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+    <td className="legend-iconography-row">
+      <svg className="legend-iconography" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         <rect width={8} height={8} x={1} y={1} rx={1} 
           fill={legendEntry.fill !== undefined ? legendEntry.fill : 'none'} 
           stroke={legendEntry.stroke !== undefined ? legendEntry.stroke : 'none'}>
@@ -174,15 +174,15 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
     })
 
     var output = [<tr>
-      <td style={style} rowSpan={legendEntry.stops.length}>
-        <svg viewBox={'0 0 10 ' + overallHeight} xmlns="http://www.w3.org/2000/svg">
+      <td style={{height: `${overallHeight}px`}} rowSpan={legendEntry.stops.length}>
+        <svg style={{width:"20px"}} viewBox={'0 0 10 ' + overallHeight} xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id={legendEntry.entry_id} x1="0%" y1="0%" x2="0%" y2="100%">
               {stops}
             </linearGradient>
           </defs>
           <rect 
-            x={1} y={1} width={8} height={overallHeight} rx={0.1} 
+            x={0} y={2} width={10} height={overallHeight} rx={0.1} 
             fill={'url("#' + legendEntry.entry_id + '")'}></rect>
         </svg>
       </td>
