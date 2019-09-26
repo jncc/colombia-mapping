@@ -158,10 +158,6 @@ function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
 function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
   if (legendEntry.stops && legendEntry.labels) {
     var overallHeight = legendEntry.stops.length * 20
-    const style = {
-      width: '20px'
-    }
-
     var interval = 100 / (legendEntry.stops.length - 1)
     var current = 0
     var stops : Array<JSX.Element> = []
@@ -174,19 +170,19 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
     })
 
     var output = [<tr>
-      <td style={{height: `${overallHeight}px`}} rowSpan={legendEntry.stops.length}>
-        <svg style={{width:"20px"}} viewBox={'0 0 10 ' + overallHeight} xmlns="http://www.w3.org/2000/svg">
+      <td style={{height: `${legendEntry.stops.length}rem`}} rowSpan={legendEntry.stops.length}>
+        <svg className="legend-iconography-ramp" viewBox={`0 0 10 ${overallHeight}`} xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id={legendEntry.entry_id} x1="0%" y1="0%" x2="0%" y2="100%">
               {stops}
             </linearGradient>
           </defs>
           <rect 
-            x={0} y={2} width={10} height={overallHeight} rx={0.1} 
+            x={1} y={2} width={8} height={overallHeight - 4} rx={0.1} 
             fill={'url("#' + legendEntry.entry_id + '")'}></rect>
         </svg>
       </td>
-      <td>{legendEntry.labels[lang][0]}</td>
+      <td className="legend-iconography-label">{legendEntry.labels[lang][0]}</td>
     </tr>]
 
     for (var i = 1; i < legendEntry.labels[lang].length; i++) {
@@ -197,7 +193,7 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
       }
 
       output.push(<tr>
-        <td>{text}</td>
+        <td style={{height:"1rem"}}>{text}</td>
       </tr>)
     }
 
