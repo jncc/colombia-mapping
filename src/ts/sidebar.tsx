@@ -442,7 +442,7 @@ export class LayerControls extends React.Component {
             {baseLayerOptions}
           </select>
         </div>
-        <div className="legend">
+        <div className="legend-container">
           {legend}
         </div>
 
