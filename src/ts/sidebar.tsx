@@ -179,7 +179,7 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
           </defs>
           <rect 
             x={1} y={2} width={8} height={overallHeight - 4} rx={0.1} 
-            fill={'url("#' + legendEntry.entry_id + '")'}></rect>
+            fill={'url("#' + legendEntry.entry_id + '")'} stroke="#000000" stroke-width="0.5"></rect>
         </svg>
       </td>
       <td className="legend-iconography-label">{legendEntry.labels[lang][0]}</td>
