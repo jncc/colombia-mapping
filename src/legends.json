@@ -175,35 +175,17 @@
                             "en": [
                                 "Low potential of land to slow runoff",
                                 "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
                                 "High potential of land to slow runoff"
                             ],
                             "es": [
                                 "Bajo potencial de la tierra para reducir la escorrentía",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
                                 "",
                                 "Alto potencial de la tierra para reducir la escorrentía"
                             ]
                         },
                         "stops": [
                             "#f7fbff",
-                            "#deebf7",
-                            "#c6dbef",
-                            "#9ecae1",
                             "#6baed6",
-                            "#4292c6",
-                            "#2171b5",
-                            "#08519c",
                             "#08306b"
                         ]
                     }
@@ -565,36 +547,18 @@
                         "labels": {
                             "en": [
                                 "Highly connected",
-                                "",
-                                "",
-                                "",
                                 "Moderately connected",
-                                "",
-                                "",
-                                "",
                                 "Poorly connected"
                             ],
                             "es": [
                                 "Altamente conectada",
-                                "",
-                                "",
-                                "",
                                 "Conectada moderadamente",
-                                "",
-                                "",
-                                "",
                                 "Poco conectada"
                             ]
                         },
                         "stops": [
                             "#00441b",
-                            "#1d8848",
-                            "#289f4e",
-                            "#41b45e",
                             "#71cc72",
-                            "#a1d99b",
-                            "#c7e9c0",
-                            "#e5f5e0",
                             "#f7fcf5"
                         ]
                     }
@@ -635,36 +599,18 @@
                         "labels": {
                             "en": [
                                 "Highly connected",
-                                "",
-                                "",
-                                "",
                                 "Moderately connected",
-                                "",
-                                "",
-                                "",
                                 "Poorly connected"
                             ],
                             "es": [
                                 "Altamente conectada",
-                                "",
-                                "",
-                                "",
                                 "Conectada moderadamente",
-                                "",
-                                "",
-                                "",
                                 "Poco conectada"
                             ]
                         },
                         "stops": [
                             "#08306b",
-                            "#08519c",
-                            "#2171b5",
-                            "#4292c6",
                             "#6baed6",
-                            "#9ecae1",
-                            "#c6dbef",
-                            "#deebf7",
                             "#f7fbff"
                         ]
                     }
@@ -705,36 +651,18 @@
                         "labels": {
                             "en": [
                                 "Highly connected",
-                                "",
-                                "",
-                                "",
                                 "Moderately connected",
-                                "",
-                                "",
-                                "",
                                 "Poorly connected"
                             ],
                             "es": [
                                 "Altamente conectada",
-                                "",
-                                "",
-                                "",
                                 "Conectada moderadamente",
-                                "",
-                                "",
-                                "",
                                 "Poco conectada"
                             ]
                         },
                         "stops": [
                             "#7f2704",
-                            "#a63603",
-                            "#d94801",
-                            "#f16913",
                             "#fd8d3c",
-                            "#fdae6b",
-                            "#fdd0a2",
-                            "#fee6ce",
                             "#fff5eb"
                         ]
                     }

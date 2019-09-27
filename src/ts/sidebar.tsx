@@ -127,21 +127,21 @@ function createLineLegendEntry(legendEntry: LegendEntry, lang: string) {
     )
   }
 
-  return <tr>
-    <td className="legend-iconography-row">
+  return <tr key={`legend-row-${legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}`}>
+    <td className="legend-iconography">
       <svg className="legend-iconography" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         {line}
       </svg>
     </td>
-    <td className="legend" dangerouslySetInnerHTML={
-      { __html: legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}}>
+    <td className="legend">
+      {legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}
     </td>
   </tr>
 }
 
 function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
-  return <tr>
-    <td className="legend-iconography-row">
+  return <tr key={`legend-row-${legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}`}>
+    <td className="legend-iconography">
       <svg className="legend-iconography" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         <rect width={8} height={8} x={1} y={1} rx={1} 
           fill={legendEntry.fill !== undefined ? legendEntry.fill : 'none'} 
@@ -149,8 +149,8 @@ function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
         </rect>
       </svg>
     </td>
-    <td className="legend" dangerouslySetInnerHTML={
-      { __html: legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}}>
+    <td className="legend">
+      {legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}
     </td>
   </tr>
 }
@@ -164,7 +164,7 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
 
     legendEntry.stops.forEach(stop => {
       stops.push(
-        <stop offset={current + '%'} stopColor={stop}></stop>
+        <stop key={`legend-stop-${current}`} offset={current + '%'} stopColor={stop}></stop>
       )
       current = Math.min(100, current + interval)
     })
@@ -179,10 +179,10 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
           </defs>
           <rect 
             x={1} y={2} width={8} height={overallHeight - 4} rx={0.1} 
-            fill={'url("#' + legendEntry.entry_id + '")'} stroke="#000000" stroke-width="0.5"></rect>
+            fill={'url("#' + legendEntry.entry_id + '")'} stroke="#000000" strokeWidth="0.5"></rect>
         </svg>
       </td>
-      <td className="legend-iconography-label">{legendEntry.labels[lang][0]}</td>
+      <td className="legend-iconography-label legend-iconography-label-ramp-first">{legendEntry.labels[lang][0]}</td>
     </tr>]
 
     for (var i = 1; i < legendEntry.labels[lang].length; i++) {
@@ -192,9 +192,15 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
           text = '\u00A0'
       }
 
-      output.push(<tr>
-        <td style={{height:'1rem'}}>{text}</td>
-      </tr>)
+      if (i == legendEntry.labels[lang].length - 1) {
+        output.push(<tr>
+          <td className="legend-iconography-label legend-iconography-label-ramp-last">{text}</td>
+        </tr>)
+      } else {
+        output.push(<tr>
+          <td className="legend-iconography-label">{text}</td>
+        </tr>)
+      }
     }
 
     return output
@@ -258,7 +264,12 @@ function GridTab(props: MapLegendGroup) {
             createLegendEntry(gridEntry)
           )
       }
-      gridLayers.push(<table><tbody>{legendEntries}</tbody></table>)
+      gridLayers.push(
+        <table key={`grid-legend-table-${gridLegend.legend_id}`}>
+          <tbody key={`grid-legend-table-body-${gridLegend.legend_id}`}>
+            {legendEntries}
+          </tbody>
+        </table>)
     }
   }
 
@@ -388,8 +399,8 @@ export class LayerControls extends React.Component {
           layerLegendEntries.push(createLegendEntry(layerLegendEntry))
         }
 
-        legend.push(<table>
-          <tbody>
+        legend.push(<table key={`legend-table-${layerLegend.legend_id}`}>
+          <tbody key={`legend-table-body-${layerLegend.legend_id}`}>
             {layerLegendEntries}
           </tbody>
         </table>)
