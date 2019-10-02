@@ -6,8 +6,7 @@ import * as layers from './layers'
 import * as grid from '../grid.json'
 import * as legends from '../legends.json'
 import '../js/leaflet-sidebar.min.js'
-import { ChangeGrid as LoadGridTab, MapLegendGroup, MapLegend, Legend, LegendEntry } from './sidebar'
-import { object } from 'prop-types'
+import { ChangeGrid as LoadGridTab, MapLegendGroup, MapLegend, LegendEntry } from './sidebar'
 
 let overlayMaps = {} as any
 let underlayMaps = {} as any
@@ -28,39 +27,47 @@ export function createMap(container: HTMLElement, config: Config) {
   // set up interactive grid layer
   gridLayer = L.geoJSON(grid as GeoJSON.GeoJsonObject, {
     style: function(feature) {
-      return {color: '#1DA0E7'}
+      return {
+        color: '#5DADE2',
+        weight: 2,
+        fillOpacity: 0.1
+      }
     },
 
     onEachFeature: function (feature, layer) {
-      if (feature.properties.layers) {
+      if (feature.properties.Legends && feature.properties.SourceMaps) {
+        let entryIds: string[] = feature.properties.Legends.split(',').map((item: string) => item.trim())
+        let mapIds: string[] = feature.properties.SourceMaps.split(',').map((item: string) => item.trim())        
         let gridLayers: Array<MapLegend> = []
 
-        // add layers
-        for (let featureLayer of keys(feature.properties.layers) as Array<keyof typeof legends>) {
-          let layer: MapLegend = {
-            layerName: content.base_layers[featureLayer].short_title[config.language],
-            legends: []
+        let featureLegends: Map<string, string[]> = new Map<string, string[]>()
+        if (entryIds.length === mapIds.length) {
+          for (let i = 0; i < entryIds.length; i++) {
+            if (!featureLegends.has(mapIds[i])) {
+              featureLegends.set(mapIds[i], [])
+            }
+            featureLegends.get(mapIds[i])!.push(entryIds[i])
           }
-          gridLayers.push(layer)  
 
-          // add layer legends
-          for (let featureLayerLegend of feature.properties.layers[featureLayer].legends) {
-            let legend = legends[featureLayer].legends
-              .filter(legend => legend.legend_id === featureLayerLegend.legend_id)[0]
-            let gridLegend: Legend = {
-              legend_id: legend.legend_id,
-              legend_title: legend.legend_title,
-              entries: [] as Array<LegendEntry>
+          let layerIds = keys(legends)
+          featureLegends.forEach((values: string[], key: string) => {
+            let layerId = layerIds.filter(layer => legends[layer].map_id === key)[0]
+            let layer: MapLegend = {
+              layerName: content.base_layers[layerId].short_title[config.language],
+              legendEntries: []
             }
-            layer.legends.push(gridLegend)
+            gridLayers.push(layer)
 
-            // add legend entries
-            let entries: Array<LegendEntry> = legend.entries
-            for (let featureLayerLegendEntry of featureLayerLegend.legend_entries) {
-              let entry = entries.filter(entry => entry.entry_id === featureLayerLegendEntry)[0]
-              gridLegend.entries.push(entry)
+            let legend = legends[layerId]
+            let entries: Array<LegendEntry> = legend.legend_entries
+
+            for (let entryId of values) {
+              let entry = entries.filter(entry => entry.entry_id === entryId.toLowerCase())[0]
+              if (entry) {
+                layer.legendEntries.push(entry)
+              }
             }
-          }     
+          })
         }
         
         layer.on({
@@ -116,10 +123,9 @@ function highlightFeature(e: L.LeafletEvent) {
 	var layer = e.target
 
 	layer.setStyle({
-		weight: 5,
-		color: '#1DA0E7',
-		dashArray: '',
-		fillOpacity: 0.7
+    color: '#0090E1',
+    weight: 5,
+    fillOpacity: 0.1
 	})
 
 	if (!L.Browser.ie && !L.Browser.edge) {
@@ -137,7 +143,7 @@ function onGridSquareclick(e: L.LeafletEvent, gridLayers: Array<MapLegend>) {
 }
 
 function zoomToFeature(e: L.LeafletEvent) {
-  map.fitBounds(e.target.getBounds(), {maxZoom: 14})
+  map.fitBounds(e.target.getBounds(), {maxZoom: 13})
 }
 
 export function refreshOverlay(layer : keyof typeof layers.overlayLayers) {

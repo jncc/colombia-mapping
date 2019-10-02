@@ -89,12 +89,7 @@ export type MapLegendGroup = {
 }
 export type MapLegend = {
   layerName: string,
-  legends: Array<Legend>
-}
-export type Legend = {
-  legend_id: string,
-  legend_title: I8lnObj,
-  entries: Array<LegendEntry>
+  legendEntries: Array<LegendEntry>
 }
 export type LegendEntry = {
   entry_id: string,
@@ -127,30 +122,30 @@ function createLineLegendEntry(legendEntry: LegendEntry, lang: string) {
     )
   }
 
-  return <tr>
+  return <tr key={`legend-row-${legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}`}>
     <td className="legend-iconography">
-      <svg className="legend" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+      <svg className="legend-iconography" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         {line}
       </svg>
     </td>
-    <td className="legend" dangerouslySetInnerHTML={
-      { __html: legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}}>
+    <td className="legend">
+      {legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}
     </td>
   </tr>
 }
 
 function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
-  return <tr>
+  return <tr key={`legend-row-${legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}`}>
     <td className="legend-iconography">
-      <svg className="legend" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+      <svg className="legend-iconography" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         <rect width={8} height={8} x={1} y={1} rx={1} 
           fill={legendEntry.fill !== undefined ? legendEntry.fill : 'none'} 
           stroke={legendEntry.stroke !== undefined ? legendEntry.stroke : 'none'}>
         </rect>
       </svg>
     </td>
-    <td className="legend" dangerouslySetInnerHTML={
-      { __html: legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}}>
+    <td className="legend">
+      {legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}
     </td>
   </tr>
 }
@@ -158,35 +153,31 @@ function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
 function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
   if (legendEntry.stops && legendEntry.labels) {
     var overallHeight = legendEntry.stops.length * 20
-    const style = {
-      width: '20px'
-    }
-
     var interval = 100 / (legendEntry.stops.length - 1)
     var current = 0
     var stops : Array<JSX.Element> = []
 
     legendEntry.stops.forEach(stop => {
       stops.push(
-        <stop offset={current + '%'} stopColor={stop}></stop>
+        <stop key={`legend-stop-${current}`} offset={current + '%'} stopColor={stop}></stop>
       )
       current = Math.min(100, current + interval)
     })
 
     var output = [<tr>
-      <td style={style} rowSpan={legendEntry.stops.length}>
-        <svg viewBox={'0 0 10 ' + overallHeight} xmlns="http://www.w3.org/2000/svg">
+      <td style={{height: `${legendEntry.stops.length}rem`}} rowSpan={legendEntry.stops.length}>
+        <svg className="legend-iconography-ramp" viewBox={`0 0 10 ${overallHeight}`} xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id={legendEntry.entry_id} x1="0%" y1="0%" x2="0%" y2="100%">
               {stops}
             </linearGradient>
           </defs>
           <rect 
-            x={1} y={1} width={8} height={overallHeight} rx={0.1} 
-            fill={'url("#' + legendEntry.entry_id + '")'}></rect>
+            x={1} y={2} width={8} height={overallHeight - 4} rx={0.1} 
+            fill={'url("#' + legendEntry.entry_id + '")'} stroke="#000000" strokeWidth="0.5"></rect>
         </svg>
       </td>
-      <td>{legendEntry.labels[lang][0]}</td>
+      <td className="legend-iconography-label legend-iconography-label-ramp-first">{legendEntry.labels[lang][0]}</td>
     </tr>]
 
     for (var i = 1; i < legendEntry.labels[lang].length; i++) {
@@ -196,9 +187,15 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
           text = '\u00A0'
       }
 
-      output.push(<tr>
-        <td>{text}</td>
-      </tr>)
+      if (i == legendEntry.labels[lang].length - 1) {
+        output.push(<tr>
+          <td className="legend-iconography-label legend-iconography-label-ramp-last">{text}</td>
+        </tr>)
+      } else {
+        output.push(<tr>
+          <td className="legend-iconography-label">{text}</td>
+        </tr>)
+      }
     }
 
     return output
@@ -250,20 +247,18 @@ function GridTab(props: MapLegendGroup) {
         { __html: gridLayer.layerName }}>
       </h5>
     )
-    for (let gridLegend of gridLayer.legends) {
-      gridLayers.push(
-        <b><p dangerouslySetInnerHTML={
-          { __html: gridLegend.legend_title[getConfig(window.location.search).language] }}>
-        </p></b>
+    var legendEntries = []
+    for (let entry of gridLayer.legendEntries) {
+      legendEntries.push(
+        createLegendEntry(entry)
       )
-      var legendEntries = []
-      for (let gridEntry of gridLegend.entries) {
-          legendEntries.push(
-            createLegendEntry(gridEntry)
-          )
-      }
-      gridLayers.push(<table><tbody>{legendEntries}</tbody></table>)
     }
+    gridLayers.push(
+      <table key={`grid-legend-table-${gridLayer.layerName}`}>
+        <tbody key={`grid-legend-table-body-${gridLayer.layerName}`}>
+          {legendEntries}
+        </tbody>
+      </table>)
   }
 
   return (
@@ -386,18 +381,16 @@ export class LayerControls extends React.Component {
 
     let legend = []
     if (!this.state.hideBaseLayer) {
-      for (let layerLegend of legends[this.state.baseLayer].legends) {
-        var layerLegendEntries = []
-        for (let layerLegendEntry of layerLegend.entries) {
-          layerLegendEntries.push(createLegendEntry(layerLegendEntry))
-        }
-
-        legend.push(<table>
-          <tbody>
-            {layerLegendEntries}
-          </tbody>
-        </table>)
+      let entries = []
+      for (let entry of legends[this.state.baseLayer].legend_entries) {
+        entries.push(createLegendEntry(entry))
       }
+
+      legend.push(<table key={`legend-table-${legends[this.state.baseLayer]}`}>
+        <tbody key={`legend-table-body-${legends[this.state.baseLayer]}`}>
+          {entries}
+        </tbody>
+      </table>)
 
       // legend.push(
       //   <img key={this.state.baseLayer + '-legend'} src={
@@ -446,7 +439,7 @@ export class LayerControls extends React.Component {
             {baseLayerOptions}
           </select>
         </div>
-        <div className="legends">
+        <div className="legend-container">
           {legend}
         </div>
 
