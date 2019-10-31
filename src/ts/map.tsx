@@ -68,8 +68,7 @@ export function createMap(container: HTMLElement, config: Config) {
               layer.legendEntries.push(newEntry)
             })
           }
-
-        });
+        })
       }
 
       layer.on({

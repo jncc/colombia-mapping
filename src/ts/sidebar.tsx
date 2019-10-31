@@ -170,7 +170,8 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
     if (legendEntry.min != undefined && legendEntry.max != undefined) {
       let miny = ((overallHeight - 4) * legendEntry.min) + 2
       let height = ((overallHeight - 4) * legendEntry.max) - miny + 2
-      boundary = <rect x={1} y={miny} width={8} height={height} rx={0.1} stroke="#000000" strokeWidth="2" fill="none"></rect>
+      boundary = <rect x={1} y={miny} width={8} height={height} rx={0.1} 
+        stroke="#000000" strokeWidth="2" fill="none"></rect>
     }
 
     var output = [<tr>
