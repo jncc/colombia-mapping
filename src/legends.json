@@ -182,7 +182,7 @@
         "map_id": "2",
         "legend_entries": [
             {
-                "entry_id": "lower",
+                "entry_id": "lower_catchment",
                 "fill": "#306b10",
                 "type": "value",
                 "label": {
@@ -191,7 +191,7 @@
                 }
             },
             {
-                "entry_id": "mid",
+                "entry_id": "mid_catchment",
                 "fill": "#38b6f4",
                 "type": "value",
                 "label": {
@@ -200,7 +200,7 @@
                 }
             },
             {
-                "entry_id": "upper",
+                "entry_id": "upper_catchment",
                 "fill": "#4623e4",
                 "type": "value",
                 "label": {
@@ -214,7 +214,7 @@
         "map_id": "3",
         "legend_entries": [
             {
-                "entry_id": "high_priority_opportunity_area_adjoining_main_channel",
+                "entry_id": "basin_touches_main_river_channel",
                 "type": "value",
                 "fill": "#8f3d3b",
                 "label": {
@@ -237,7 +237,7 @@
         "map_id": "4",
         "legend_entries": [
             {
-                "entry_id": "area_excluded_from_erosion_risk_analysis",
+                "entry_id": "valley",
                 "type": "value",
                 "fill": "#67766c",
                 "label": {
@@ -314,7 +314,7 @@
                 }
             },
             {
-                "entry_id": "soils_of_low_susceptibility_to_wind_erosion",
+                "entry_id": "low",
                 "type": "value",
                 "fill": "#e8fcfc",
                 "label": {
@@ -323,7 +323,7 @@
                 }
             },
             {
-                "entry_id": "soils_of_moderate_susceptibility_to_wind_erosion",
+                "entry_id": "medium",
                 "type": "value",
                 "fill": "#ec9410",
                 "label": {
@@ -332,7 +332,7 @@
                 }
             },
             {
-                "entry_id": "soils_of_highest_susceptibility_to_wind_erosion",
+                "entry_id": "high",
                 "type": "value",
                 "fill": "#d7191c",
                 "label": {
@@ -346,7 +346,7 @@
         "map_id": "6",
         "legend_entries": [
             {
-                "entry_id": "wetland",
+                "entry_id": "wetland_core",
                 "type": "value",
                 "fill": "#347adb",
                 "label": {
@@ -364,7 +364,7 @@
                 }
             },
             {
-                "entry_id": "woodland",
+                "entry_id": "woodland_core",
                 "type": "value",
                 "fill": "#386234",
                 "label": {
@@ -378,7 +378,7 @@
         "map_id": "7",
         "legend_entries": [
             {
-                "entry_id": "important_areas",
+                "entry_id": "areas_important_for_both_biodiversity_and_surface_water_regulation",
                 "fill": "#4aa933",
                 "type": "value",
                 "label": {
@@ -401,7 +401,7 @@
         "map_id": "8",
         "legend_entries": [
             {
-                "entry_id": "colombia_network_source_habitat_woodland",
+                "entry_id": "woodland_core",
                 "type": "value",
                 "fill": "#626262",
                 "label": {
@@ -436,7 +436,7 @@
         "map_id": "9",
         "legend_entries": [
             {
-                "entry_id": "colombia_network_source_habitat_wetland",
+                "entry_id": "wetland_core",
                 "type": "value",
                 "fill": "#000000",
                 "label": {
@@ -471,7 +471,7 @@
         "map_id": "10",
         "legend_entries": [
             {
-                "entry_id": "colombia_network_source_habitat_grassland",
+                "entry_id": "grassland",
                 "type": "value",
                 "fill": "#000000",
                 "label": {
@@ -506,7 +506,7 @@
         "map_id": "11",
         "legend_entries": [
             {
-                "entry_id": "grassland_opporunity_high_priority",
+                "entry_id": "grassland_opportunity__high",
                 "type": "value",
                 "fill": "#623f0b",
                 "label": {
@@ -515,7 +515,7 @@
                 }
             },
             {
-                "entry_id": "grassland_opporunity_medium_priority",
+                "entry_id": "grassland_opportunity__medium",
                 "type": "value",
                 "fill": "#cd994b",
                 "label": {
@@ -524,7 +524,7 @@
                 }
             },
             {
-                "entry_id": "grassland_opporunity_low_priority",
+                "entry_id": "grassland_opportunity__low",
                 "type": "value",
                 "fill": "#f8d863",
                 "label": {
@@ -533,7 +533,7 @@
                 }
             },
             {
-                "entry_id": "grassland_or_wetland_opporunity_high_priority",
+                "entry_id": "grassland_or_wetland_opportunity__high",
                 "type": "value",
                 "fill": "#e80df7",
                 "label": {
@@ -542,7 +542,7 @@
                 }
             },
             {
-                "entry_id": "grassland_or_wetland_opporunity_medium_priority",
+                "entry_id": "grassland_or_wetland_opportunity__medium",
                 "type": "value",
                 "fill": "#de6fe6",
                 "label": {
@@ -551,7 +551,7 @@
                 }
             },
             {
-                "entry_id": "grassland_or_wetland_opporunity_low_priority",
+                "entry_id": "grassland_or_wetland_opportunity__low",
                 "type": "value",
                 "fill": "#ebaeea",
                 "label": {
@@ -560,7 +560,7 @@
                 }
             },
             {
-                "entry_id": "wetland_opporunity_high_priority",
+                "entry_id": "wetland_opportunity__high",
                 "type": "value",
                 "fill": "#4217ea",
                 "label": {
@@ -569,7 +569,7 @@
                 }
             },
             {
-                "entry_id": "wetland_opporunity_medium_priority",
+                "entry_id": "wetland_opportunity__medium",
                 "type": "value",
                 "fill": "#798ce8",
                 "label": {
@@ -578,7 +578,7 @@
                 }
             },
             {
-                "entry_id": "wetland_opporunity_low_priority",
+                "entry_id": "wetland_opportunity__low",
                 "type": "value",
                 "fill": "#c8e8fa",
                 "label": {
@@ -587,7 +587,7 @@
                 }
             },
             {
-                "entry_id": "woodland_opporunity_high_priority",
+                "entry_id": "woodand_opportunity__high",
                 "type": "value",
                 "fill": "#144222",
                 "label": {
@@ -596,7 +596,7 @@
                 }
             },
             {
-                "entry_id": "woodland_opporunity_medium_priority",
+                "entry_id": "woodand_opportunity__medium",
                 "type": "value",
                 "fill": "#4cd955",
                 "label": {
@@ -605,7 +605,7 @@
                 }
             },
             {
-                "entry_id": "woodland_opporunity_low_priority",
+                "entry_id": "woodand_opportunity__low",
                 "type": "value",
                 "fill": "#9ff280",
                 "label": {
@@ -619,7 +619,7 @@
         "map_id": "12",
         "legend_entries": [
             {
-                "entry_id": "grassland_opporunity_high_priority",
+                "entry_id": "grassland_opportunity__high",
                 "type": "value",
                 "fill": "#623f0b",
                 "label": {
@@ -628,7 +628,7 @@
                 }
             },
             {
-                "entry_id": "grassland_opporunity_medium_priority",
+                "entry_id": "grassland_opportunity__medium",
                 "type": "value",
                 "fill": "#cd994b",
                 "label": {
@@ -637,7 +637,7 @@
                 }
             },
             {
-                "entry_id": "grassland_opporunity_low_priority",
+                "entry_id": "grassland_opportunity__low",
                 "type": "value",
                 "fill": "#f8d863",
                 "label": {
@@ -646,7 +646,7 @@
                 }
             },
             {
-                "entry_id": "grassland_or_wetland_opporunity_high_priority",
+                "entry_id": "grassland_or_wetland_opportunity__high",
                 "type": "value",
                 "fill": "#e80df7",
                 "label": {
@@ -655,7 +655,7 @@
                 }
             },
             {
-                "entry_id": "grassland_or_wetland_opporunity_medium_priority",
+                "entry_id": "grassland_or_wetland_opportunity__medium",
                 "type": "value",
                 "fill": "#de6fe6",
                 "label": {
@@ -664,7 +664,7 @@
                 }
             },
             {
-                "entry_id": "grassland_or_wetland_opporunity_low_priority",
+                "entry_id": "grassland_or_wetland_opportunity__low",
                 "type": "value",
                 "fill": "#ebaeea",
                 "label": {
@@ -673,7 +673,7 @@
                 }
             },
             {
-                "entry_id": "wetland_opporunity_high_priority",
+                "entry_id": "wetland_opportunity__high",
                 "type": "value",
                 "fill": "#4217ea",
                 "label": {
@@ -682,7 +682,7 @@
                 }
             },
             {
-                "entry_id": "wetland_opporunity_medium_priority",
+                "entry_id": "wetland_opportunity__medium",
                 "type": "value",
                 "fill": "#798ce8",
                 "label": {
@@ -691,7 +691,7 @@
                 }
             },
             {
-                "entry_id": "wetland_opporunity_low_priority",
+                "entry_id": "wetland_opportunity__low",
                 "type": "value",
                 "fill": "#c8e8fa",
                 "label": {
@@ -700,7 +700,7 @@
                 }
             },
             {
-                "entry_id": "woodland_opporunity_high_priority",
+                "entry_id": "woodand_opportunity__high",
                 "type": "value",
                 "fill": "#144222",
                 "label": {
@@ -709,7 +709,7 @@
                 }
             },
             {
-                "entry_id": "woodland_opporunity_medium_priority",
+                "entry_id": "woodand_opportunity__medium",
                 "type": "value",
                 "fill": "#4cd955",
                 "label": {
@@ -718,7 +718,7 @@
                 }
             },
             {
-                "entry_id": "woodland_opporunity_low_priority",
+                "entry_id": "woodand_opportunity__low",
                 "type": "value",
                 "fill": "#9ff280",
                 "label": {
@@ -732,7 +732,7 @@
         "map_id": "13",
         "legend_entries": [
             {
-                "entry_id": "grassland_opporunity",
+                "entry_id": "grassland_opportunity",
                 "type": "value",
                 "fill": "#cd994b",
                 "label": {
@@ -741,7 +741,7 @@
                 }
             },
             {
-                "entry_id": "grassland_or_wetland_opporunity",
+                "entry_id": "grassland_or_wetland_opportunity",
                 "type": "value",
                 "fill": "#e80df7",
                 "label": {
@@ -750,7 +750,7 @@
                 }
             },
             {
-                "entry_id": "wetland_opporunity",
+                "entry_id": "wetland_opportunity",
                 "type": "value",
                 "fill": "#4217ea",
                 "label": {
@@ -759,7 +759,7 @@
                 }
             },
             {
-                "entry_id": "woodland_opporunity",
+                "entry_id": "woodand_opportunity",
                 "type": "value",
                 "fill": "#9ff280",
                 "label": {

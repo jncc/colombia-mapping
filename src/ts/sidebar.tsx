@@ -98,7 +98,9 @@ export type LegendEntry = {
   fill?: string,
   stroke?: string,
   stops?: Array<string>,
-  labels?: I8lnLabelsObj  
+  labels?: I8lnLabelsObj,
+  min?: number,
+  max?: number
 }
 export type I8lnObj = {
   [key: string]: string
@@ -164,6 +166,13 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
       current = Math.min(100, current + interval)
     })
 
+    let boundary = <defs></defs>
+    if (legendEntry.min != undefined && legendEntry.max != undefined) {
+      let miny = ((overallHeight - 4) * legendEntry.min) + 2
+      let height = ((overallHeight - 4) * legendEntry.max) - miny + 2
+      boundary = <rect x={1} y={miny} width={8} height={height} rx={0.1} stroke="#000000" strokeWidth="2" fill="none"></rect>
+    }
+
     var output = [<tr>
       <td style={{height: `${legendEntry.stops.length}rem`}} rowSpan={legendEntry.stops.length}>
         <svg className="legend-iconography-ramp" viewBox={`0 0 10 ${overallHeight}`} xmlns="http://www.w3.org/2000/svg">
@@ -175,6 +184,7 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
           <rect 
             x={1} y={2} width={8} height={overallHeight - 4} rx={0.1} 
             fill={'url("#' + legendEntry.entry_id + '")'} stroke="#000000" strokeWidth="0.5"></rect>
+          {boundary}
         </svg>
       </td>
       <td className="legend-iconography-label legend-iconography-label-ramp-first">{legendEntry.labels[lang][0]}</td>
@@ -227,13 +237,13 @@ function GridTab(props: MapLegendGroup) {
   for (let section of content.grid_panel.info_sections) {
     if (section.section_title) {
       gridInfoText.push(
-        <h5 key={section.section_title.en} dangerouslySetInnerHTML={
+        <h5 key={section.section_title.en.replace(' ', '-')} dangerouslySetInnerHTML={
           { __html: section.section_title[getConfig(window.location.search).language] }}>
         </h5>
       )
     }
     gridInfoText.push(
-      <p dangerouslySetInnerHTML={
+      <p key={`p-${section.section_title.en.replace(' ', '-')}`} dangerouslySetInnerHTML={
         { __html: section.section_content[getConfig(window.location.search).language] }}>
       </p>
     )
@@ -243,9 +253,9 @@ function GridTab(props: MapLegendGroup) {
   for (let gridLayer of props.mapLegends) {
     gridLayers.push(<hr />)
     gridLayers.push(
-      <h5 dangerouslySetInnerHTML={
+      <h6 key={gridLayer.layerName} dangerouslySetInnerHTML={
         { __html: gridLayer.layerName }}>
-      </h5>
+      </h6>
     )
     var legendEntries = []
     for (let entry of gridLayer.legendEntries) {
@@ -405,13 +415,13 @@ export class LayerControls extends React.Component {
       for (let section of content.base_layers[this.state.baseLayer as keyof typeof content.base_layers].info_sections) {
         if (section.section_title) {
           info.push(
-            <h5 dangerouslySetInnerHTML={
+            <h5 key={`h5-${section.section_title.en.replace(' ', '-')}`} dangerouslySetInnerHTML={
               { __html: section.section_title[getConfig(window.location.search).language] }}>
             </h5>
           )
         }
         info.push(
-          <p dangerouslySetInnerHTML={
+          <p key={`p-${section.section_title.en.replace(' ', '-')}`} dangerouslySetInnerHTML={
             { __html: section.section_content[getConfig(window.location.search).language] }}>
           </p>
         )
