@@ -25,7 +25,7 @@ export const baseLayers = {
     legend_styles: []
   },
   wind_erosion_risk: {
-    wms_name: 'colombia_eo4_cultivar:colombia_soil_wind_erosion_risk',
+    wms_name: 'colombia_eo4_cultivar:colombia_wind_soil_erosion_risk',
     legend_styles: []
   },
   key_biodiversity_habitats: {
