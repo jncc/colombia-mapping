@@ -12,6 +12,8 @@ const legendBaseUrl = process.env.GEOSERVER_URL + '/colombia_eo4_cultivar/wms'
 
 let sidebarLeft: L.Control.Sidebar
 let sidebarRight: L.Control.Sidebar
+let opacitySliderValue = 0.9
+
 export function createSidebar(map: L.Map, config: Config) {
   sidebarLeft = L.control.sidebar('sidebar-left', {position: 'left'})
   sidebarLeft.addTo(map)
@@ -111,14 +113,14 @@ export type I8lnLabelsObj = {
 
 function createLineLegendEntry(legendEntry: LegendEntry, lang: string) {
   var line = [
-    <line x1={0} y1={10} x2={10} y2={0}
+    <line key={`line-${legendEntry.entry_id}`} x1={0} y1={10} x2={10} y2={0}
       stroke={legendEntry.fill} strokeWidth={2}>
     </line>
   ]
 
   if (legendEntry.stroke !== undefined) {
     line.unshift(
-      <line x1={0} y1={10} x2={10} y2={0}
+      <line key={`line-outline-${legendEntry.entry_id}`} x1={0} y1={10} x2={10} y2={0}
         stroke={legendEntry.stroke} strokeWidth={3}>
       </line>
     )
@@ -293,6 +295,11 @@ export class LayerControls extends React.Component {
     showGridLayer: false
   }
 
+  changeBaseLayerTransparency = (event: React.ChangeEvent<HTMLInputElement>) => {
+    opacitySliderValue = parseFloat(event.target.value)
+    map.updateBaseLayerOpacity(opacitySliderValue)
+  }
+
   changeBaseLayer = (event: React.ChangeEvent<HTMLSelectElement>) => {
     if (event.target.value === 'no_layer') {
       map.removeBaselayer()
@@ -305,7 +312,7 @@ export class LayerControls extends React.Component {
         hideBaseLayer: false,
         baseLayer: event.target.value
       })
-      map.updateBaseLayer(event.target.value as keyof typeof layers.baseLayers)
+      map.updateBaseLayer(event.target.value as keyof typeof layers.baseLayers, opacitySliderValue)
       for (let overlay of keys(this.state.overlays)) {
         if (this.state.overlays[overlay]) {
           map.refreshOverlay(overlay as keyof typeof layers.overlayLayers)
@@ -402,17 +409,17 @@ export class LayerControls extends React.Component {
           {entries}
         </tbody>
       </table>)
-
-      // legend.push(
-      //   <img key={this.state.baseLayer + '-legend'} src={
-      //     legendBaseUrl
-      //     + '&LAYER='
-      //     + layers.baseLayers[this.state.baseLayer as keyof typeof layers.baseLayers].wms_name} />
-      // )
     }
 
     let info = []
     if (!this.state.hideBaseLayer) {
+      if (this.state.baseLayer !== 'no_layer') {
+        info.push(
+          <div key="opacitySliderContainer" className="opacitySliderContainer">
+            <input type="range" min="0" max="1" defaultValue="0.9" step="0.1" className="opacitySlider" id="opacitySliderRange" onChange={this.changeBaseLayerTransparency}></input>
+          </div>
+        )
+      }      
       for (let section of content.base_layers[this.state.baseLayer as keyof typeof content.base_layers].info_sections) {
         if (section.section_title) {
           info.push(

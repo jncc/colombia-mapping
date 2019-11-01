@@ -6,7 +6,7 @@ import * as layers from './layers'
 import * as grid from '../grid.json'
 import * as legends from '../legends.json'
 import '../js/leaflet-sidebar.min.js'
-import { ChangeGrid as LoadGridTab, MapLegendGroup, MapLegend, LegendEntry } from './sidebar'
+import { ChangeGrid as LoadGridTab, MapLegend, LegendEntry } from './sidebar'
 
 let overlayMaps = {} as any
 let underlayMaps = {} as any
@@ -14,6 +14,7 @@ let baseMaps = {} as any
 let gridLayer = {} as any
 let map: L.Map
 let previousEvent: L.LeafletEvent | undefined = undefined
+let currentLayer: string | undefined = undefined
 
 export function createMap(container: HTMLElement, config: Config) {
 
@@ -202,12 +203,24 @@ export function updateUnderlay(layer: keyof typeof layers.underlayLayers, checke
   }
 }
 
-export function updateBaseLayer(layer: keyof typeof layers.baseLayers) {
-  for (let baseLayer of keys(baseMaps)) {
-    map.removeLayer(baseMaps[baseLayer])
+export function updateBaseLayer(layer: keyof typeof layers.baseLayers, opacity: number) {
+  // for (let baseLayer of keys(baseMaps)) {
+  //   map.removeLayer(baseMaps[baseLayer])
+  // }  
+  if (currentLayer !== undefined) {
+    map.removeLayer(baseMaps[currentLayer])
+    currentLayer = undefined
   }
   if (layer !== 'no_layer') {
+    currentLayer = layer
+    baseMaps[layer].setOpacity(opacity)
     baseMaps[layer].addTo(map)
+  }
+}
+
+export function updateBaseLayerOpacity(opacity: number) {
+  if (currentLayer !== undefined) {
+    baseMaps[currentLayer].setOpacity(opacity)
   }
 }
 
