@@ -423,16 +423,16 @@ with open(zoneFile, 'r') as gridData:
         id = feature['properties']['id']        
         legends = {}
         
-        for map in input.keys():
+        for map in outputs.keys():
             legends[map] = {}
-            if len(input[map]['vector'].keys()) > 0:
-                if ('{id}'.format(id=id) in input[map]['vector']):
-                    legends[map]['vector'] = input[map]['vector']['{id}'.format(id=id)]
-            if len(input[map]['ramp'].keys()) > 0:
+            if len(outputs[map]['vector'].keys()) > 0:
+                if ('{id}'.format(id=id) in outputs[map]['vector']):
+                    legends[map]['vector'] = outputs[map]['vector']['{id}'.format(id=id)]
+            if len(outputs[map]['ramp'].keys()) > 0:
                 legends[map]['ramp'] = {}
-                for ramp in input[map]['ramp'].keys():
-                    if ('{id}'.format(id=id) in input[map]['ramp'][ramp]):
-                        legends[map]['ramp'][ramp] = input[map]['ramp'][ramp]['{id}'.format(id=id)]
+                for ramp in outputs[map]['ramp'].keys():
+                    if ('{id}'.format(id=id) in outputs[map]['ramp'][ramp]):
+                        legends[map]['ramp'][ramp] = outputs[map]['ramp'][ramp]['{id}'.format(id=id)]
             
             if 'vector' in legends[map] and len(legends[map]['vector']) == 0:
                 del legends[map]['vector']
