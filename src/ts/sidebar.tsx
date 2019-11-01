@@ -416,7 +416,9 @@ export class LayerControls extends React.Component {
       if (this.state.baseLayer !== 'no_layer') {
         info.push(
           <div key="opacitySliderContainer" className="opacitySliderContainer">
-            <input type="range" min="0" max="1" defaultValue="0.9" step="0.1" className="opacitySlider" id="opacitySliderRange" onChange={this.changeBaseLayerTransparency}></input>
+            <input type="range" min="0" max="1" defaultValue="0.9" step="0.1" 
+              className="opacitySlider" id="opacitySliderRange" 
+              onChange={this.changeBaseLayerTransparency}></input>
           </div>
         )
       }      
