@@ -39,8 +39,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.74,
-                                "max": 0.94
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -51,14 +51,14 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.13
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.74,
+                                "min": 1.0,
                                 "max": 1.0
                             }
                         }
@@ -134,7 +134,7 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.74,
+                                "min": 1.0,
                                 "max": 1.0
                             }
                         }
@@ -146,15 +146,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.15
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.41,
-                                "max": 0.89
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -243,8 +243,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.8,
-                                "max": 0.98
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -255,15 +255,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.35
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.02,
-                                "max": 0.45
+                                "min": 0.08,
+                                "max": 1.0
                             }
                         }
                     },
@@ -356,8 +356,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.79,
-                                "max": 0.81
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -368,7 +368,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.36
                             }
                         }
                     },
@@ -379,7 +379,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.15
                             }
                         }
                     },
@@ -454,8 +454,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.75,
-                                "max": 0.93
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -466,15 +466,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.0
+                                "max": 0.02
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.4,
-                                "max": 0.72
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -552,8 +552,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.59,
-                                "max": 0.94
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -564,15 +564,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.17
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.35,
-                                "max": 0.99
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -650,8 +650,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.61,
-                                "max": 0.99
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -662,15 +662,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.17
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.25,
-                                "max": 0.85
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -765,8 +765,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.63,
-                                "max": 0.98
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -777,7 +777,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.12
+                                "max": 1.0
                             }
                         }
                     },
@@ -788,7 +788,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.48
+                                "max": 1.0
                             }
                         }
                     },
@@ -912,8 +912,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.55,
-                                "max": 0.8
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -924,7 +924,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.33
+                                "max": 1.0
                             }
                         }
                     },
@@ -935,7 +935,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.1
+                                "max": 0.42
                             }
                         }
                     },
@@ -1056,16 +1056,16 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.58,
-                                "max": 0.61
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.29,
-                                "max": 0.34
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1076,7 +1076,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.0
+                                "max": 0.01
                             }
                         }
                     },
@@ -1168,8 +1168,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.47,
-                                "max": 0.84
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1180,7 +1180,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.05
+                                "max": 0.5
                             }
                         }
                     },
@@ -1191,7 +1191,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.53
+                                "max": 1.0
                             }
                         }
                     },
@@ -1300,8 +1300,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.35,
-                                "max": 0.75
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1312,7 +1312,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.08
+                                "max": 0.79
                             }
                         }
                     },
@@ -1323,7 +1323,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.47
+                                "max": 1.0
                             }
                         }
                     },
@@ -1451,8 +1451,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.37,
-                                "max": 0.76
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1463,15 +1463,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.11
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.03,
-                                "max": 0.5
+                                "min": 0.13,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1574,8 +1574,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.38,
-                                "max": 0.75
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1586,7 +1586,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.16
+                                "max": 1.0
                             }
                         }
                     },
@@ -1597,7 +1597,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.25
+                                "max": 1.0
                             }
                         }
                     },
@@ -1712,8 +1712,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.38,
-                                "max": 0.63
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1724,7 +1724,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.38
+                                "max": 1.0
                             }
                         }
                     },
@@ -1735,7 +1735,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.16
+                                "max": 0.66
                             }
                         }
                     },
@@ -1853,8 +1853,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.31,
-                                "max": 0.58
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1865,7 +1865,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.51
+                                "max": 1.0
                             }
                         }
                     },
@@ -1876,7 +1876,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.11
+                                "max": 0.45
                             }
                         }
                     },
@@ -1974,16 +1974,16 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.3,
-                                "max": 0.39
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.26,
-                                "max": 0.49
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -1994,7 +1994,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.06
+                                "max": 0.24
                             }
                         }
                     },
@@ -2088,8 +2088,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.42,
-                                "max": 0.53
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -2100,7 +2100,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.28
+                                "max": 1.0
                             }
                         }
                     },
@@ -2111,7 +2111,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.18
+                                "max": 0.74
                             }
                         }
                     },
@@ -2221,8 +2221,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.13,
-                                "max": 0.47
+                                "min": 0.47,
+                                "max": 1.0
                             }
                         }
                     },
@@ -2233,7 +2233,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.42
+                                "max": 1.0
                             }
                         }
                     },
@@ -2244,7 +2244,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.2
+                                "max": 0.8
                             }
                         }
                     },
@@ -2379,8 +2379,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.15,
-                                "max": 0.5
+                                "min": 0.56,
+                                "max": 1.0
                             }
                         }
                     },
@@ -2391,7 +2391,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.23
+                                "max": 1.0
                             }
                         }
                     },
@@ -2402,7 +2402,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.2
+                                "max": 0.8
                             }
                         }
                     },
@@ -2525,8 +2525,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.33,
-                                "max": 0.52
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -2537,7 +2537,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.27
+                                "max": 1.0
                             }
                         }
                     },
@@ -2548,7 +2548,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.08
+                                "max": 0.31
                             }
                         }
                     },
@@ -2662,8 +2662,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.23,
-                                "max": 0.43
+                                "min": 0.85,
+                                "max": 1.0
                             }
                         }
                     },
@@ -2674,7 +2674,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.37
+                                "max": 1.0
                             }
                         }
                     },
@@ -2685,7 +2685,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.08
+                                "max": 0.31
                             }
                         }
                     },
@@ -2797,8 +2797,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.13,
-                                "max": 0.43
+                                "min": 0.48,
+                                "max": 1.0
                             }
                         }
                     },
@@ -2809,7 +2809,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.49
+                                "max": 1.0
                             }
                         }
                     },
@@ -2820,7 +2820,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.09
+                                "max": 0.36
                             }
                         }
                     },
@@ -2931,8 +2931,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.06,
-                                "max": 0.33
+                                "min": 0.23,
+                                "max": 1.0
                             }
                         }
                     },
@@ -2943,7 +2943,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.33
+                                "max": 1.0
                             }
                         }
                     },
@@ -2954,7 +2954,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.09
+                                "max": 0.35
                             }
                         }
                     },
@@ -3062,8 +3062,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.07,
-                                "max": 0.18
+                                "min": 0.25,
+                                "max": 0.64
                             }
                         }
                     },
@@ -3074,7 +3074,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.36
+                                "max": 1.0
                             }
                         }
                     },
@@ -3085,7 +3085,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.07
+                                "max": 0.29
                             }
                         }
                     },
@@ -3215,7 +3215,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.16
                             }
                         }
                     },
@@ -3226,7 +3226,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.1
+                                "max": 0.98
                             }
                         }
                     },
@@ -3237,7 +3237,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.15
                             }
                         }
                     },
@@ -3379,7 +3379,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.24
+                                "max": 0.86
                             }
                         }
                     },
@@ -3390,7 +3390,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.35
+                                "max": 1.0
                             }
                         }
                     },
@@ -3401,7 +3401,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.11
+                                "max": 0.46
                             }
                         }
                     },
@@ -3546,8 +3546,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.03,
-                                "max": 0.36
+                                "min": 0.09,
+                                "max": 1.0
                             }
                         }
                     },
@@ -3558,7 +3558,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.34
+                                "max": 1.0
                             }
                         }
                     },
@@ -3569,7 +3569,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.12
+                                "max": 0.5
                             }
                         }
                     },
@@ -3690,8 +3690,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.17,
-                                "max": 0.45
+                                "min": 0.61,
+                                "max": 1.0
                             }
                         }
                     },
@@ -3702,7 +3702,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.47
+                                "max": 1.0
                             }
                         }
                     },
@@ -3713,7 +3713,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.11
+                                "max": 0.43
                             }
                         }
                     },
@@ -3823,8 +3823,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.05,
-                                "max": 0.35
+                                "min": 0.2,
+                                "max": 1.0
                             }
                         }
                     },
@@ -3835,7 +3835,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.4
+                                "max": 1.0
                             }
                         }
                     },
@@ -3846,7 +3846,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.08
+                                "max": 0.32
                             }
                         }
                     },
@@ -3968,7 +3968,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.26
+                                "max": 0.93
                             }
                         }
                     },
@@ -3979,7 +3979,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.45
+                                "max": 1.0
                             }
                         }
                     },
@@ -3990,7 +3990,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.08
+                                "max": 0.34
                             }
                         }
                     },
@@ -4122,7 +4122,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.16
+                                "max": 0.57
                             }
                         }
                     },
@@ -4133,7 +4133,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.27
+                                "max": 1.0
                             }
                         }
                     },
@@ -4144,7 +4144,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.08
+                                "max": 0.34
                             }
                         }
                     },
@@ -4279,7 +4279,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.11
+                                "max": 0.4
                             }
                         }
                     },
@@ -4290,7 +4290,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.18
+                                "max": 1.0
                             }
                         }
                     },
@@ -4301,7 +4301,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.07
+                                "max": 0.27
                             }
                         }
                     },
@@ -4429,8 +4429,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.01,
-                                "max": 0.09
+                                "min": 0.02,
+                                "max": 0.34
                             }
                         }
                     },
@@ -4441,7 +4441,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.1
+                                "max": 1.0
                             }
                         }
                     },
@@ -4452,7 +4452,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.05
                             }
                         }
                     },
@@ -4577,7 +4577,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.04
                             }
                         }
                     },
@@ -4588,7 +4588,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.25
+                                "max": 1.0
                             }
                         }
                     },
@@ -4599,7 +4599,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.03
+                                "max": 0.12
                             }
                         }
                     },
@@ -4733,7 +4733,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.07
                             }
                         }
                     },
@@ -4744,7 +4744,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.32
+                                "max": 1.0
                             }
                         }
                     },
@@ -4755,7 +4755,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.06
+                                "max": 0.23
                             }
                         }
                     },
@@ -4895,7 +4895,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.13
                             }
                         }
                     },
@@ -4906,7 +4906,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.19
+                                "max": 1.0
                             }
                         }
                     },
@@ -4917,7 +4917,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.17
                             }
                         }
                     },
@@ -5054,7 +5054,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.19
+                                "max": 0.69
                             }
                         }
                     },
@@ -5065,7 +5065,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.23
+                                "max": 1.0
                             }
                         }
                     },
@@ -5076,7 +5076,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.09
+                                "max": 0.36
                             }
                         }
                     },
@@ -5210,7 +5210,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.24
+                                "max": 0.88
                             }
                         }
                     },
@@ -5221,7 +5221,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.3
+                                "max": 1.0
                             }
                         }
                     },
@@ -5232,7 +5232,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.13
+                                "max": 0.52
                             }
                         }
                     },
@@ -5362,7 +5362,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.22
+                                "max": 0.81
                             }
                         }
                     },
@@ -5373,7 +5373,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.32
+                                "max": 1.0
                             }
                         }
                     },
@@ -5384,7 +5384,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.12
+                                "max": 0.5
                             }
                         }
                     },
@@ -5516,7 +5516,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.08
+                                "max": 0.29
                             }
                         }
                     },
@@ -5527,7 +5527,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.26
+                                "max": 1.0
                             }
                         }
                     },
@@ -5538,7 +5538,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.03
+                                "max": 0.1
                             }
                         }
                     },
@@ -5661,7 +5661,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.13
                             }
                         }
                     },
@@ -5672,7 +5672,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.27
+                                "max": 1.0
                             }
                         }
                     },
@@ -5683,7 +5683,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.08
                             }
                         }
                     },
@@ -5811,7 +5811,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.05
+                                "max": 0.18
                             }
                         }
                     },
@@ -5822,7 +5822,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.22
+                                "max": 1.0
                             }
                         }
                     },
@@ -5833,7 +5833,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.08
                             }
                         }
                     },
@@ -5958,15 +5958,15 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.09
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.01,
-                                "max": 0.13
+                                "min": 0.11,
+                                "max": 1.0
                             }
                         }
                     },
@@ -5977,7 +5977,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.04
                             }
                         }
                     },
@@ -6095,23 +6095,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.05
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.23,
-                                "max": 0.52
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.04,
-                                "max": 0.16
+                                "min": 0.15,
+                                "max": 0.67
                             }
                         }
                     },
@@ -6235,7 +6235,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.04
                             }
                         }
                     },
@@ -6246,7 +6246,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.52
+                                "max": 1.0
                             }
                         }
                     },
@@ -6257,7 +6257,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.16
+                                "max": 0.65
                             }
                         }
                     },
@@ -6391,7 +6391,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.04
                             }
                         }
                     },
@@ -6402,7 +6402,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.56
+                                "max": 1.0
                             }
                         }
                     },
@@ -6413,7 +6413,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.15
+                                "max": 0.61
                             }
                         }
                     },
@@ -6545,7 +6545,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.04
                             }
                         }
                     },
@@ -6556,7 +6556,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.57
+                                "max": 1.0
                             }
                         }
                     },
@@ -6567,7 +6567,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.15
+                                "max": 0.61
                             }
                         }
                     },
@@ -6689,7 +6689,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.04
                             }
                         }
                     },
@@ -6700,7 +6700,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.43
+                                "max": 1.0
                             }
                         }
                     },
@@ -6711,7 +6711,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.14
+                                "max": 0.57
                             }
                         }
                     },
@@ -6829,7 +6829,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.08
                             }
                         }
                     },
@@ -6840,7 +6840,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.23
+                                "max": 1.0
                             }
                         }
                     },
@@ -6851,7 +6851,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.05
+                                "max": 0.2
                             }
                         }
                     },
@@ -6973,7 +6973,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.03
+                                "max": 0.09
                             }
                         }
                     },
@@ -6984,7 +6984,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.17
+                                "max": 1.0
                             }
                         }
                     },
@@ -6995,7 +6995,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.15
                             }
                         }
                     },
@@ -7123,7 +7123,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.06
                             }
                         }
                     },
@@ -7134,7 +7134,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.25
+                                "max": 1.0
                             }
                         }
                     },
@@ -7145,7 +7145,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.04
+                                "max": 0.14
                             }
                         }
                     },
@@ -7262,7 +7262,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.07
                             }
                         }
                     },
@@ -7273,7 +7273,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.42
+                                "max": 1.0
                             }
                         }
                     },
@@ -7284,7 +7284,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.09
                             }
                         }
                     },
@@ -7408,7 +7408,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.03
+                                "max": 0.11
                             }
                         }
                     },
@@ -7419,7 +7419,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.38
+                                "max": 1.0
                             }
                         }
                     },
@@ -7430,7 +7430,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.1
                             }
                         }
                     },
@@ -7555,23 +7555,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.06
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.49,
-                                "max": 0.88
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.15,
-                                "max": 0.53
+                                "min": 0.63,
+                                "max": 1.0
                             }
                         }
                     },
@@ -7693,7 +7693,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.05
                             }
                         }
                     },
@@ -7704,7 +7704,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.57
+                                "max": 1.0
                             }
                         }
                     },
@@ -7715,7 +7715,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.4
+                                "max": 1.0
                             }
                         }
                     },
@@ -7850,7 +7850,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.03
                             }
                         }
                     },
@@ -7861,7 +7861,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.6
+                                "max": 1.0
                             }
                         }
                     },
@@ -7872,7 +7872,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.32
+                                "max": 1.0
                             }
                         }
                     },
@@ -8006,15 +8006,15 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.03
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.19,
-                                "max": 0.63
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -8025,7 +8025,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.38
+                                "max": 1.0
                             }
                         }
                     },
@@ -8144,15 +8144,15 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.04
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.03,
-                                "max": 0.6
+                                "min": 0.29,
+                                "max": 1.0
                             }
                         }
                     },
@@ -8163,7 +8163,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.33
+                                "max": 1.0
                             }
                         }
                     },
@@ -8274,7 +8274,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.08
                             }
                         }
                     },
@@ -8285,7 +8285,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.63
+                                "max": 1.0
                             }
                         }
                     },
@@ -8296,7 +8296,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.24
+                                "max": 0.99
                             }
                         }
                     },
@@ -8414,7 +8414,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.05
                             }
                         }
                     },
@@ -8425,7 +8425,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.49
+                                "max": 1.0
                             }
                         }
                     },
@@ -8436,7 +8436,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.15
+                                "max": 0.6
                             }
                         }
                     },
@@ -8566,7 +8566,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.09
                             }
                         }
                     },
@@ -8577,7 +8577,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.37
+                                "max": 1.0
                             }
                         }
                     },
@@ -8588,7 +8588,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.08
+                                "max": 0.34
                             }
                         }
                     },
@@ -8714,7 +8714,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.05
                             }
                         }
                     },
@@ -8725,7 +8725,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.49
+                                "max": 1.0
                             }
                         }
                     },
@@ -8736,7 +8736,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.07
+                                "max": 0.3
                             }
                         }
                     },
@@ -8868,14 +8868,14 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.03
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.57,
+                                "min": 1.0,
                                 "max": 1.0
                             }
                         }
@@ -8883,8 +8883,8 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.39,
-                                "max": 0.66
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -8995,23 +8995,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.07
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.13,
-                                "max": 0.77
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.12,
-                                "max": 0.45
+                                "min": 0.49,
+                                "max": 1.0
                             }
                         }
                     },
@@ -9121,23 +9121,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.03
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.22,
-                                "max": 0.69
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.12,
-                                "max": 0.56
+                                "min": 0.48,
+                                "max": 1.0
                             }
                         }
                     },
@@ -9248,23 +9248,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.04
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.16,
-                                "max": 0.63
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.31,
-                                "max": 0.65
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -9368,23 +9368,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.05
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.11,
-                                "max": 0.63
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.17,
-                                "max": 0.55
+                                "min": 0.69,
+                                "max": 1.0
                             }
                         }
                     },
@@ -9486,23 +9486,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.06
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.25,
-                                "max": 0.98
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.15,
-                                "max": 0.54
+                                "min": 0.6,
+                                "max": 1.0
                             }
                         }
                     },
@@ -9605,15 +9605,15 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.06
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.02,
-                                "max": 0.87
+                                "min": 0.2,
+                                "max": 1.0
                             }
                         }
                     },
@@ -9624,7 +9624,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.3
+                                "max": 1.0
                             }
                         }
                     },
@@ -9736,7 +9736,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.06
                             }
                         }
                     },
@@ -9747,7 +9747,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.33
+                                "max": 1.0
                             }
                         }
                     },
@@ -9758,7 +9758,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.21
+                                "max": 0.87
                             }
                         }
                     },
@@ -9877,23 +9877,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.02
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.01,
-                                "max": 0.45
+                                "min": 0.1,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.01,
-                                "max": 0.23
+                                "min": 0.03,
+                                "max": 0.93
                             }
                         }
                     },
@@ -9997,23 +9997,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.0
+                                "max": 0.02
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.45,
-                                "max": 0.82
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.46,
-                                "max": 0.85
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -10109,23 +10109,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.08
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.17,
-                                "max": 0.61
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.36,
-                                "max": 0.68
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -10235,23 +10235,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.09
+                                "max": 0.34
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.07,
-                                "max": 0.66
+                                "min": 0.68,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.29,
-                                "max": 0.6
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -10355,7 +10355,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.1
+                                "max": 0.37
                             }
                         }
                     },
@@ -10366,15 +10366,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.32
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.22,
-                                "max": 0.6
+                                "min": 0.91,
+                                "max": 1.0
                             }
                         }
                     },
@@ -10478,23 +10478,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.03
+                                "max": 0.12
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.06,
-                                "max": 0.45
+                                "min": 0.57,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.22,
-                                "max": 0.59
+                                "min": 0.9,
+                                "max": 1.0
                             }
                         }
                     },
@@ -10598,23 +10598,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.05
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.09,
-                                "max": 0.68
+                                "min": 0.87,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.27,
-                                "max": 0.6
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -10717,23 +10717,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.06
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.02,
-                                "max": 0.57
+                                "min": 0.21,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.02,
-                                "max": 0.41
+                                "min": 0.07,
+                                "max": 1.0
                             }
                         }
                     },
@@ -10836,23 +10836,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.03
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.03,
-                                "max": 0.59
+                                "min": 0.24,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.01,
-                                "max": 0.36
+                                "min": 0.06,
+                                "max": 1.0
                             }
                         }
                     },
@@ -10947,23 +10947,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.02
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.27,
-                                "max": 0.31
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.21,
-                                "max": 0.23
+                                "min": 0.86,
+                                "max": 0.93
                             }
                         }
                     },
@@ -11056,23 +11056,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.02
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.41,
-                                "max": 0.58
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.67,
-                                "max": 0.78
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -11166,23 +11166,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.03
+                                "max": 0.12
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.1,
-                                "max": 0.45
+                                "min": 0.97,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.39,
-                                "max": 0.82
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -11280,7 +11280,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.17
+                                "max": 0.6
                             }
                         }
                     },
@@ -11291,15 +11291,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.24
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.28,
-                                "max": 0.52
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -11392,7 +11392,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.29
+                                "max": 1.0
                             }
                         }
                     },
@@ -11403,15 +11403,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.39
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.14,
-                                "max": 0.42
+                                "min": 0.56,
+                                "max": 1.0
                             }
                         }
                     },
@@ -11507,7 +11507,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.1
+                                "max": 0.36
                             }
                         }
                     },
@@ -11518,15 +11518,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.35
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.09,
-                                "max": 0.48
+                                "min": 0.39,
+                                "max": 1.0
                             }
                         }
                     },
@@ -11631,23 +11631,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.03
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.06,
-                                "max": 0.47
+                                "min": 0.54,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.03,
-                                "max": 0.51
+                                "min": 0.13,
+                                "max": 1.0
                             }
                         }
                     },
@@ -11753,15 +11753,15 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.05
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.16,
-                                "max": 0.6
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -11772,7 +11772,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.38
+                                "max": 1.0
                             }
                         }
                     },
@@ -11876,16 +11876,16 @@
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.55,
-                                "max": 0.6
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.19,
-                                "max": 0.3
+                                "min": 0.78,
+                                "max": 1.0
                             }
                         }
                     },
@@ -11969,23 +11969,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.02
+                                "max": 0.07
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.3,
-                                "max": 0.4
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.41,
-                                "max": 0.73
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -12070,8 +12070,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.06,
-                                "max": 0.29
+                                "min": 0.21,
+                                "max": 1.0
                             }
                         }
                     },
@@ -12082,15 +12082,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.41
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.09,
-                                "max": 0.36
+                                "min": 0.36,
+                                "max": 1.0
                             }
                         }
                     },
@@ -12186,7 +12186,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.22
+                                "max": 0.8
                             }
                         }
                     },
@@ -12197,7 +12197,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.22
+                                "max": 1.0
                             }
                         }
                     },
@@ -12208,7 +12208,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.19
+                                "max": 0.78
                             }
                         }
                     },
@@ -12317,7 +12317,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.03
+                                "max": 0.1
                             }
                         }
                     },
@@ -12328,7 +12328,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.45
+                                "max": 1.0
                             }
                         }
                     },
@@ -12339,7 +12339,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.29
+                                "max": 1.0
                             }
                         }
                     },
@@ -12448,23 +12448,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.0
+                                "max": 0.02
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.27,
-                                "max": 0.53
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.12,
-                                "max": 0.43
+                                "min": 0.47,
+                                "max": 1.0
                             }
                         }
                     },
@@ -12555,8 +12555,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.07,
-                                "max": 0.5
+                                "min": 0.24,
+                                "max": 1.0
                             }
                         }
                     },
@@ -12567,15 +12567,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.28
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.09,
-                                "max": 0.29
+                                "min": 0.38,
+                                "max": 1.0
                             }
                         }
                     },
@@ -12667,7 +12667,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.33
+                                "max": 1.0
                             }
                         }
                     },
@@ -12678,15 +12678,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.46
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.08,
-                                "max": 0.35
+                                "min": 0.31,
+                                "max": 1.0
                             }
                         }
                     },
@@ -12779,7 +12779,7 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.23
+                                "max": 0.85
                             }
                         }
                     },
@@ -12790,7 +12790,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.39
+                                "max": 1.0
                             }
                         }
                     },
@@ -12801,7 +12801,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.21
+                                "max": 0.87
                             }
                         }
                     },
@@ -12888,23 +12888,23 @@
                         "ramp": {
                             "woodland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.01
+                                "max": 0.03
                             }
                         }
                     },
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.36,
-                                "max": 0.4
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.12,
-                                "max": 0.13
+                                "min": 0.48,
+                                "max": 0.55
                             }
                         }
                     },
@@ -12989,8 +12989,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.33,
-                                "max": 0.78
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -13001,15 +13001,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.36
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.17,
-                                "max": 0.62
+                                "min": 0.71,
+                                "max": 1.0
                             }
                         }
                     },
@@ -13095,8 +13095,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.18,
-                                "max": 0.75
+                                "min": 0.67,
+                                "max": 1.0
                             }
                         }
                     },
@@ -13107,15 +13107,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.44
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.18,
-                                "max": 0.56
+                                "min": 0.73,
+                                "max": 1.0
                             }
                         }
                     },
@@ -13201,8 +13201,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.75,
-                                "max": 0.92
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -13213,15 +13213,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.18
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.51,
-                                "max": 0.79
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -13306,8 +13306,8 @@
                     "woodland_ecological_connectivity": {
                         "ramp": {
                             "woodland_ecological_network": {
-                                "min": 0.67,
-                                "max": 0.9
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
@@ -13318,15 +13318,15 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.4
+                                "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.46,
-                                "max": 0.85
+                                "min": 1.0,
+                                "max": 1.0
                             }
                         }
                     },
