@@ -12,7 +12,7 @@
                 "type": "value",
                 "label": {
                     "en": "Agriculture",
-                    "es": "Spanish agriculture"
+                    "es": "Agricultura"
                 }
             },
             {
@@ -21,7 +21,7 @@
                 "type": "value",
                 "label": {
                     "en": "Banana",
-                    "es": "Spanish banana"
+                    "es": "Banana"
                 }
             },
             {
@@ -30,7 +30,7 @@
                 "type": "value",
                 "label": {
                     "en": "Bare ground",
-                    "es": "Spanish bare ground"
+                    "es": "Terreno desnudo"
                 }
             },
             {
@@ -39,7 +39,7 @@
                 "type": "value",
                 "label": {
                     "en": "Forest",
-                    "es": "Spanish forest"
+                    "es": "Bosque"
                 }
             },
             {
@@ -48,7 +48,7 @@
                 "type": "value",
                 "label": {
                     "en": "Forest/agriculture mix",
-                    "es": "Spanish forest/agriculture mix"
+                    "es": "Mezcla bosque/agricultura"
                 }
             },
             {
@@ -57,7 +57,7 @@
                 "type": "value",
                 "label": {
                     "en": "Forest/agriculture/grassland mix",
-                    "es": "Spanish Forests/agriculture/grassland mix"
+                    "es": "Mezcla Bosque/agricultura/pradera"
                 }
             },
             {
@@ -66,7 +66,7 @@
                 "type": "value",
                 "label": {
                     "en": "Grassland",
-                    "es": "Spanish grassland"
+                    "es": "Pradera"
                 }
             },
             {
@@ -75,7 +75,7 @@
                 "type": "value",
                 "label": {
                     "en": "Mangrove",
-                    "es": "Spanish mangrove"
+                    "es": "Mangle"
                 }
             },
             {
@@ -84,7 +84,7 @@
                 "type": "value",
                 "label": {
                     "en": "Palm",
-                    "es": "Spanish palm"
+                    "es": "Palma"
                 }
             },
             {
@@ -93,7 +93,7 @@
                 "type": "value",
                 "label": {
                     "en": "Rivers",
-                    "es": "Spanish rivers"
+                    "es": "Ríos"
                 }
             },
             {
@@ -102,7 +102,7 @@
                 "type": "value",
                 "label": {
                     "en": "Scrub",
-                    "es": "Spanish scrub"
+                    "es": "Matorral"
                 }
             },
             {
@@ -111,7 +111,7 @@
                 "type": "value",
                 "label": {
                     "en": "Snow",
-                    "es": "Spanish snow"
+                    "es": "Nieve"
                 }
             },
             {
@@ -120,7 +120,7 @@
                 "type": "value",
                 "label": {
                     "en": "Urban",
-                    "es": "Spanish urban"
+                    "es": "Urbano"
                 }
             },
             {
@@ -129,7 +129,7 @@
                 "type": "value",
                 "label": {
                     "en": "Waterbodies",
-                    "es": "Spanish waterbodies"
+                    "es": "Masas de agua"
                 }
             },
             {
@@ -138,7 +138,7 @@
                 "type": "value",
                 "label": {
                     "en": "Wetland",
-                    "es": "Spanish wetland"
+                    "es": "Humedal"
                 }
             },
             {
@@ -147,7 +147,7 @@
                 "type": "value",
                 "label": {
                     "en": "Wetland (open water)",
-                    "es": "Spanish wetland (open water)"
+                    "es": "Humedal (aguas abiertas)"
                 }
             }
         ]

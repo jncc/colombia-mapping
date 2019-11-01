@@ -2,7 +2,7 @@
     "info_panel": {
         "title": {
             "en": "Colombia mapper",
-            "es": "Spanish Colombia mapper"
+            "es": "Mapeador de colombia"
         },
         "info_sections": [
             {
@@ -12,13 +12,17 @@
                 },
                 "section_content": {
                     "en": "Colombia mapper",
-                    "es": "Spanish Colombia mapper"
+                    "es": "Mapeador de colombia"
                 }
             }
         ],
         "button_text": {
             "en": "Get started",
-            "es": "Get started"
+            "es": "Empezar"
+        },
+        "opacity_slider": {
+            "en": "Opacity",
+            "es": "Opacidad"
         }
     },
     "grid_panel": {
@@ -26,11 +30,11 @@
             {
                 "section_title": {
                     "en": "A summary of the data available in the selected area on the map",
-                    "es": ""
+                    "es": "Un resumen de los datos disponibles en el área seleccionada en el mapa"
                 },
                 "section_content": {
-                    "en": "Use the layer selection on the left of the map to view the individual datasets in more detail.",
-                    "es": ""
+                    "en": "Use the layer selection on the left of the map to view the individual datasets in more detail. A thicker black outline represents the range of values present in a selected square for a given data layer. <svg class=\"legend-iconography\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"8\" height=\"8\" x=\"1\" y=\"1\" rx=\"1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\"></rect></svg>",
+                    "es": "Use la selección de capas a la izquierda del mapa para ver los conjuntos de datos individuales con más detalle. Un contorno negro más grueso representa el rango de valores presentes en un cuadrado seleccionado para una capa de datos dada. <svg class=\"legend-iconography\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"8\" height=\"8\" x=\"1\" y=\"1\" rx=\"1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\"></rect></svg>"
                 }
             }
         ]
@@ -39,7 +43,7 @@
         "no_layer": {
             "short_title": {
                 "en": "No layer selected",
-                "es": "No layer selected"
+                "es": "Ninguna capa seleccionada"
             },
             "info_sections": [],
             "attribution": {
