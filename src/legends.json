@@ -1,10 +1,8 @@
 {
     "no_layer": {
-        "map_id": "",
         "legend_entries": []
     },
     "habitat_map": {
-        "map_id": "14",
         "legend_entries": [
             {
                 "entry_id": "agriculture",
@@ -153,7 +151,6 @@
         ]
     },
     "water_runoff_moderation": {
-        "map_id": "1",
         "legend_entries": [
             {
                 "entry_id": "water_runoff_moderation_ramp",
@@ -179,7 +176,6 @@
         ]
     },
     "water_regulation_opportunities": {
-        "map_id": "2",
         "legend_entries": [
             {
                 "entry_id": "lower_catchment",
@@ -211,7 +207,6 @@
         ]
     },
     "water_regulation_opportunities_high_volume": {
-        "map_id": "3",
         "legend_entries": [
             {
                 "entry_id": "basin_touches_main_river_channel",
@@ -234,7 +229,6 @@
         ]
     },
     "precipitation_erosion_risk": {
-        "map_id": "4",
         "legend_entries": [
             {
                 "entry_id": "valley",
@@ -293,7 +287,6 @@
         ]
     },
     "wind_erosion_risk": {
-        "map_id": "5",
         "legend_entries": [
             {
                 "entry_id": "urban_and_roads",
@@ -343,7 +336,6 @@
         ]
     },
     "key_biodiversity_habitats": {
-        "map_id": "6",
         "legend_entries": [
             {
                 "entry_id": "wetland_core",
@@ -375,7 +367,6 @@
         ]
     },
     "key_ecosystem_service_areas": {
-        "map_id": "7",
         "legend_entries": [
             {
                 "entry_id": "areas_important_for_both_biodiversity_and_surface_water_regulation",
@@ -398,7 +389,6 @@
         ]
     },
     "woodland_ecological_connectivity": {
-        "map_id": "8",
         "legend_entries": [
             {
                 "entry_id": "woodland_core",
@@ -433,7 +423,6 @@
         ]
     },
     "wetland_ecological_connectivity": {
-        "map_id": "9",
         "legend_entries": [
             {
                 "entry_id": "wetland_core",
@@ -468,7 +457,6 @@
         ]
     },
     "grassland_ecological_connectivity": {
-        "map_id": "10",
         "legend_entries": [
             {
                 "entry_id": "grassland",
@@ -503,7 +491,6 @@
         ]
     },
     "ecological_opportunities": {
-        "map_id": "11",
         "legend_entries": [
             {
                 "entry_id": "grassland_opportunity__high",
@@ -616,7 +603,6 @@
         ]
     },
     "priority_ecological_opportunities": {
-        "map_id": "12",
         "legend_entries": [
             {
                 "entry_id": "grassland_opportunity__high",
@@ -729,7 +715,6 @@
         ]
     },
     "multi_benefit_ecological_opportunities": {
-        "map_id": "13",
         "legend_entries": [
             {
                 "entry_id": "grassland_opportunity",

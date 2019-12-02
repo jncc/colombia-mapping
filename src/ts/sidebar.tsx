@@ -15,11 +15,11 @@ let sidebarRight: L.Control.Sidebar
 let opacitySliderValue = 0.9
 
 export function createSidebar(map: L.Map, config: Config) {
-  sidebarLeft = L.control.sidebar('sidebar-left', {position: 'left'})
+  sidebarLeft = L.control.sidebar('sidebar-left', { position: 'left' })
   sidebarLeft.addTo(map)
 
-  sidebarRight = L.control.sidebar('sidebar-right', {position: 'right'})
-  
+  sidebarRight = L.control.sidebar('sidebar-right', { position: 'right' })
+
   // set up grid tab contents using react component
   ChangeGrid([])
   sidebarRight.close()
@@ -43,12 +43,25 @@ export function createSidebar(map: L.Map, config: Config) {
         }
       }
 
+
       let getStartedButton = L.DomUtil.create('button', 'btn btn-primary start')
       getStartedButton.innerHTML += content.info_panel.button_text[config.language]
-      getStartedButton.addEventListener('click', function() {
+      getStartedButton.addEventListener('click', function () {
         sidebarLeft.open('layers')
       })
       homeContainer.appendChild(getStartedButton)
+
+      let sponsorLinks = L.DomUtil.create('div', 'row')
+
+      let eo4cLink = L.DomUtil.create('div', 'col-2 nopadding')
+      eo4cLink.innerHTML = '<a href=""><img class="sidebar-sponsor-img" title="EO4 Cultivar" alt="EO4 Cultivar" src="' + require('../images/eo4c.jpg') + '"></img></a>'
+      sponsorLinks.appendChild(eo4cLink)
+
+      let uksaLink = L.DomUtil.create('div', 'col-3 nopadding')
+      uksaLink.innerHTML = '<a href=""><img class="sidebar-sponsor-img" title="UK Space Agency" alt="UK Space Agency" src="' + require('../images/uksa.jpg') + '" /></a>'
+      sponsorLinks.appendChild(uksaLink)
+
+      homeContainer.appendChild(sponsorLinks)
 
       home.appendChild(homeContainer)
     }
@@ -63,14 +76,14 @@ export function createSidebar(map: L.Map, config: Config) {
   // event listeners for close buttons
   let homeClose: HTMLElement | null = document.getElementById('close-home')
   if (homeClose) {
-    homeClose.addEventListener('click', function() {
+    homeClose.addEventListener('click', function () {
       sidebarLeft.close()
     })
   }
 
   let layersClose: HTMLElement | null = document.getElementById('close-layers')
   if (layersClose) {
-    layersClose.addEventListener('click', function() {
+    layersClose.addEventListener('click', function () {
       sidebarLeft.close()
     })
   }
@@ -142,8 +155,8 @@ function createValueLegendEntry(legendEntry: LegendEntry, lang: string) {
   return <tr key={`legend-row-${legendEntry.label ? legendEntry.label[lang] : 'UNDEFINED'}`}>
     <td className="legend-iconography">
       <svg className="legend-iconography" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-        <rect width={8} height={8} x={1} y={1} rx={1} 
-          fill={legendEntry.fill !== undefined ? legendEntry.fill : 'none'} 
+        <rect width={8} height={8} x={1} y={1} rx={1}
+          fill={legendEntry.fill !== undefined ? legendEntry.fill : 'none'}
           stroke={legendEntry.stroke !== undefined ? legendEntry.stroke : 'none'}>
         </rect>
       </svg>
@@ -159,7 +172,7 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
     var overallHeight = legendEntry.stops.length * 20
     var interval = 100 / (legendEntry.stops.length - 1)
     var current = 0
-    var stops : Array<JSX.Element> = []
+    var stops: Array<JSX.Element> = []
 
     legendEntry.stops.forEach(stop => {
       stops.push(
@@ -172,20 +185,20 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
     if (legendEntry.min != undefined && legendEntry.max != undefined) {
       let miny = ((overallHeight - 4) * legendEntry.min) + 2
       let height = Math.max(1, (((overallHeight - 4) * legendEntry.max) - miny + 2))
-      boundary = <rect x={1} y={miny} width={8} height={height} rx={0.1} 
+      boundary = <rect x={1} y={miny} width={8} height={height} rx={0.1}
         stroke="#000000" strokeWidth="2" fill="none"></rect>
     }
 
     var output = [<tr>
-      <td style={{height: `${legendEntry.stops.length}rem`}} rowSpan={legendEntry.stops.length}>
+      <td style={{ height: `${legendEntry.stops.length}rem` }} rowSpan={legendEntry.stops.length}>
         <svg className="legend-iconography-ramp" viewBox={`0 0 10 ${overallHeight}`} xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id={legendEntry.entry_id} x1="0%" y1="0%" x2="0%" y2="100%">
               {stops}
             </linearGradient>
           </defs>
-          <rect 
-            x={1} y={2} width={8} height={overallHeight - 4} rx={0.1} 
+          <rect
+            x={1} y={2} width={8} height={overallHeight - 4} rx={0.1}
             fill={'url("#' + legendEntry.entry_id + '")'} stroke="#000000" strokeWidth="0.5"></rect>
           {boundary}
         </svg>
@@ -197,7 +210,7 @@ function createRampLegendEntry(legendEntry: LegendEntry, lang: string) {
       var text = legendEntry.labels[lang][i]
 
       if (text === undefined || text.length === 0 || !text.trim()) {
-          text = '\u00A0'
+        text = '\u00A0'
       }
 
       if (i == legendEntry.labels[lang].length - 1) {
@@ -419,12 +432,12 @@ export class LayerControls extends React.Component {
             <label htmlFor="opacitySlider">
               {content.info_panel.opacity_slider[getConfig(window.location.search).language]}
             </label>
-            <input type="range" min="0" max="1" defaultValue="0.9" step="0.1" 
-              className="opacitySlider" id="opacitySlider" 
+            <input type="range" min="0" max="1" defaultValue="0.9" step="0.1"
+              className="opacitySlider" id="opacitySlider"
               onChange={this.changeBaseLayerTransparency} ></input>
           </div>
         )
-      }      
+      }
       for (let section of content.base_layers[this.state.baseLayer as keyof typeof content.base_layers].info_sections) {
         if (section.section_title) {
           info.push(
@@ -446,15 +459,15 @@ export class LayerControls extends React.Component {
       <div className="sidebar-layers">
         <h3><span id="close-layers" className="sidebar-close"><i className="fas fa-caret-left"></i></span></h3>
         <div className="layer-select">
-        <div key="grid" className="checkbox">
-          <div className="form-inline">
-            <label className="form-check-label">
-              <input id="grid-checkbox" className="form-check-input" type="checkbox"
-                onChange={this.changeGridLayer} value="grid" checked={this.state.showGridLayer}/>
-              5k grid squares
+          <div key="grid" className="checkbox">
+            <div className="form-inline">
+              <label className="form-check-label">
+                <input id="grid-checkbox" className="form-check-input" type="checkbox"
+                  onChange={this.changeGridLayer} value="grid" checked={this.state.showGridLayer} />
+                5k grid squares
             </label>
+            </div>
           </div>
-        </div>
           {underlayOptions}
           {overlayOptions}
           <hr />

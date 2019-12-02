@@ -11,7 +11,7 @@
                     "es": null
                 },
                 "section_content": {
-                    "en": "Colombia mapper",
+                    "en": "<p>Welcome to the Magdalena Region in Northern Colombia.  The area of interest defined as the focus point for the sustainable livelihoods Colombian case study covers the River Frio and the River Sevilla catchments.  The area is part of the wider agricultural production area known as the ‘Zona Bananera’. Through mapping land use and modelling ecosystem services, the EO4 Cultivar project has created baseline data layers to demonstrate how remote sensing, commercial information, and local knowledge can be integrated to produce landscape-scale assessments of the functions and processes that deliver important ecosystem services.</p><p>The project uses the Spatial Evidence for Natural Capital Evaluation (SENCE) tool which combines multiple datasets and scientific knowledge to model ecosystem services and produce maps that show existing natural capital assets that provide ecosystem services, known as ‘stock maps’.  The project also generated a suite of maps that spatially define areas where action can be taken to preserve and enhance ecosystem service delivery, often referred to as ‘opportunity mapping’.</p><p>More information on the <a href=\"\">project is available</a>, as are <a href=\"\">reports detailing the habitat and ecosystem service mapping process</a>. Data used in the mapping and modelling process is available from the <a href=\"\">JNCC Data Hub</a>.</p>",
                     "es": "Mapeador de colombia"
                 }
             }
@@ -56,7 +56,18 @@
                 "en": "Habitat map",
                 "es": "Mapa de hábitat"
             },
-            "info_sections": [],
+            "info_sections": [
+                {
+                    "section_title": {
+                        "en": "Habitat map",
+                        "es": "Mapa de hábitat"
+                    },
+                    "section_content": {
+                        "en": "<p>A habitat map has been produced for the study region within the Magdalena department of Colombia. This provides a baseline of type, extent and distribution of current land use and habitats.  These natural assets are ecologically and hydrologically connected throughout the watershed within the area of interest. The map can be used to help inform catchment-scale planning for sustainable land-use, focused land management interventions, and subsequent policy decisions. The map was developed for use as an input dataset for ecosystem service, risk and opportunity analyses.</p><p>The current map is based on 20 m resolution Sentinel 1 and Sentinel 2 imagery and 30 m resolution elevation data.</p>",
+                        "es": "<p>Se creó un mapa de hábitat para la región de estudio dentro del departamento del Magdalena en Colombia. Esto nos proporciona una línea base de tipo, extensión y distribución del uso actual de los suelos y hábitats. Estos activos naturales están ecológica e hidrológicamente conectados a lo largo de la cuenca dentro del área de interés. El mapa puede usarse para ayudar a informar la planificación a escala de cuenca para el uso sostenible de la tierra, intervenciones centradas en la gestión de la tierra y subsiguientes decisiones políticas. El mapa fue desarrollado para su uso como conjunto de datos de entrada para los servicios ecosistémicos y el análisis de riesgo y oportunidades.</p><p>El mapa actual se basa en imágenes de una resolución de 20m del Sentinel 1 y Sentinel 2, además de datos de elevación de una resolución de 30m.</p>"
+                    }
+                }
+            ],
             "attribution": {
                 "en": "???",
                 "es": "???"
@@ -74,7 +85,7 @@
                         "es": "La habilidad del suelo para regular la escorrentía superficial"
                     },
                     "section_content": {
-                        "en": "<i>Ecosystem service: Regulation and overland flow</i>",
+                        "en": "<i>Ecosystem service: Regulation and overland flow.</i>",
                         "es": "<i>Servicio ecosistémico: Regulación de la escorrentía superficial.</i>"
                     }
                 },
@@ -121,7 +132,7 @@
             ],
             "attribution": {
                 "en": "Data and maps created by Environment Systems Ltd (2019). Soil data: Geographic Institute Agustin Codazzi",
-                "es": "Datos y mapas creados por Environment Systems Ltd (2019). Datos de suelo: Instituto Geográfico Agustín Codazzi"
+                "es": "Datos y mapas creados por Environment Systems Ltd (2019). Datos de suelo: Instituto Geográfico Agustín Codazzi."
             }
         },
         "water_regulation_opportunities": {
@@ -420,8 +431,8 @@
                 }
             ],
             "attribution": {
-                "en": "Datos y mapas creados por Environment Systems Ltd (2019)",
-                "es": "???"
+                "en": "Data and maps created by Environment Systems Ltd (2019)",
+                "es": "Datos y mapas creados por Environment Systems Ltd (2019)"
             }
         },
         "key_ecosystem_service_areas": {
