@@ -74,7 +74,12 @@ def getVectorFeaturesInLocation(input, zones, attributeField, strFormattingFunct
         
         # Sort, remove duplicates and then format the output string to match the required fromat later on
         # using the provided string formatting function
-        zoneOutput = list(map(lambda v: strFormattingFunction(v), sorted(list(set(zoneOutput)))))
+        sorted_list = sorted(list(set(zoneOutput)))
+        output_list = []
+        for output_string in sorted_list:
+            output_list.append(strFormattingFunction(output_string))
+        zoneOutput = sorted(list(set(output_list)))
+        
         output[zone['id']] = zoneOutput
     
     return output
@@ -204,7 +209,7 @@ maps = [
         }
     },
     {
-        'name': 'Map_9-UPDATED',
+        'name': 'Map_9',
         'output_name': 'water_regulation_opportunities',
         'vector': {
             'Colombia_RioFrio_all_ops_to_enhance_surface_water_reg_revised': 'Catchment'
@@ -212,7 +217,7 @@ maps = [
         'ramp': {}
     },
     {
-        'name': 'Map_10-UPDATED',
+        'name': 'Map_10',
         'output_name': 'water_regulation_opportunities_high_volume',
         'vector': {
             'Colombia_RioFrio_ops_to_enhance_surface_water_reg_receiving_high_flow_volume': 'RioFrio'
@@ -230,8 +235,8 @@ maps = [
         'ramp': {
             'Colombia_Precip_Erosion_Risk': {
                 'name': 'colombia_precip_erosion_risk',
-                'min': 0,
-                'max': 0.066704243421555
+                'min': 0.0,
+                'max': 0.0667042
             }
         }
     },
@@ -288,7 +293,7 @@ maps = [
             'Wetland ecological network': {
                 'name': 'wetland_ecological_network',
                 'min': 0.0,
-                'max': 43500
+                'max': 43500.0
             }
         }
     },    
@@ -323,7 +328,7 @@ maps = [
         'ramp': {}
     },
     {
-        'name': 'Map_13-UPDATED',
+        'name': 'Map_13',
         'output_name': 'multi_benefit_ecological_opportunities',
         'vector': {
             'Colombia_multibenefit_opportunities_habitat_water_regulation': 'MainOp',
@@ -379,6 +384,11 @@ outputs = {}
 # }
 
 for mapGroup in maps:
+    if (mapGroup['name'] is None):
+        print('##### Extracing Group - ROOT')
+    else:
+        print('##### Extracing Group - ' + mapGroup['name'])
+    
     # Setup output structure
     outputs[mapGroup['output_name']] = {}
     outputs[mapGroup['output_name']]['vector'] = {}
@@ -395,7 +405,7 @@ for mapGroup in maps:
         if (isinstance(treeLayer, QgsLayerTreeLayer)):
             layer = treeLayer.layer()
             if (layer.name() in mapGroup['vector'].keys()):
-                print('Extracting vector layer ' + layer.name())            
+                print('Extracting vector layer ' + layer.name())
                 extracted = getVectorFeaturesInLocation(layer, zones, mapGroup['vector'][layer.name()], formatStr)
                 fullMergeDict(outputs[mapGroup['output_name']]['vector'], extracted)
             elif (layer.name() in mapGroup['ramp'].keys()):
@@ -426,13 +436,13 @@ with open(zoneFile, 'r') as gridData:
         for map in outputs.keys():
             legends[map] = {}
             if len(outputs[map]['vector'].keys()) > 0:
-                if ('{id}'.format(id=id) in outputs[map]['vector']):
-                    legends[map]['vector'] = outputs[map]['vector']['{id}'.format(id=id)]
+                if (id in outputs[map]['vector']):
+                    legends[map]['vector'] = outputs[map]['vector'][id]
             if len(outputs[map]['ramp'].keys()) > 0:
                 legends[map]['ramp'] = {}
                 for ramp in outputs[map]['ramp'].keys():
-                    if ('{id}'.format(id=id) in outputs[map]['ramp'][ramp]):
-                        legends[map]['ramp'][ramp] = outputs[map]['ramp'][ramp]['{id}'.format(id=id)]
+                    if (id in outputs[map]['ramp'][ramp]):
+                        legends[map]['ramp'][ramp] = outputs[map]['ramp'][ramp][id]
             
             if 'vector' in legends[map] and len(legends[map]['vector']) == 0:
                 del legends[map]['vector']

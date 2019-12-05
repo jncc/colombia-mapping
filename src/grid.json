@@ -1,10 +1,17 @@
 {
     "type": "FeatureCollection",
-    "name": "grid",
+    "name": "grids",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
     "features": [
         {
             "type": "Feature",
             "properties": {
+                "fid": 1,
                 "id": 4,
                 "legends": {
                     "water_runoff_moderation": {
@@ -29,11 +36,6 @@
                     "key_biodiversity_habitats": {
                         "vector": [
                             "wetland_core"
-                        ]
-                    },
-                    "key_ecosystem_service_areas": {
-                        "vector": [
-                            "areas_important_for_both_biodiversity_and_surface_water_regulation"
                         ]
                     },
                     "woodland_ecological_connectivity": {
@@ -105,6 +107,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 2,
                 "id": 5,
                 "legends": {
                     "water_runoff_moderation": {
@@ -201,6 +204,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 3,
                 "id": 6,
                 "legends": {
                     "water_runoff_moderation": {
@@ -311,6 +315,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 4,
                 "id": 7,
                 "legends": {
                     "water_runoff_moderation": {
@@ -368,7 +373,7 @@
                         "ramp": {
                             "wetland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.36
+                                "max": 0.39
                             }
                         }
                     },
@@ -425,6 +430,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 5,
                 "id": 14,
                 "legends": {
                     "water_runoff_moderation": {
@@ -521,6 +527,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 6,
                 "id": 15,
                 "legends": {
                     "water_runoff_moderation": {
@@ -621,6 +628,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 7,
                 "id": 16,
                 "legends": {
                     "water_runoff_moderation": {
@@ -716,6 +724,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 8,
                 "id": 17,
                 "legends": {
                     "water_runoff_moderation": {
@@ -733,8 +742,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -864,6 +873,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 9,
                 "id": 18,
                 "legends": {
                     "water_runoff_moderation": {
@@ -1015,6 +1025,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 10,
                 "id": 19,
                 "legends": {
                     "water_runoff_moderation": {
@@ -1128,6 +1139,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 11,
                 "id": 25,
                 "legends": {
                     "water_runoff_moderation": {
@@ -1253,6 +1265,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 12,
                 "id": 26,
                 "legends": {
                     "water_runoff_moderation": {
@@ -1270,8 +1283,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -1402,6 +1415,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 13,
                 "id": 27,
                 "legends": {
                     "water_runoff_moderation": {
@@ -1419,8 +1433,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -1531,6 +1545,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 14,
                 "id": 28,
                 "legends": {
                     "water_runoff_moderation": {
@@ -1669,6 +1684,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 15,
                 "id": 29,
                 "legends": {
                     "water_runoff_moderation": {
@@ -1810,6 +1826,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 16,
                 "id": 30,
                 "legends": {
                     "water_runoff_moderation": {
@@ -1940,6 +1957,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 17,
                 "id": 31,
                 "legends": {
                     "water_runoff_moderation": {
@@ -2045,6 +2063,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 18,
                 "id": 36,
                 "legends": {
                     "water_runoff_moderation": {
@@ -2171,6 +2190,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 19,
                 "id": 37,
                 "legends": {
                     "water_runoff_moderation": {
@@ -2188,8 +2208,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -2328,6 +2348,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 20,
                 "id": 38,
                 "legends": {
                     "water_runoff_moderation": {
@@ -2345,8 +2366,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -2485,6 +2506,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 21,
                 "id": 39,
                 "legends": {
                     "water_runoff_moderation": {
@@ -2624,6 +2646,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 22,
                 "id": 40,
                 "legends": {
                     "water_runoff_moderation": {
@@ -2753,6 +2776,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 23,
                 "id": 41,
                 "legends": {
                     "water_runoff_moderation": {
@@ -2887,6 +2911,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 24,
                 "id": 42,
                 "legends": {
                     "water_runoff_moderation": {
@@ -2954,7 +2979,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.35
+                                "max": 0.36
                             }
                         }
                     },
@@ -3022,6 +3047,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 25,
                 "id": 43,
                 "legends": {
                     "water_runoff_moderation": {
@@ -3152,6 +3178,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 26,
                 "id": 47,
                 "legends": {
                     "water_runoff_moderation": {
@@ -3170,8 +3197,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -3316,6 +3343,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 27,
                 "id": 48,
                 "legends": {
                     "water_runoff_moderation": {
@@ -3334,8 +3362,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -3490,6 +3518,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 28,
                 "id": 49,
                 "legends": {
                     "water_runoff_moderation": {
@@ -3650,6 +3679,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 29,
                 "id": 50,
                 "legends": {
                     "water_runoff_moderation": {
@@ -3783,6 +3813,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 30,
                 "id": 51,
                 "legends": {
                     "water_runoff_moderation": {
@@ -3918,6 +3949,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 31,
                 "id": 52,
                 "legends": {
                     "water_runoff_moderation": {
@@ -4072,6 +4104,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 32,
                 "id": 53,
                 "legends": {
                     "water_runoff_moderation": {
@@ -4228,6 +4261,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 33,
                 "id": 54,
                 "legends": {
                     "water_runoff_moderation": {
@@ -4385,6 +4419,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 34,
                 "id": 55,
                 "legends": {
                     "water_runoff_moderation": {
@@ -4518,6 +4553,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 35,
                 "id": 57,
                 "legends": {
                     "water_runoff_moderation": {
@@ -4672,6 +4708,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 36,
                 "id": 58,
                 "legends": {
                     "water_runoff_moderation": {
@@ -4690,8 +4727,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -4833,6 +4870,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 37,
                 "id": 59,
                 "legends": {
                     "water_runoff_moderation": {
@@ -4851,8 +4889,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -5004,6 +5042,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 38,
                 "id": 60,
                 "legends": {
                     "water_runoff_moderation": {
@@ -5159,6 +5198,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 39,
                 "id": 61,
                 "legends": {
                     "water_runoff_moderation": {
@@ -5311,6 +5351,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 40,
                 "id": 62,
                 "legends": {
                     "water_runoff_moderation": {
@@ -5467,6 +5508,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 41,
                 "id": 63,
                 "legends": {
                     "water_runoff_moderation": {
@@ -5612,6 +5654,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 42,
                 "id": 64,
                 "legends": {
                     "water_runoff_moderation": {
@@ -5761,6 +5804,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 43,
                 "id": 65,
                 "legends": {
                     "water_runoff_moderation": {
@@ -5914,6 +5958,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 44,
                 "id": 66,
                 "legends": {
                     "water_runoff_moderation": {
@@ -6038,6 +6083,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 45,
                 "id": 67,
                 "legends": {
                     "water_runoff_moderation": {
@@ -6175,6 +6221,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 46,
                 "id": 68,
                 "legends": {
                     "water_runoff_moderation": {
@@ -6193,8 +6240,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -6330,6 +6377,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 47,
                 "id": 69,
                 "legends": {
                     "water_runoff_moderation": {
@@ -6348,8 +6396,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -6490,6 +6538,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 48,
                 "id": 70,
                 "legends": {
                     "water_runoff_moderation": {
@@ -6640,6 +6689,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 49,
                 "id": 71,
                 "legends": {
                     "water_runoff_moderation": {
@@ -6780,6 +6830,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 50,
                 "id": 72,
                 "legends": {
                     "water_runoff_moderation": {
@@ -6923,6 +6974,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 51,
                 "id": 73,
                 "legends": {
                     "water_runoff_moderation": {
@@ -7077,6 +7129,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 52,
                 "id": 74,
                 "legends": {
                     "water_runoff_moderation": {
@@ -7212,6 +7265,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 53,
                 "id": 75,
                 "legends": {
                     "water_runoff_moderation": {
@@ -7358,6 +7412,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 54,
                 "id": 76,
                 "legends": {
                     "water_runoff_moderation": {
@@ -7497,6 +7552,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 55,
                 "id": 78,
                 "legends": {
                     "water_runoff_moderation": {
@@ -7631,6 +7687,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 56,
                 "id": 79,
                 "legends": {
                     "water_runoff_moderation": {
@@ -7650,8 +7707,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -7788,6 +7845,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 57,
                 "id": 80,
                 "legends": {
                     "water_runoff_moderation": {
@@ -7807,8 +7865,8 @@
                     },
                     "water_regulation_opportunities_high_volume": {
                         "vector": [
-                            "high_priority_opportunity_area",
-                            "basin_touches_main_river_channel"
+                            "basin_touches_main_river_channel",
+                            "high_priority_opportunity_area"
                         ]
                     },
                     "precipitation_erosion_risk": {
@@ -7946,6 +8004,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 58,
                 "id": 81,
                 "legends": {
                     "water_runoff_moderation": {
@@ -8096,6 +8155,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 59,
                 "id": 82,
                 "legends": {
                     "water_runoff_moderation": {
@@ -8225,6 +8285,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 60,
                 "id": 83,
                 "legends": {
                     "water_runoff_moderation": {
@@ -8365,6 +8426,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 61,
                 "id": 84,
                 "legends": {
                     "water_runoff_moderation": {
@@ -8516,12 +8578,13 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 62,
                 "id": 85,
                 "legends": {
                     "water_runoff_moderation": {
                         "ramp": {
                             "water_runoff_moderation_ramp": {
-                                "min": 0.07,
+                                "min": 0.08,
                                 "max": 0.77
                             }
                         }
@@ -8664,6 +8727,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 63,
                 "id": 86,
                 "legends": {
                     "water_runoff_moderation": {
@@ -8810,6 +8874,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 64,
                 "id": 89,
                 "legends": {
                     "water_runoff_moderation": {
@@ -8943,6 +9008,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 65,
                 "id": 90,
                 "legends": {
                     "water_runoff_moderation": {
@@ -9068,6 +9134,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 66,
                 "id": 91,
                 "legends": {
                     "water_runoff_moderation": {
@@ -9136,7 +9203,7 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.48,
+                                "min": 0.34,
                                 "max": 1.0
                             }
                         }
@@ -9153,8 +9220,8 @@
                             "agriculture",
                             "bare_ground",
                             "forest",
-                            "forest_agriculture_mix",
                             "forest_agriculture_grassland_mix",
+                            "forest_agriculture_mix",
                             "grassland",
                             "rivers",
                             "urban"
@@ -9195,6 +9262,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 67,
                 "id": 92,
                 "legends": {
                     "water_runoff_moderation": {
@@ -9263,7 +9331,7 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
+                                "min": 0.28,
                                 "max": 1.0
                             }
                         }
@@ -9280,8 +9348,8 @@
                             "agriculture",
                             "bare_ground",
                             "forest",
-                            "forest_agriculture_mix",
                             "forest_agriculture_grassland_mix",
+                            "forest_agriculture_mix",
                             "rivers",
                             "urban"
                         ]
@@ -9321,6 +9389,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 68,
                 "id": 93,
                 "legends": {
                     "water_runoff_moderation": {
@@ -9440,6 +9509,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 69,
                 "id": 94,
                 "legends": {
                     "water_runoff_moderation": {
@@ -9557,6 +9627,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 70,
                 "id": 95,
                 "legends": {
                     "water_runoff_moderation": {
@@ -9687,6 +9758,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 71,
                 "id": 96,
                 "legends": {
                     "water_runoff_moderation": {
@@ -9830,6 +9902,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 72,
                 "id": 97,
                 "legends": {
                     "water_runoff_moderation": {
@@ -9954,6 +10027,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 73,
                 "id": 100,
                 "legends": {
                     "water_runoff_moderation": {
@@ -10057,6 +10131,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 74,
                 "id": 101,
                 "legends": {
                     "water_runoff_moderation": {
@@ -10124,7 +10199,7 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
+                                "min": 0.67,
                                 "max": 1.0
                             }
                         }
@@ -10141,8 +10216,8 @@
                             "agriculture",
                             "bare_ground",
                             "forest",
-                            "forest_agriculture_mix",
                             "forest_agriculture_grassland_mix",
+                            "forest_agriculture_mix",
                             "grassland",
                             "rivers",
                             "urban"
@@ -10183,6 +10258,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 75,
                 "id": 102,
                 "legends": {
                     "water_runoff_moderation": {
@@ -10219,6 +10295,7 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -10242,15 +10319,18 @@
                     "wetland_ecological_connectivity": {
                         "ramp": {
                             "wetland_ecological_network": {
-                                "min": 0.68,
+                                "min": 0.46,
                                 "max": 1.0
                             }
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
+                                "min": 0.0,
                                 "max": 1.0
                             }
                         }
@@ -10307,6 +10387,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 76,
                 "id": 103,
                 "legends": {
                     "water_runoff_moderation": {
@@ -10339,6 +10420,7 @@
                     "key_biodiversity_habitats": {
                         "vector": [
                             "wetland_core",
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -10371,9 +10453,12 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.91,
+                                "min": 0.0,
                                 "max": 1.0
                             }
                         }
@@ -10431,6 +10516,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 77,
                 "id": 104,
                 "legends": {
                     "water_runoff_moderation": {
@@ -10462,6 +10548,7 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -10491,9 +10578,12 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.9,
+                                "min": 0.0,
                                 "max": 1.0
                             }
                         }
@@ -10551,6 +10641,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 78,
                 "id": 105,
                 "legends": {
                     "water_runoff_moderation": {
@@ -10613,7 +10704,7 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
+                                "min": 0.56,
                                 "max": 1.0
                             }
                         }
@@ -10670,6 +10761,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 79,
                 "id": 106,
                 "legends": {
                     "water_runoff_moderation": {
@@ -10789,6 +10881,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 80,
                 "id": 107,
                 "legends": {
                     "water_runoff_moderation": {
@@ -10907,13 +11000,14 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 81,
                 "id": 108,
                 "legends": {
                     "water_runoff_moderation": {
                         "ramp": {
                             "water_runoff_moderation_ramp": {
                                 "min": 0.54,
-                                "max": 0.77
+                                "max": 0.75
                             }
                         }
                     },
@@ -11013,6 +11107,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 82,
                 "id": 111,
                 "legends": {
                     "water_runoff_moderation": {
@@ -11117,6 +11212,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 83,
                 "id": 112,
                 "legends": {
                     "water_runoff_moderation": {
@@ -11151,6 +11247,7 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -11179,9 +11276,12 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
+                                "min": 0.0,
                                 "max": 1.0
                             }
                         }
@@ -11235,6 +11335,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 84,
                 "id": 113,
                 "legends": {
                     "water_runoff_moderation": {
@@ -11265,6 +11366,7 @@
                     "key_biodiversity_habitats": {
                         "vector": [
                             "wetland_core",
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -11296,10 +11398,13 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
-                                "max": 1.0
+                                "min": 0.0,
+                                "max": 0.68
                             }
                         }
                     },
@@ -11347,6 +11452,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 85,
                 "id": 114,
                 "legends": {
                     "water_runoff_moderation": {
@@ -11377,6 +11483,7 @@
                     "key_biodiversity_habitats": {
                         "vector": [
                             "wetland_core",
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -11408,10 +11515,13 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.56,
-                                "max": 1.0
+                                "min": 0.0,
+                                "max": 0.36
                             }
                         }
                     },
@@ -11459,6 +11569,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 86,
                 "id": 115,
                 "legends": {
                     "water_runoff_moderation": {
@@ -11491,6 +11602,7 @@
                     "key_biodiversity_habitats": {
                         "vector": [
                             "wetland_core",
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -11523,9 +11635,12 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.39,
+                                "min": 0.0,
                                 "max": 1.0
                             }
                         }
@@ -11584,6 +11699,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 87,
                 "id": 116,
                 "legends": {
                     "water_runoff_moderation": {
@@ -11646,7 +11762,7 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.13,
+                                "min": 0.04,
                                 "max": 1.0
                             }
                         }
@@ -11663,8 +11779,8 @@
                             "agriculture",
                             "bare_ground",
                             "forest",
-                            "forest_agriculture_mix",
                             "forest_agriculture_grassland_mix",
+                            "forest_agriculture_mix",
                             "grassland",
                             "rivers",
                             "urban"
@@ -11705,6 +11821,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 88,
                 "id": 117,
                 "legends": {
                     "water_runoff_moderation": {
@@ -11829,6 +11946,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 89,
                 "id": 118,
                 "legends": {
                     "water_runoff_moderation": {
@@ -11929,13 +12047,14 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 90,
                 "id": 123,
                 "legends": {
                     "water_runoff_moderation": {
                         "ramp": {
                             "water_runoff_moderation_ramp": {
-                                "min": 0.36,
-                                "max": 0.89
+                                "min": 0.39,
+                                "max": 0.93
                             }
                         }
                     },
@@ -11954,6 +12073,7 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -11982,9 +12102,12 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
+                                "min": 0.0,
                                 "max": 1.0
                             }
                         }
@@ -12030,6 +12153,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 91,
                 "id": 125,
                 "legends": {
                     "water_runoff_moderation": {
@@ -12059,7 +12183,8 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
-                            "wetland_core"
+                            "wetland_core",
+                            "grassland"
                         ]
                     },
                     "key_ecosystem_service_areas": {
@@ -12087,10 +12212,13 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.36,
-                                "max": 1.0
+                                "min": 0.0,
+                                "max": 0.47
                             }
                         }
                     },
@@ -12137,6 +12265,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 92,
                 "id": 126,
                 "legends": {
                     "water_runoff_moderation": {
@@ -12208,7 +12337,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.78
+                                "max": 0.42
                             }
                         }
                     },
@@ -12268,6 +12397,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 93,
                 "id": 127,
                 "legends": {
                     "water_runoff_moderation": {
@@ -12362,8 +12492,8 @@
                             "agriculture",
                             "bare_ground",
                             "forest",
-                            "forest_agriculture_mix",
                             "forest_agriculture_grassland_mix",
+                            "forest_agriculture_mix",
                             "grassland",
                             "rivers",
                             "urban",
@@ -12405,6 +12535,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 94,
                 "id": 128,
                 "legends": {
                     "water_runoff_moderation": {
@@ -12463,7 +12594,7 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.47,
+                                "min": 0.07,
                                 "max": 1.0
                             }
                         }
@@ -12515,6 +12646,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 95,
                 "id": 136,
                 "legends": {
                     "water_runoff_moderation": {
@@ -12544,7 +12676,8 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
-                            "wetland_core"
+                            "wetland_core",
+                            "grassland"
                         ]
                     },
                     "key_ecosystem_service_areas": {
@@ -12572,10 +12705,13 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.38,
-                                "max": 1.0
+                                "min": 0.0,
+                                "max": 0.25
                             }
                         }
                     },
@@ -12622,6 +12758,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 96,
                 "id": 137,
                 "legends": {
                     "water_runoff_moderation": {
@@ -12652,6 +12789,7 @@
                     "key_biodiversity_habitats": {
                         "vector": [
                             "wetland_core",
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -12683,10 +12821,13 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.31,
-                                "max": 1.0
+                                "min": 0.0,
+                                "max": 0.48
                             }
                         }
                     },
@@ -12734,6 +12875,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 97,
                 "id": 138,
                 "legends": {
                     "water_runoff_moderation": {
@@ -12801,7 +12943,7 @@
                         "ramp": {
                             "grassland_ecological_network": {
                                 "min": 0.0,
-                                "max": 0.87
+                                "max": 0.26
                             }
                         }
                     },
@@ -12848,12 +12990,13 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 98,
                 "id": 139,
                 "legends": {
                     "water_runoff_moderation": {
                         "ramp": {
                             "water_runoff_moderation_ramp": {
-                                "min": 0.25,
+                                "min": 0.3,
                                 "max": 0.75
                             }
                         }
@@ -12873,6 +13016,7 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
+                            "grassland",
                             "woodland_core"
                         ]
                     },
@@ -12901,10 +13045,13 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.48,
-                                "max": 0.55
+                                "min": 0.0,
+                                "max": 0.07
                             }
                         }
                     },
@@ -12949,6 +13096,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 99,
                 "id": 147,
                 "legends": {
                     "water_runoff_moderation": {
@@ -12978,7 +13126,8 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
-                            "wetland_core"
+                            "wetland_core",
+                            "grassland"
                         ]
                     },
                     "key_ecosystem_service_areas": {
@@ -13006,10 +13155,13 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.71,
-                                "max": 1.0
+                                "min": 0.0,
+                                "max": 0.74
                             }
                         }
                     },
@@ -13056,6 +13208,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 100,
                 "id": 148,
                 "legends": {
                     "water_runoff_moderation": {
@@ -13084,7 +13237,8 @@
                     },
                     "key_biodiversity_habitats": {
                         "vector": [
-                            "wetland_core"
+                            "wetland_core",
+                            "grassland"
                         ]
                     },
                     "key_ecosystem_service_areas": {
@@ -13112,9 +13266,12 @@
                         }
                     },
                     "grassland_ecological_connectivity": {
+                        "vector": [
+                            "grassland"
+                        ],
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 0.73,
+                                "min": 0.0,
                                 "max": 1.0
                             }
                         }
@@ -13162,6 +13319,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 101,
                 "id": 158,
                 "legends": {
                     "water_runoff_moderation": {
@@ -13220,7 +13378,7 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
+                                "min": 0.33,
                                 "max": 1.0
                             }
                         }
@@ -13267,6 +13425,7 @@
         {
             "type": "Feature",
             "properties": {
+                "fid": 102,
                 "id": 159,
                 "legends": {
                     "water_runoff_moderation": {
@@ -13325,7 +13484,7 @@
                     "grassland_ecological_connectivity": {
                         "ramp": {
                             "grassland_ecological_network": {
-                                "min": 1.0,
+                                "min": 0.23,
                                 "max": 1.0
                             }
                         }
