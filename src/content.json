@@ -45,7 +45,18 @@
                 "en": "No layer selected",
                 "es": "Ninguna capa seleccionada"
             },
-            "info_sections": [],
+            "info_sections": [
+                {
+                    "section_title": {
+                        "en": "",
+                        "es": ""
+                    },
+                    "section_content": {
+                        "en": "<p>Select a layer from the drop down to explore ecosystem service delivery and identify opportunities for enhancing ecosystem services in the region.</p><p><b>Focal Area of Interest (5km2) – Summary of data:</b> This function splits the area of interest into 5km2 grids.  Select a 5km2 area you are interested in to display a summary of the ecosystem service delivery and enhancement opportunities within that 5km2.</p><p><b>Satellite Imagery:</b> This function shows the satellite images of the area of interest.</p><p><b>Zona Bananera:</b> This highlights the project’s area of interest (outlined in red). The broad case study region was identified in consultation with key local stakeholders and is located within the Magdalena region in northern Colombia.</p><p><b>Rio Frio Catchment:</b> This highlights the sub-catchment area for the Rio Frio ‘Cold River’ (outlined in red).  This sub-catchment has been defined using modelling that identifies interconnected hydrological units within the overall area of interest.</p>",
+                        "es": "<p>Select a layer from the drop down to explore ecosystem service delivery and identify opportunities for enhancing ecosystem services in the region.</p><p><b>Focal Area of Interest (5km2) – Summary of data:</b> This function splits the area of interest into 5km2 grids.  Select a 5km2 area you are interested in to display a summary of the ecosystem service delivery and enhancement opportunities within that 5km2.</p><p><b>Satellite Imagery:</b> This function shows the satellite images of the area of interest.</p><p><b>Zona Bananera:</b> This highlights the project’s area of interest (outlined in red). The broad case study region was identified in consultation with key local stakeholders and is located within the Magdalena region in northern Colombia.</p><p><b>Rio Frio Catchment:</b> This highlights the sub-catchment area for the Rio Frio ‘Cold River’ (outlined in red).  This sub-catchment has been defined using modelling that identifies interconnected hydrological units within the overall area of interest.</p>"
+                    }
+                }
+            ],
             "attribution": {
                 "en": "",
                 "es": ""
