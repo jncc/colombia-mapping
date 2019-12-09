@@ -9,4 +9,6 @@ tsc/
 .cache
 dist/
 
+*.log
+
 .env

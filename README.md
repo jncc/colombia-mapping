@@ -30,6 +30,9 @@ Use [TsLint](https://palantir.github.io/tslint/). In VS Code, install the *TSLin
 - use 'single quotes' for strings
 - do not use semicolons to terminate statements
 
+
+Set up a .env file for local dev, you can use .env.example
+
 To install/restore packages, run:
 
     yarn
