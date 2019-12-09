@@ -52,13 +52,13 @@ export function createSidebar(map: L.Map, config: Config) {
 
       let sponsorLinks = L.DomUtil.create('div', 'row')
 
-      let eo4cLink = L.DomUtil.create('div', 'col-2 nopadding')
-      eo4cLink.innerHTML = '<a href=""><img class="sidebar-sponsor-img" title="EO4 Cultivar" alt="EO4 Cultivar" src="' 
+      let eo4cLink = L.DomUtil.create('div', 'col-3 nopadding')
+      eo4cLink.innerHTML = '<a href=""><img class="sidebar-sponsor-img" title="EO4 Cultivar" alt="EO4 Cultivar" src="'
         + require('../images/eo4c.jpg') + '"></img></a>'
       sponsorLinks.appendChild(eo4cLink)
 
-      let uksaLink = L.DomUtil.create('div', 'col-3 nopadding')
-      uksaLink.innerHTML = '<a href=""><img class="sidebar-sponsor-img" title="UK Space Agency" ' 
+      let uksaLink = L.DomUtil.create('div', 'col-4 nopadding')
+      uksaLink.innerHTML = '<a href=""><img class="sidebar-sponsor-img" title="UK Space Agency" '
         + 'alt="UK Space Agency" src="' + require('../images/uksa.jpg') + '" /></a>'
       sponsorLinks.appendChild(uksaLink)
 
@@ -426,34 +426,31 @@ export class LayerControls extends React.Component {
     }
 
     let info = []
-    if (!this.state.hideBaseLayer) {
-      if (this.state.baseLayer !== 'no_layer') {
+    if (this.state.baseLayer !== 'no_layer') {
+      info.push(
+        <div key="opacitySliderContainer" className="opacitySliderContainer">
+          <label htmlFor="opacitySlider">
+            {content.info_panel.opacity_slider[getConfig(window.location.search).language]}
+          </label>
+          <input type="range" min="0" max="1" defaultValue="0.9" step="0.1"
+            className="opacitySlider" id="opacitySlider"
+            onChange={this.changeBaseLayerTransparency} ></input>
+        </div>
+      )
+    }
+    for (let section of content.base_layers[this.state.baseLayer as keyof typeof content.base_layers].info_sections) {
+      if (section.section_title) {
         info.push(
-          <div key="opacitySliderContainer" className="opacitySliderContainer">
-            <label htmlFor="opacitySlider">
-              {content.info_panel.opacity_slider[getConfig(window.location.search).language]}
-            </label>
-            <input type="range" min="0" max="1" defaultValue="0.9" step="0.1"
-              className="opacitySlider" id="opacitySlider"
-              onChange={this.changeBaseLayerTransparency} ></input>
-          </div>
+          <h5 key={`h5-${section.section_title.en.replace(' ', '-')}`} dangerouslySetInnerHTML={
+            { __html: section.section_title[getConfig(window.location.search).language] }}>
+          </h5>
         )
       }
-      for (let section of content.base_layers[this.state.baseLayer as keyof typeof content.base_layers].info_sections) {
-        if (section.section_title) {
-          info.push(
-            <h5 key={`h5-${section.section_title.en.replace(' ', '-')}`} dangerouslySetInnerHTML={
-              { __html: section.section_title[getConfig(window.location.search).language] }}>
-            </h5>
-          )
-        }
-        info.push(
-          <p key={`p-${section.section_title.en.replace(' ', '-')}`} dangerouslySetInnerHTML={
-            { __html: section.section_content[getConfig(window.location.search).language] }}>
-          </p>
-        )
-      }
-
+      info.push(
+        <p key={`p-${section.section_title.en.replace(' ', '-')}`} dangerouslySetInnerHTML={
+          { __html: section.section_content[getConfig(window.location.search).language] }}>
+        </p>
+      )
     }
 
     return (
@@ -466,7 +463,7 @@ export class LayerControls extends React.Component {
                 <input id="grid-checkbox" className="form-check-input" type="checkbox"
                   onChange={this.changeGridLayer} value="grid" checked={this.state.showGridLayer} />
                 {content.overlay_layers['grid_5k'].short_title[getConfig(window.location.search).language]}
-            </label>
+              </label>
             </div>
           </div>
           {underlayOptions}
