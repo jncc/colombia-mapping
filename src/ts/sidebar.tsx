@@ -465,7 +465,7 @@ export class LayerControls extends React.Component {
               <label className="form-check-label">
                 <input id="grid-checkbox" className="form-check-input" type="checkbox"
                   onChange={this.changeGridLayer} value="grid" checked={this.state.showGridLayer} />
-                {content.overlay_layers["grid_5k"].short_title[getConfig(window.location.search).language]}
+                {content.overlay_layers['grid_5k'].short_title[getConfig(window.location.search).language]}
             </label>
             </div>
           </div>
