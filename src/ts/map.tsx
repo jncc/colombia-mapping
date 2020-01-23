@@ -6,7 +6,8 @@ import * as layers from './layers'
 import * as grid from '../grid.json'
 import * as legends from '../legends.json'
 import '../js/leaflet-sidebar.min.js'
-import { ChangeGrid as LoadGridTab, MapLegend, LegendEntry } from './sidebar'
+import { ChangeGrid as LoadGridTab } from './sidebar'
+import { MapLegend, LegendEntry } from './legend'
 
 let overlayMaps = {} as any
 let underlayMaps = {} as any
