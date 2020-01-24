@@ -264,15 +264,16 @@
 }
 
 #grid-button input:hover + span {
-   background-color:#2D5A05;
+   background-color:#246221;
+   cursor: pointer;
 }
 
 #grid-button input:checked + span {
-   background-color:rgb(33, 71, 28);
+   background-color:#245221;
    color:#fff;
 }
 
 #grid-button input:checked:hover + span {
-   background-color:#2D5A05;
+   background-color:#246221;
    color:#fff;
 }
