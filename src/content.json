@@ -11,7 +11,7 @@
                     "es": null
                 },
                 "section_content": {
-                    "en": "<p>Welcome to the Magdalena Region in Northern Colombia.  The area of interest defined as the focus point for the sustainable livelihoods Colombian case study covers the River Frio and the River Sevilla catchments.  The area is part of the wider agricultural production area known as the 'Zona Bananera'. Through mapping land use and modelling ecosystem services, the EO4 Cultivar project has created baseline data layers to demonstrate how remote sensing, commercial information, and local knowledge can be integrated to produce landscape-scale assessments of the functions and processes that deliver important ecosystem services.</p><p>The project uses the Spatial Evidence for Natural Capital Evaluation (SENCE) tool which combines multiple datasets and scientific knowledge to model ecosystem services and produce maps that show existing natural capital assets that provide ecosystem services, known as 'stock maps'.  The project also generated a suite of maps that spatially define areas where action can be taken to preserve and enhance ecosystem service delivery, often referred to as 'opportunity mapping'.</p><p>More information on the <a href=\"\">project is available</a>, as are <a href=\"\">reports detailing the habitat and ecosystem service mapping process</a>. Data used in the mapping and modelling process is available from the <a href=\"\">JNCC Data Hub</a>.</p>",
+                    "en": "<p>Welcome to Magdalena, Northern Colombia. Here, EO4cultivar, funded through the  International Partnership Programme, run by UKSA, has identified places to focus action to deliver sustainable land management within river catchments of the Zona Bananera, reaching into the Sierra Nevada de Santa Marta.</p><p>The mapping concerns local priorities to reduce the risk of flooding and soil erosion and to improve ecological connectivity. Places where a land management intervention can benefit ecosystem services (e.g. by slowing runoff or restoring habitats) are identified. Deploying action in places that deliver multiple benefits is likely to be most cost-effective. The outputs of this work are suitable for any organisations aiming to undertake environmental improvement work in the area.</p><p>More information on the <a href=\"#\">project is available</a>, as are <a href=\"#\">reports detailing the mapping process</a>. Data used in the mapping and modelling process are available from the <a href=\"#\">JNCC Data Hub</a>.</p>",
                     "es": "Mapeador de colombia"
                 }
             }
@@ -41,6 +41,8 @@
     },
     "base_layers": {
         "no_layer": {
+            "wms_name": "",
+            "legend_styles": [],
             "short_title": {
                 "en": "No layer selected",
                 "es": "Ninguna capa seleccionada"
@@ -63,6 +65,8 @@
             }
         },
         "habitat_map": {
+            "wms_name": "colombia_eo4_cultivar:colombia_habitat_map_20190326_final",
+            "legend_styles": [],
             "short_title": {
                 "en": "Habitat map",
                 "es": "Mapa de hábitat"
@@ -85,6 +89,8 @@
             }
         },
         "water_runoff_moderation": {
+            "wms_name": "colombia_eo4_cultivar:colombia_surface_water_regulation_stock",
+            "legend_styles": [],
             "short_title": {
                 "en": "Ability of the land to moderate surface water runoff",
                 "es": "La habilidad del suelo para regular la escorrentía superficial"
@@ -146,369 +152,9 @@
                 "es": "Datos y mapas creados por Environment Systems Ltd (2019). Datos de suelo: Instituto Geográfico Agustín Codazzi."
             }
         },
-        "water_regulation_opportunities": {
-            "short_title": {
-                "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment",
-                "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío"
-            },
-            "info_sections": [
-                {
-                    "section_title": {
-                        "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment",
-                        "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío"
-                    },
-                    "section_content": {
-                        "en": "<i>Ecosystem service: Regulation of overland flow.</i>",
-                        "es": "<i>Servicio Ecosistémico: Regulación de la escorrentía superficial.</i>"
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How to interpret the map:",
-                        "es": "Cómo interpretar el mapa:"
-                    },
-                    "section_content": {
-                        "en": "This map shows places with agriculture and grassland where it would be possible to improve surface water regulation to slow the flow of runoff into the river Frio. Places shown in dark blue are located in the upper catchment of the Rio Frio. Places shown in light blue are in the mid-catchment, and places shown in green are in the lower catchment. All of the coloured areas on the map are hydrologically connected, and action taken in these areas should enhance the existing water regulation capacity of the land. However, the types of action that are most appropriate, and whether these are logistically possible and cost-effective, depend on the position of the opportunity within the catchment.",
-                        "es": "Este mapa muestra lugares con agricultura y pastizales en donde sería posible mejorar la regulación superficial del agua para retardar el flujo de la escorrentía hacia el Río Frío. Los lugares de color azul oscuro están ubicados en la cuenca alta del Río Frío. Los lugares en color azul claro se encuentran en la parte media de la cuenca y los de color verde, en la cuenca baja. Todas las áreas de color en el mapa están hidrológicamente conectadas, por lo que las medidas adoptadas en estos sectores deberían mejorar la capacidad existente de la regulación del agua. No obstante, los tipos de acción que serían más apropiados, y ya sea que fuesen logísticamente posibles y rentables, dependen de la posición de la oportunidad dentro de la cuenca."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "Why is it important:",
-                        "es": "Por qué es importante:"
-                    },
-                    "section_content": {
-                        "en": "Generally, interventions in the mid- and upper-reaches of the catchment (light and dark blue) will benefit a larger downstream area, but can be more challenging to implement, e.g. due to topography and accessibility. In the lower reaches of the catchment the effects of management intervention become more localised (as there is less downstream area), but can be easier to achieve. In the lower reaches of the river wetland creation can enhance the capacity of land to store flood waters and limit their spread, which might protect valuable assets and infrastructure. In the upper reaches afforestation can slow the volume and rate at which water enters the watercourses.",
-                        "es": "Por lo general, las intervenciones en la zona media y alta de la cuenca (azul claro y oscuro) beneficiarán un área grande de aguas abajo, pero puede ser más difícil de implementar, por ejemplo, debido a la topografía y la accesibilidad. En las partes más bajas del área de captación, los resultados de la intervención del manejo se vuelven más localizados (ya que hay menos área de aguas abajo), pero más fáciles de lograr. En los tramos inferiores del río, la creación de humedales puede aumentar la capacidad de la tierra para almacenar las aguas de las inundaciones y restringir su velocidad, lo que podría proteger valiosos bienes e infraestructura. En los tramos superiores, la forestación puede ralentizar el volumen y la velocidad con la que el agua entra en los cursos de agua."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How the map was created:",
-                        "es": "Cómo se creó el mapa:"
-                    },
-                    "section_content": {
-                        "en": "This map was created by analysing the restoration potential of habitat and land use classes generated using Sentinel 1 and Sentinel 2 satellite imagery. The river basin boundary was determined by analysis of SRTM elevation data.",
-                        "es": "Este mapa fue creado al analizar el potencial de restauración del hábitat y de las clases de uso del suelo gracias a las imágenes satelitales de Sentinel 1 y Sentinel 2. La delimitación de la cuenca hidrográfica se determinó por un análisis de datos de elevación SRTM."
-                    }
-                }
-            ],
-            "attribution": {
-                "en": "Data and maps created by Environment Systems Ltd (2019)",
-                "es": "Datos y mapas creados por Environment Systems Ltd (2019)"
-            }
-        },
-        "water_regulation_opportunities_high_volume": {
-            "short_title": {
-                "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment: places receiving high volumes of surface water flow",
-                "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío: sitios limítrofes de los principales canales de drenaje"
-            },
-            "info_sections": [
-                {
-                    "section_title": {
-                        "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment: places receiving high volumes of surface water flow",
-                        "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío: sitios limítrofes de los principales canales de drenaje"
-                    },
-                    "section_content": {
-                        "en": "<i>Ecosystem service: Regulation of overland flow.</i>",
-                        "es": "<i>Servicio Ecosistémico: Regulación de la escorrentía superficial.</i>"
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How to interpret the map:",
-                        "es": "Cómo interpretar el mapa:"
-                    },
-                    "section_content": {
-                        "en": "This map shows places that are currently agriculture or grassland within major flow paths, where taking action to improve surface water regulation, to slow the flow of runoff into the river Frio, would be most effective. Dark brown places directly adjoin a major river, tributary or channel. They receive the largest proportion of the runoff water and may be more likely to flood; action should be most effective here. Lighter orange places are also within major flow paths but have less influence on flow into the major channels.",
-                        "es": "Este mapa muestra lugares que actualmente se usan en la agricultura y como pastizales, en donde tomar acción para mejorar la regulación de las aguas superficiales para retardar el flujo de la escorrentía hacia el Río Frío sería más eficaz. Los sitios de color marrón oscuro están dentro de subcuencas que colindan directamente con un río principal, afluente o canal; por ello, la acción a tomar sería más eficaz aquí. Los sitios de color naranja claro también se encuentran dentro de las principales corrientes, pero no colindan directamente con un canal principal."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "What the service is:",
-                        "es": "Cuál es el servicio:"
-                    },
-                    "section_content": {
-                        "en": "Water regulation is a form of Natural Flood Management where hydrological and morphological processes, along with vegetation type, together manage the sources and pathways for flood waters.",
-                        "es": "La regulación del agua es una forma de la Gestión Natural de Inundaciones en donde los procesos hidrológicos y morfológicos, y el tipo de vegetación presente, trabajan juntos para manejar las fuentes y vías de evacuación de las aguas de inundaciones."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "Why it is important:",
-                        "es": "Por qué es importante:"
-                    },
-                    "section_content": {
-                        "en": "Generally, interventions higher up the catchment should benefit a larger area downstream, but can be more challenging to implement (e.g. due to topography and accessibility). In the lower reaches of the catchment the effects of management intervention become more localised (as there is less downstream area), but may be necessary to protect important  ssets/infrastructure. In all parts of the catchment, considering the location of major flow paths and places adjacent to channels will assist assessment of risk, and the value of benefits derived from taking action in different locations.",
-                        "es": "Por lo general, las intervenciones en la zona alta de la cuenca deberían beneficiar a una zona más extensa aguas abajo. Sin embargo, las intervenciones en los tramos medios y altos de la cuenca pueden ser más difíciles de implementar (por ejemplo; debido la topografía y a la accesibilidad). En los tramos más bajos de la cuenca, los efectos de la intervención de gestión pueden ser más localizados (ya que hay menos zonas de aguas abajo). En todas las partes de la cuenca los beneficios de acción pueden maximizarse al apuntar a las áreas más cercanas a las vías de flujo principales (mostradas en marrón)."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How the map was created:",
-                        "es": "Cómo se creó el mapa:"
-                    },
-                    "section_content": {
-                        "en": "This map was created by analysing the restoration potential of habitat and land use classes generated using Sentinel 1 and Sentinel 2 satellite imagery, and flow paths derived from SRTM elevation data.",
-                        "es": "Este mapa fue creado al analizar el potencial de restauración del hábitat y de las clases de uso del suelo gracias a las imágenes satelitales de Sentinel 1 y Sentinel 2. Esto ha sido combinado con un análisis de datos de elevación SRTM para determinar cuencas y subcuencas hidrológicas."
-                    }
-                }
-            ],
-            "attribution": {
-                "en": "Data and maps created by Environment Systems Ltd (2019). Sentinel-2 image: European Space Agency - ESA",
-                "es": "Datos y mapas creados por Environment Systems Ltd (2019). Imagen del Sentinel-2: Agencia Espacial Europea - ESA"
-            }
-        },
-        "precipitation_erosion_risk": {
-            "short_title": {
-                "en": "Risk of soil erosion in the Sierra Nevada caused by precipitation",
-                "es": "Riesgo de erosión del suelo en la Sierra Nevada causado por lluvias"
-            },
-            "info_sections": [
-                {
-                    "section_title": {
-                        "en": "Risk of soil erosion in the Sierra Nevada caused by precipitation",
-                        "es": "Riesgo de erosión del suelo en la Sierra Nevada causado por lluvias"
-                    },
-                    "section_content": {
-                        "en": "<i>Ecosystem services: Conservation of soil and water quality. Limiting sediment entering rivers.</i>",
-                        "es": "<i>Servicios ecosistémicos: conservación del suelo y calidad del agua. Limitación de los sedimentos que entran a los ríos.</i>"
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How to interpret the map:",
-                        "es": "Cómo interpretar el mapa:"
-                    },
-                    "section_content": {
-                        "en": "Places of highest risk are coloured red. Places of lower risk are coloured blue.",
-                        "es": "Los sitios de más alto riesgo están señalados de color rojo. Los sitios en menor riesgo se muestran en color azul."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "What the service is:",
-                        "es": "Cuál es el servicio:"
-                    },
-                    "section_content": {
-                        "en": "Land erosion risk is a significant factor leading to loss of soil, soil quality degradation, siltation of rivers, damage to habitats and wildlife, and damage to buildings, roads, and other infrastructure.",
-                        "es": "El riesgo de la erosión del suelo es un factor importante que conduce a la pérdida de suelo, la degradación de la calidad del suelo, la sedimentación de ríos, daño a los hábitats y a la vida silvestre, daño a las edificaciones, carreteras y otro tipo de infraestructura."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "Why it is important:",
-                        "es": "Por qué es importante:"
-                    },
-                    "section_content": {
-                        "en": "Soil is a non-renewable resource and where it is lost through erosion, it can take hundreds to thousands of years to re-form. Losing soil disrupts the physical structure of the soil and the balance of biological communities which regulate soil functions, degrading soil quality. Nutrients and chemicals in the soil can be detrimental to the freshwater, wetland and marine habitats they reach, as well as the associated wildlife.",
-                        "es": "El suelo es un recurso no renovable y en donde se haya perdido por erosión puede tomar de cientos a miles de años para volver a formarse. La pérdida del suelo altera la estructura física del mismo y el balance de comunidades biológicas, que regulan las funciones del suelo, degradando así la calidad del suelo. Los nutrientes y químicos en el suelo pueden ser perjudiciales para el agua dulce, los humedales y los hábitats marinos a los que alcancen, así como a la fauna silvestre asociada."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How the map was created:",
-                        "es": "Cómo se creó el mapa:"
-                    },
-                    "section_content": {
-                        "en": "<p>This map was created using SCIMAP which is a framework for modelling and mapping diffuse pollution risk across landscapes. It considers slope, habitats and average precipitation. The map has been created using SRTM, WorldClim, Sentinel 1 and Sentinel 2 data.</p><p>The current map has been created at the strategic scale and is indicative at a field level. Field visits should be undertaken before any site-specific management decisions are taken. Additional data could be sourced to refine the maps at the local scale; methods for doing this are discussed in the project report.</p>",
-                        "es": "Este mapa fue creado usando SCIMAP el cual es un marco para la modelización y el mapeo del riesgo poblacional disperso en los distintos entornos naturales. Se considera a la pendiente, los hábitats y la precipitación promedio. El mapa ha sido creado usando también datos SRTM, WorldClim, Sentinel 1 y Sentinel 2. El mapa actual ha sido creado a escala estratégica y es indicativo a nivel de campo. Se deben realizar visitas de campo antes de tomar cualquier decisión de gestión de sitios específicos. Se podrían obtener datos adicionales para mejorar los mapas a escala local. Los métodos que se usaron para este trabajo son mencionados en el informe del proyecto."
-                    }
-                }
-            ],
-            "attribution": {
-                "en": "Data and maps created by Environment Systems Ltd (2019) SCIMAP by Sim Reaney, Durham University is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License",
-                "es": "Datos y mapas creados por Environment Systems Ltd (2019) SCIMAP por Sim Reaney, Durham University está licenciada bajo la licencia Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported"
-            }
-        },
-        "wind_erosion_risk": {
-            "short_title": {
-                "en": "Risk of soil erosion caused by wind",
-                "es": "Riesgo de erosión del suelo causado por el viento"
-            },
-            "info_sections": [
-                {
-                    "section_title": {
-                        "en": "Risk of soil erosion caused by wind",
-                        "es": "Riesgo de erosión del suelo causado por el viento"
-                    },
-                    "section_content": {
-                        "en": "<i>Ecosystem services: Conservation of soil and water quality. Limiting sediment entering rivers.</i>",
-                        "es": "<i>Servicios ecosistémicos: conservación del suelo y calidad del agua. Limitación de los sedimentos que entran a los ríos.</i>"
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How to interpret the map:",
-                        "es": "Cómo interpretar el mapa:"
-                    },
-                    "section_content": {
-                        "en": "Orange colours are places where soils are susceptible to wind erosion, with dark orange places being most susceptible.",
-                        "es": "El color naranja señala los sitios donde los suelos son susceptibles a la erosión eólica, mientras que los de color naranja oscuro muestran una mayor susceptibilidad."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "What the service is:",
-                        "es": "Cuál es el servicio:"
-                    },
-                    "section_content": {
-                        "en": "Topsoil erosion risk is a significant factor leading to loss of soil, soil quality degradation, reduction in agricultural productivity, and siltation of rivers and streams. Some soil types are more susceptible to wind erosion due to their texture, stoniness and organic matter content.",
-                        "es": "El riesgo de erosión de la capa arable es un factor significativo que conlleva a la pérdida del suelo, la degradación de la calidad del suelo, reducción en la productividad agrícola y sedimentación de los ríos y arroyos. Algunos tipos de suelo son más susceptibles a la erosión eólica debido a su textura, pedregosidad y contenido de materia orgánica."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "Why it is important:",
-                        "es": "Por qué es importante:"
-                    },
-                    "section_content": {
-                        "en": "Soil is a non-renewable resource and where it is lost through erosion, it can take hundreds to thousands of years to re-form. Losing topsoil removes a nutrient-rich growing-medium for plants, and also reduces the water infiltration capacity of the soil, leading to increased runoff. Land use management can have a large influence on wind erosion, particularly if vegetation cover is removed from dry, susceptible soils when erosive winds are likely to occur.",
-                        "es": "El suelo es un recurso no renovable y en donde se haya perdido por erosión puede tomar de cientos a miles de años para volver a formarse. La pérdida de la capa arable elimina un medio de cultivo para plantas rico en nutrientes y también reduce la capacidad de infiltración de agua en el suelto lo cual conlleva a una escorrentía incrementada. La gestión del uso de suelos puede tener una gran influencia en la erosión eólica, especialmente si se elimina la cobertura vegetal de suelos secos y susceptibles cuando es probable que ocurran vientos erosivos."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How the map was created:",
-                        "es": "Cómo se creó el mapa:"
-                    },
-                    "section_content": {
-                        "en": "This map is based on an analysis of soil characteristics as mapped within the Digital Soil Map of the Department of Magdalena, Republic of Colombia. Scale 1: 100,000 (2009). Soil classes and their relative abundances were assessed for their susceptibility to wind erosion, so that soils with the highest risk and which are present in over 60% of an area, are given the highest risk. Areas where the same soil type is present, but in lower proportions, are assessed as lower risk.",
-                        "es": "Este mapa está basado en un análisis de características de suelo según está mapeado dentro del Mapa Digital de Suelos del Departamento del Magdalena, Colombia. Escala 1: 100,000 (2009). Las clases de suelo y sus abundancias relativas fueron evaluadas por su susceptibilidad a la erosión eólica de tal manera que los suelos con más alto riesgo y que están presentes en un 60% del área son los que obtienen el más alto riesgo."
-                    }
-                }
-            ],
-            "attribution": {
-                "en": "Data and maps created by Environment Systems Ltd (2019). Soil data: Geographic Institute Agustín Codazzi",
-                "es": "Datos y mapas creados por Environment Systems Ltd (2019). Datos de suelo: Instituto Geográfico Agustín Codazzi"
-            }
-        },
-        "key_biodiversity_habitats": {
-            "short_title": {
-                "en": "Places with habitat of key importance for biodiversity",
-                "es": "Sitios con hábitat de importancia clave para la biodiversidad"
-            },
-            "info_sections": [
-                {
-                    "section_title": {
-                        "en": "Places with habitat of key importance for biodiversity",
-                        "es": "Sitios con hábitat de importancia clave para la biodiversidad"
-                    },
-                    "section_content": {
-                        "en": "<i>Ecosystem services: Population maintenance & genetic diversity.</i>",
-                        "es": "<i>Servicios ecosistémicos: mantenimiento de la población & diversidad genética.</i>"
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How to interpret the map:",
-                        "es": "Cómo interpretar el mapa:"
-                    },
-                    "section_content": {
-                        "en": "The map shows existing areas of natural or semi-natural grassland, wetland or woodland that are important for supporting biological and genetic diversity. Areas of disturbed woodland are not included as they are likely to be less diverse than undisturbed woodland.",
-                        "es": "El mapa muestra áreas existentes de pastizales, humedales o bosques naturales o semi-naturales que son importantes para apoyar la diversidad biológica y genética. Las áreas de bosque intervenido no han sido incluidas ya que es probable que sean menos diversas que las que no han sido intervenidas."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "What the service is:",
-                        "es": "Cuál es el servicio:"
-                    },
-                    "section_content": {
-                        "en": "The map shows areas of natural or semi-natural vegetation, that are likely to support populations of a wide range of species, and high overall biodiversity. Biodiversity is a supporting service which underpins many other ecosystem services such as soil quality, pollination, food provision and surface water regulation.",
-                        "es": "El mapa muestra áreas de vegetación natural o semi-natural que son proclive a apoyar poblaciones de una amplia variedad de especies y una alta biodiversidad en general. La biodiversidad es un servicio de apoyo que respalda muchos otros servicios ecosistémicos, tales como la calidad del suelo, la polinización, el suministro de alimentos y la regulación del agua superficial."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "Why it is important:",
-                        "es": "Por qué es importante:"
-                    },
-                    "section_content": {
-                        "en": "These habitats are core components of the ecological networks, which facilitate gene flow between species populations and increase ecological resilience to disturbances such as land management and climate change. Natural and semi-natural habitats function as a complete system and so generally provide a higher level of ecosystem services than less natural and structurally diverse habitats. Loss of these habitats would reduce the ecological resilience, and have an impact on related ecosystem services, such as the ability of land to regulate surface water runoff, and habitat for pollinators.",
-                        "es": "Estos hábitats son los elementos básicos de las redes ecológicas lo cual facilita el flujo genético entre las poblaciones de especies y aumenta la resiliencia ecológica frente a disturbios como el manejo territorial y el cambio climático. Los hábitats naturales y seminaturales funcionan como un sistema completo y, por lo tanto, generalmente brindan un mayor nivel de servicios ecosistémicos que los hábitats estructuralmente diversos y menos naturales. La pérdida de estos hábitats disminuiría la resiliencia ecológica y, además, tendría un impacto en los servicios ecosistémicos relacionados tales como, en la habilidad de la tierra para regular la escorrentía superficial y en el hábitat para los polinizadores."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How the map was created:",
-                        "es": "Cómo se creó el mapa:"
-                    },
-                    "section_content": {
-                        "en": "The habitat classes were generated using Sentinel 1 and Sentinel 2 satellite imagery. The map has been created at the strategic scale and is indicative at a field level. Field visits should be undertaken before any specific management decisions are taken.",
-                        "es": "Las clases de hábitat fueron generadas usando imágenes satelitales Sentinel 1 y Sentinel 2. El mapa ha sido creado a escala estratégica y es indicativo a nivel de campo. Se deben llevar a cabo visitas de campo antes de tomar cualquier decisión de manejo específica."
-                    }
-                }
-            ],
-            "attribution": {
-                "en": "Data and maps created by Environment Systems Ltd (2019)",
-                "es": "Datos y mapas creados por Environment Systems Ltd (2019)"
-            }
-        },
-        "key_ecosystem_service_areas": {
-            "short_title": {
-                "en": "Places delivering multiple ecosystem service benefits: key areas for biodiversity and surface water regulation",
-                "es": "Sitios que ofrecen múltiples beneficios de servicios ecosistémicos: áreas clave para la biodiversidad y la regulación de aguas superficiales"
-            },
-            "info_sections": [
-                {
-                    "section_title": {
-                        "en": "Places delivering multiple ecosystem service benefits: key areas for biodiversity and surface water regulation",
-                        "es": "Sitios que ofrecen múltiples beneficios de servicios ecosistémicos: áreas clave para la biodiversidad y la regulación de aguas superficiales"
-                    },
-                    "section_content": {
-                        "en": "<i>Ecosystem services: Population maintenance & genetic diversity. Regulation of overland flow.</i>",
-                        "es": "<i>Servicio ecosistémico: Mantenimiento de la población & diversidad genética. Regulación de la escorrentía superficial.</i>"
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How to interpret the map:",
-                        "es": "Cómo interpretar el mapa:"
-                    },
-                    "section_content": {
-                        "en": "The map identifies areas of source habitat (grassland, woodland, wetland) which coincide with areas providing high surface water regulation.",
-                        "es": "El mapa identifica las áreas de hábitat fuente (pastizales, bosque, humedales) las cuales coinciden con las áreas que brindan una alta regulación de aguas superficiales."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "What the service is:",
-                        "es": "Cuál es el servicio:"
-                    },
-                    "section_content": {
-                        "en": "Source habitats function as the core of ecological networks. The structure and naturalness of the vegetation in these areas provides high biodiversity value. These vegetation characteristics combine with characteristics of the soil, geology and slope and together they provide high levels of surface water regulation. Biodiversity is a supporting service which underpins many other ecosystem services such as soil quality, pollination and food provision. Surface water regulation is a form of natural flood management, where hydrological and morphological processes, together with the habitat features, work together to manage the sources and pathways for flood waters.",
-                        "es": "Los hábitats fuente cumplen la función de ser el núcleo de las redes ecológicas. La estructura y la naturalidad de la vegetación en estas áreas ofrecen un alto valor de biodiversidad. Estas características de vegetación se combinan con características del suelo, geología y pendiente, y juntas brindan altos niveles de regulación de las aguas superficiales. La biodiversidad es un servicio de apoyo que respalda muchos otros servicios ecosistémicos tales como: la calidad del suelo, polinización y el suministro de alimentos. La regulación de las aguas superficiales es una forma natural de manejar las inundaciones donde los procesos morfológicos e hidrológicos, en conjunto con las características del hábitat, trabajan para así manejar las fuentes y las vías de las aguas de inundaciones."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "Why it is important:",
-                        "es": "Por qué es importante:"
-                    },
-                    "section_content": {
-                        "en": "Surface water regulation and biodiversity are important ecosystem services in their own right. However, places providing high levels of multiple ecosystem services could be considered more valuable than those providing a single ecosysterm service. The protection of places of high biodiversity value that also provide high levels of natural flood management is likely to be a good investment.",
-                        "es": "La regulación de aguas superficiales y la biodiversidad son servicios ecosistémicos importantes por sí mismos. Sin embargo, los sitios que brindan altos niveles de múltiples servicios ecosistémicos podrían ser considerados de más valor que aquellos que brindan un solo servicio ecosistémico. Es de esperar que la protección de estos lugares de alto valor de biodiversidad, que también brindan altos niveles de gestión natural de inundaciones, sea una buena inversión."
-                    }
-                },
-                {
-                    "section_title": {
-                        "en": "How the map was created:",
-                        "es": "Cómo se creó el mapa:"
-                    },
-                    "section_content": {
-                        "en": "This map was derived by combining information from two other ecosystem service maps in this series: \"Ability of the land to moderate surface water runoff\" and \"Places with habitat of key importance for biodiversity\".",
-                        "es": "Este mapa se generó de la combinación de información de otros dos mapas de servicios ecosistémicos en estas series: \"La habilidad del suelo para regular la escorrentía superficial\" y \"Sitios con hábitat de importancia clave para la biodiversidad\"."
-                    }
-                }
-            ],
-            "attribution": {
-                "en": "Data and maps created by Environment Systems Ltd (2019)",
-                "es": "Datos y mapas creados por Environment Systems Ltd (2019). Datos de suelo: Instituto Geográfico Agustín Codazzi"
-            }
-        },
         "woodland_ecological_connectivity": {
+            "wms_name": "colombia_eo4_cultivar:colombia_woodland_ecosystem_connectivity",
+            "legend_styles": [],
             "short_title": {
                 "en": "Ecological Network Connectivity - Woodland Ecosystem",
                 "es": "Conectividad de red ecológica – Ecosistema forestal"
@@ -571,6 +217,8 @@
             }
         },
         "wetland_ecological_connectivity": {
+            "wms_name": "colombia_eo4_cultivar:colombia_wetland_ecosystem_connectivity",
+            "legend_styles": [],
             "short_title": {
                 "en": "Ecological Network Connectivity - Wetland Ecosystem",
                 "es": "Conectividad de red ecológica – Ecosistema de humedales"
@@ -633,6 +281,8 @@
             }
         },
         "grassland_ecological_connectivity": {
+            "wms_name": "colombia_eo4_cultivar:colombia_grassland_ecosystem_connectivity",
+            "legend_styles": [],
             "short_title": {
                 "en": "Ecological Network Connectivity - Grassland Ecosystem",
                 "es": "Conectividad de red ecológica – Ecosistema de pastizales"
@@ -694,7 +344,383 @@
                 "es": "Datos y mapas creados por Environment Systems Ltd (2019)"
             }
         },
+        "water_regulation_opportunities": {
+            "wms_name": "colombia_eo4_cultivar:colombia_RioFrio_all_ops_to_enhance_surface_water_reg",
+            "legend_styles": [],
+            "short_title": {
+                "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment",
+                "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío"
+            },
+            "info_sections": [
+                {
+                    "section_title": {
+                        "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment",
+                        "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío"
+                    },
+                    "section_content": {
+                        "en": "<i>Ecosystem service: Regulation of overland flow.</i>",
+                        "es": "<i>Servicio Ecosistémico: Regulación de la escorrentía superficial.</i>"
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How to interpret the map:",
+                        "es": "Cómo interpretar el mapa:"
+                    },
+                    "section_content": {
+                        "en": "This map shows places with agriculture and grassland where it would be possible to improve surface water regulation to slow the flow of runoff into the river Frio. Places shown in dark blue are located in the upper catchment of the Rio Frio. Places shown in light blue are in the mid-catchment, and places shown in green are in the lower catchment. All of the coloured areas on the map are hydrologically connected, and action taken in these areas should enhance the existing water regulation capacity of the land. However, the types of action that are most appropriate, and whether these are logistically possible and cost-effective, depend on the position of the opportunity within the catchment.",
+                        "es": "Este mapa muestra lugares con agricultura y pastizales en donde sería posible mejorar la regulación superficial del agua para retardar el flujo de la escorrentía hacia el Río Frío. Los lugares de color azul oscuro están ubicados en la cuenca alta del Río Frío. Los lugares en color azul claro se encuentran en la parte media de la cuenca y los de color verde, en la cuenca baja. Todas las áreas de color en el mapa están hidrológicamente conectadas, por lo que las medidas adoptadas en estos sectores deberían mejorar la capacidad existente de la regulación del agua. No obstante, los tipos de acción que serían más apropiados, y ya sea que fuesen logísticamente posibles y rentables, dependen de la posición de la oportunidad dentro de la cuenca."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "Why is it important:",
+                        "es": "Por qué es importante:"
+                    },
+                    "section_content": {
+                        "en": "Generally, interventions in the mid- and upper-reaches of the catchment (light and dark blue) will benefit a larger downstream area, but can be more challenging to implement, e.g. due to topography and accessibility. In the lower reaches of the catchment the effects of management intervention become more localised (as there is less downstream area), but can be easier to achieve. In the lower reaches of the river wetland creation can enhance the capacity of land to store flood waters and limit their spread, which might protect valuable assets and infrastructure. In the upper reaches afforestation can slow the volume and rate at which water enters the watercourses.",
+                        "es": "Por lo general, las intervenciones en la zona media y alta de la cuenca (azul claro y oscuro) beneficiarán un área grande de aguas abajo, pero puede ser más difícil de implementar, por ejemplo, debido a la topografía y la accesibilidad. En las partes más bajas del área de captación, los resultados de la intervención del manejo se vuelven más localizados (ya que hay menos área de aguas abajo), pero más fáciles de lograr. En los tramos inferiores del río, la creación de humedales puede aumentar la capacidad de la tierra para almacenar las aguas de las inundaciones y restringir su velocidad, lo que podría proteger valiosos bienes e infraestructura. En los tramos superiores, la forestación puede ralentizar el volumen y la velocidad con la que el agua entra en los cursos de agua."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How the map was created:",
+                        "es": "Cómo se creó el mapa:"
+                    },
+                    "section_content": {
+                        "en": "This map was created by analysing the restoration potential of habitat and land use classes generated using Sentinel 1 and Sentinel 2 satellite imagery. The river basin boundary was determined by analysis of SRTM elevation data.",
+                        "es": "Este mapa fue creado al analizar el potencial de restauración del hábitat y de las clases de uso del suelo gracias a las imágenes satelitales de Sentinel 1 y Sentinel 2. La delimitación de la cuenca hidrográfica se determinó por un análisis de datos de elevación SRTM."
+                    }
+                }
+            ],
+            "attribution": {
+                "en": "Data and maps created by Environment Systems Ltd (2019)",
+                "es": "Datos y mapas creados por Environment Systems Ltd (2019)"
+            }
+        },
+        "water_regulation_opportunities_high_volume": {
+            "wms_name": "colombia_eo4_cultivar:colombia_riofrio_ops_to_enhance_surface_water_reg_receiving_high_flow_volume",
+            "legend_styles": [],
+            "short_title": {
+                "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment: places receiving high volumes of surface water flow",
+                "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío: sitios limítrofes de los principales canales de drenaje"
+            },
+            "info_sections": [
+                {
+                    "section_title": {
+                        "en": "Opportunities to enhance surface water regulation in the Rio Frio catchment: places receiving high volumes of surface water flow",
+                        "es": "Oportunidades para mejorar la regulación de las aguas superficiales en la zona de captación del Río Frío: sitios limítrofes de los principales canales de drenaje"
+                    },
+                    "section_content": {
+                        "en": "<i>Ecosystem service: Regulation of overland flow.</i>",
+                        "es": "<i>Servicio Ecosistémico: Regulación de la escorrentía superficial.</i>"
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How to interpret the map:",
+                        "es": "Cómo interpretar el mapa:"
+                    },
+                    "section_content": {
+                        "en": "This map shows places that are currently agriculture or grassland within major flow paths, where taking action to improve surface water regulation, to slow the flow of runoff into the river Frio, would be most effective. Dark brown places directly adjoin a major river, tributary or channel. They receive the largest proportion of the runoff water and may be more likely to flood; action should be most effective here. Lighter orange places are also within major flow paths but have less influence on flow into the major channels.",
+                        "es": "Este mapa muestra lugares que actualmente se usan en la agricultura y como pastizales, en donde tomar acción para mejorar la regulación de las aguas superficiales para retardar el flujo de la escorrentía hacia el Río Frío sería más eficaz. Los sitios de color marrón oscuro están dentro de subcuencas que colindan directamente con un río principal, afluente o canal; por ello, la acción a tomar sería más eficaz aquí. Los sitios de color naranja claro también se encuentran dentro de las principales corrientes, pero no colindan directamente con un canal principal."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "What the service is:",
+                        "es": "Cuál es el servicio:"
+                    },
+                    "section_content": {
+                        "en": "Water regulation is a form of Natural Flood Management where hydrological and morphological processes, along with vegetation type, together manage the sources and pathways for flood waters.",
+                        "es": "La regulación del agua es una forma de la Gestión Natural de Inundaciones en donde los procesos hidrológicos y morfológicos, y el tipo de vegetación presente, trabajan juntos para manejar las fuentes y vías de evacuación de las aguas de inundaciones."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "Why it is important:",
+                        "es": "Por qué es importante:"
+                    },
+                    "section_content": {
+                        "en": "Generally, interventions higher up the catchment should benefit a larger area downstream, but can be more challenging to implement (e.g. due to topography and accessibility). In the lower reaches of the catchment the effects of management intervention become more localised (as there is less downstream area), but may be necessary to protect important  ssets/infrastructure. In all parts of the catchment, considering the location of major flow paths and places adjacent to channels will assist assessment of risk, and the value of benefits derived from taking action in different locations.",
+                        "es": "Por lo general, las intervenciones en la zona alta de la cuenca deberían beneficiar a una zona más extensa aguas abajo. Sin embargo, las intervenciones en los tramos medios y altos de la cuenca pueden ser más difíciles de implementar (por ejemplo; debido la topografía y a la accesibilidad). En los tramos más bajos de la cuenca, los efectos de la intervención de gestión pueden ser más localizados (ya que hay menos zonas de aguas abajo). En todas las partes de la cuenca los beneficios de acción pueden maximizarse al apuntar a las áreas más cercanas a las vías de flujo principales (mostradas en marrón)."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How the map was created:",
+                        "es": "Cómo se creó el mapa:"
+                    },
+                    "section_content": {
+                        "en": "This map was created by analysing the restoration potential of habitat and land use classes generated using Sentinel 1 and Sentinel 2 satellite imagery, and flow paths derived from SRTM elevation data.",
+                        "es": "Este mapa fue creado al analizar el potencial de restauración del hábitat y de las clases de uso del suelo gracias a las imágenes satelitales de Sentinel 1 y Sentinel 2. Esto ha sido combinado con un análisis de datos de elevación SRTM para determinar cuencas y subcuencas hidrológicas."
+                    }
+                }
+            ],
+            "attribution": {
+                "en": "Data and maps created by Environment Systems Ltd (2019). Sentinel-2 image: European Space Agency - ESA",
+                "es": "Datos y mapas creados por Environment Systems Ltd (2019). Imagen del Sentinel-2: Agencia Espacial Europea - ESA"
+            }
+        },
+        "precipitation_erosion_risk": {
+            "wms_name": "colombia_eo4_cultivar:colombia_precip_soil_erosion_risk",
+            "legend_styles": [],
+            "short_title": {
+                "en": "Risk of soil erosion in the Sierra Nevada caused by precipitation",
+                "es": "Riesgo de erosión del suelo en la Sierra Nevada causado por lluvias"
+            },
+            "info_sections": [
+                {
+                    "section_title": {
+                        "en": "Risk of soil erosion in the Sierra Nevada caused by precipitation",
+                        "es": "Riesgo de erosión del suelo en la Sierra Nevada causado por lluvias"
+                    },
+                    "section_content": {
+                        "en": "<i>Ecosystem services: Conservation of soil and water quality. Limiting sediment entering rivers.</i>",
+                        "es": "<i>Servicios ecosistémicos: conservación del suelo y calidad del agua. Limitación de los sedimentos que entran a los ríos.</i>"
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How to interpret the map:",
+                        "es": "Cómo interpretar el mapa:"
+                    },
+                    "section_content": {
+                        "en": "Places of highest risk are coloured red. Places of lower risk are coloured blue.",
+                        "es": "Los sitios de más alto riesgo están señalados de color rojo. Los sitios en menor riesgo se muestran en color azul."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "What the service is:",
+                        "es": "Cuál es el servicio:"
+                    },
+                    "section_content": {
+                        "en": "Land erosion risk is a significant factor leading to loss of soil, soil quality degradation, siltation of rivers, damage to habitats and wildlife, and damage to buildings, roads, and other infrastructure.",
+                        "es": "El riesgo de la erosión del suelo es un factor importante que conduce a la pérdida de suelo, la degradación de la calidad del suelo, la sedimentación de ríos, daño a los hábitats y a la vida silvestre, daño a las edificaciones, carreteras y otro tipo de infraestructura."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "Why it is important:",
+                        "es": "Por qué es importante:"
+                    },
+                    "section_content": {
+                        "en": "Soil is a non-renewable resource and where it is lost through erosion, it can take hundreds to thousands of years to re-form. Losing soil disrupts the physical structure of the soil and the balance of biological communities which regulate soil functions, degrading soil quality. Nutrients and chemicals in the soil can be detrimental to the freshwater, wetland and marine habitats they reach, as well as the associated wildlife.",
+                        "es": "El suelo es un recurso no renovable y en donde se haya perdido por erosión puede tomar de cientos a miles de años para volver a formarse. La pérdida del suelo altera la estructura física del mismo y el balance de comunidades biológicas, que regulan las funciones del suelo, degradando así la calidad del suelo. Los nutrientes y químicos en el suelo pueden ser perjudiciales para el agua dulce, los humedales y los hábitats marinos a los que alcancen, así como a la fauna silvestre asociada."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How the map was created:",
+                        "es": "Cómo se creó el mapa:"
+                    },
+                    "section_content": {
+                        "en": "<p>This map was created using SCIMAP which is a framework for modelling and mapping diffuse pollution risk across landscapes. It considers slope, habitats and average precipitation. The map has been created using SRTM, WorldClim, Sentinel 1 and Sentinel 2 data.</p><p>The current map has been created at the strategic scale and is indicative at a field level. Field visits should be undertaken before any site-specific management decisions are taken. Additional data could be sourced to refine the maps at the local scale; methods for doing this are discussed in the project report.</p>",
+                        "es": "Este mapa fue creado usando SCIMAP el cual es un marco para la modelización y el mapeo del riesgo poblacional disperso en los distintos entornos naturales. Se considera a la pendiente, los hábitats y la precipitación promedio. El mapa ha sido creado usando también datos SRTM, WorldClim, Sentinel 1 y Sentinel 2. El mapa actual ha sido creado a escala estratégica y es indicativo a nivel de campo. Se deben realizar visitas de campo antes de tomar cualquier decisión de gestión de sitios específicos. Se podrían obtener datos adicionales para mejorar los mapas a escala local. Los métodos que se usaron para este trabajo son mencionados en el informe del proyecto."
+                    }
+                }
+            ],
+            "attribution": {
+                "en": "Data and maps created by Environment Systems Ltd (2019) SCIMAP by Sim Reaney, Durham University is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License",
+                "es": "Datos y mapas creados por Environment Systems Ltd (2019) SCIMAP por Sim Reaney, Durham University está licenciada bajo la licencia Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported"
+            }
+        },
+        "wind_erosion_risk": {
+            "wms_name": "colombia_eo4_cultivar:colombia_wind_soil_erosion_risk",
+            "legend_styles": [],
+            "short_title": {
+                "en": "Risk of soil erosion caused by wind",
+                "es": "Riesgo de erosión del suelo causado por el viento"
+            },
+            "info_sections": [
+                {
+                    "section_title": {
+                        "en": "Risk of soil erosion caused by wind",
+                        "es": "Riesgo de erosión del suelo causado por el viento"
+                    },
+                    "section_content": {
+                        "en": "<i>Ecosystem services: Conservation of soil and water quality. Limiting sediment entering rivers.</i>",
+                        "es": "<i>Servicios ecosistémicos: conservación del suelo y calidad del agua. Limitación de los sedimentos que entran a los ríos.</i>"
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How to interpret the map:",
+                        "es": "Cómo interpretar el mapa:"
+                    },
+                    "section_content": {
+                        "en": "Orange colours are places where soils are susceptible to wind erosion, with dark orange places being most susceptible.",
+                        "es": "El color naranja señala los sitios donde los suelos son susceptibles a la erosión eólica, mientras que los de color naranja oscuro muestran una mayor susceptibilidad."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "What the service is:",
+                        "es": "Cuál es el servicio:"
+                    },
+                    "section_content": {
+                        "en": "Topsoil erosion risk is a significant factor leading to loss of soil, soil quality degradation, reduction in agricultural productivity, and siltation of rivers and streams. Some soil types are more susceptible to wind erosion due to their texture, stoniness and organic matter content.",
+                        "es": "El riesgo de erosión de la capa arable es un factor significativo que conlleva a la pérdida del suelo, la degradación de la calidad del suelo, reducción en la productividad agrícola y sedimentación de los ríos y arroyos. Algunos tipos de suelo son más susceptibles a la erosión eólica debido a su textura, pedregosidad y contenido de materia orgánica."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "Why it is important:",
+                        "es": "Por qué es importante:"
+                    },
+                    "section_content": {
+                        "en": "Soil is a non-renewable resource and where it is lost through erosion, it can take hundreds to thousands of years to re-form. Losing topsoil removes a nutrient-rich growing-medium for plants, and also reduces the water infiltration capacity of the soil, leading to increased runoff. Land use management can have a large influence on wind erosion, particularly if vegetation cover is removed from dry, susceptible soils when erosive winds are likely to occur.",
+                        "es": "El suelo es un recurso no renovable y en donde se haya perdido por erosión puede tomar de cientos a miles de años para volver a formarse. La pérdida de la capa arable elimina un medio de cultivo para plantas rico en nutrientes y también reduce la capacidad de infiltración de agua en el suelto lo cual conlleva a una escorrentía incrementada. La gestión del uso de suelos puede tener una gran influencia en la erosión eólica, especialmente si se elimina la cobertura vegetal de suelos secos y susceptibles cuando es probable que ocurran vientos erosivos."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How the map was created:",
+                        "es": "Cómo se creó el mapa:"
+                    },
+                    "section_content": {
+                        "en": "This map is based on an analysis of soil characteristics as mapped within the Digital Soil Map of the Department of Magdalena, Republic of Colombia. Scale 1: 100,000 (2009). Soil classes and their relative abundances were assessed for their susceptibility to wind erosion, so that soils with the highest risk and which are present in over 60% of an area, are given the highest risk. Areas where the same soil type is present, but in lower proportions, are assessed as lower risk.",
+                        "es": "Este mapa está basado en un análisis de características de suelo según está mapeado dentro del Mapa Digital de Suelos del Departamento del Magdalena, Colombia. Escala 1: 100,000 (2009). Las clases de suelo y sus abundancias relativas fueron evaluadas por su susceptibilidad a la erosión eólica de tal manera que los suelos con más alto riesgo y que están presentes en un 60% del área son los que obtienen el más alto riesgo."
+                    }
+                }
+            ],
+            "attribution": {
+                "en": "Data and maps created by Environment Systems Ltd (2019). Soil data: Geographic Institute Agustín Codazzi",
+                "es": "Datos y mapas creados por Environment Systems Ltd (2019). Datos de suelo: Instituto Geográfico Agustín Codazzi"
+            }
+        },
+        "key_biodiversity_habitats": {
+            "wms_name": "colombia_eo4_cultivar:colombia_habitat_network_sources",
+            "legend_styles": [],
+            "short_title": {
+                "en": "Places with habitat of key importance for biodiversity",
+                "es": "Sitios con hábitat de importancia clave para la biodiversidad"
+            },
+            "info_sections": [
+                {
+                    "section_title": {
+                        "en": "Places with habitat of key importance for biodiversity",
+                        "es": "Sitios con hábitat de importancia clave para la biodiversidad"
+                    },
+                    "section_content": {
+                        "en": "<i>Ecosystem services: Population maintenance & genetic diversity.</i>",
+                        "es": "<i>Servicios ecosistémicos: mantenimiento de la población & diversidad genética.</i>"
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How to interpret the map:",
+                        "es": "Cómo interpretar el mapa:"
+                    },
+                    "section_content": {
+                        "en": "The map shows existing areas of natural or semi-natural grassland, wetland or woodland that are important for supporting biological and genetic diversity. Areas of disturbed woodland are not included as they are likely to be less diverse than undisturbed woodland.",
+                        "es": "El mapa muestra áreas existentes de pastizales, humedales o bosques naturales o semi-naturales que son importantes para apoyar la diversidad biológica y genética. Las áreas de bosque intervenido no han sido incluidas ya que es probable que sean menos diversas que las que no han sido intervenidas."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "What the service is:",
+                        "es": "Cuál es el servicio:"
+                    },
+                    "section_content": {
+                        "en": "The map shows areas of natural or semi-natural vegetation, that are likely to support populations of a wide range of species, and high overall biodiversity. Biodiversity is a supporting service which underpins many other ecosystem services such as soil quality, pollination, food provision and surface water regulation.",
+                        "es": "El mapa muestra áreas de vegetación natural o semi-natural que son proclive a apoyar poblaciones de una amplia variedad de especies y una alta biodiversidad en general. La biodiversidad es un servicio de apoyo que respalda muchos otros servicios ecosistémicos, tales como la calidad del suelo, la polinización, el suministro de alimentos y la regulación del agua superficial."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "Why it is important:",
+                        "es": "Por qué es importante:"
+                    },
+                    "section_content": {
+                        "en": "These habitats are core components of the ecological networks, which facilitate gene flow between species populations and increase ecological resilience to disturbances such as land management and climate change. Natural and semi-natural habitats function as a complete system and so generally provide a higher level of ecosystem services than less natural and structurally diverse habitats. Loss of these habitats would reduce the ecological resilience, and have an impact on related ecosystem services, such as the ability of land to regulate surface water runoff, and habitat for pollinators.",
+                        "es": "Estos hábitats son los elementos básicos de las redes ecológicas lo cual facilita el flujo genético entre las poblaciones de especies y aumenta la resiliencia ecológica frente a disturbios como el manejo territorial y el cambio climático. Los hábitats naturales y seminaturales funcionan como un sistema completo y, por lo tanto, generalmente brindan un mayor nivel de servicios ecosistémicos que los hábitats estructuralmente diversos y menos naturales. La pérdida de estos hábitats disminuiría la resiliencia ecológica y, además, tendría un impacto en los servicios ecosistémicos relacionados tales como, en la habilidad de la tierra para regular la escorrentía superficial y en el hábitat para los polinizadores."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How the map was created:",
+                        "es": "Cómo se creó el mapa:"
+                    },
+                    "section_content": {
+                        "en": "The habitat classes were generated using Sentinel 1 and Sentinel 2 satellite imagery. The map has been created at the strategic scale and is indicative at a field level. Field visits should be undertaken before any specific management decisions are taken.",
+                        "es": "Las clases de hábitat fueron generadas usando imágenes satelitales Sentinel 1 y Sentinel 2. El mapa ha sido creado a escala estratégica y es indicativo a nivel de campo. Se deben llevar a cabo visitas de campo antes de tomar cualquier decisión de manejo específica."
+                    }
+                }
+            ],
+            "attribution": {
+                "en": "Data and maps created by Environment Systems Ltd (2019)",
+                "es": "Datos y mapas creados por Environment Systems Ltd (2019)"
+            }
+        },
+        "key_ecosystem_service_areas": {
+            "wms_name": "colombia_eo4_cultivar:colombia_important_benefit_areas",
+            "legend_styles": [],
+            "short_title": {
+                "en": "Places delivering multiple ecosystem service benefits: key areas for biodiversity and surface water regulation",
+                "es": "Sitios que ofrecen múltiples beneficios de servicios ecosistémicos: áreas clave para la biodiversidad y la regulación de aguas superficiales"
+            },
+            "info_sections": [
+                {
+                    "section_title": {
+                        "en": "Places delivering multiple ecosystem service benefits: key areas for biodiversity and surface water regulation",
+                        "es": "Sitios que ofrecen múltiples beneficios de servicios ecosistémicos: áreas clave para la biodiversidad y la regulación de aguas superficiales"
+                    },
+                    "section_content": {
+                        "en": "<i>Ecosystem services: Population maintenance & genetic diversity. Regulation of overland flow.</i>",
+                        "es": "<i>Servicio ecosistémico: Mantenimiento de la población & diversidad genética. Regulación de la escorrentía superficial.</i>"
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How to interpret the map:",
+                        "es": "Cómo interpretar el mapa:"
+                    },
+                    "section_content": {
+                        "en": "The map identifies areas of source habitat (grassland, woodland, wetland) which coincide with areas providing high surface water regulation.",
+                        "es": "El mapa identifica las áreas de hábitat fuente (pastizales, bosque, humedales) las cuales coinciden con las áreas que brindan una alta regulación de aguas superficiales."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "What the service is:",
+                        "es": "Cuál es el servicio:"
+                    },
+                    "section_content": {
+                        "en": "Source habitats function as the core of ecological networks. The structure and naturalness of the vegetation in these areas provides high biodiversity value. These vegetation characteristics combine with characteristics of the soil, geology and slope and together they provide high levels of surface water regulation. Biodiversity is a supporting service which underpins many other ecosystem services such as soil quality, pollination and food provision. Surface water regulation is a form of natural flood management, where hydrological and morphological processes, together with the habitat features, work together to manage the sources and pathways for flood waters.",
+                        "es": "Los hábitats fuente cumplen la función de ser el núcleo de las redes ecológicas. La estructura y la naturalidad de la vegetación en estas áreas ofrecen un alto valor de biodiversidad. Estas características de vegetación se combinan con características del suelo, geología y pendiente, y juntas brindan altos niveles de regulación de las aguas superficiales. La biodiversidad es un servicio de apoyo que respalda muchos otros servicios ecosistémicos tales como: la calidad del suelo, polinización y el suministro de alimentos. La regulación de las aguas superficiales es una forma natural de manejar las inundaciones donde los procesos morfológicos e hidrológicos, en conjunto con las características del hábitat, trabajan para así manejar las fuentes y las vías de las aguas de inundaciones."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "Why it is important:",
+                        "es": "Por qué es importante:"
+                    },
+                    "section_content": {
+                        "en": "Surface water regulation and biodiversity are important ecosystem services in their own right. However, places providing high levels of multiple ecosystem services could be considered more valuable than those providing a single ecosysterm service. The protection of places of high biodiversity value that also provide high levels of natural flood management is likely to be a good investment.",
+                        "es": "La regulación de aguas superficiales y la biodiversidad son servicios ecosistémicos importantes por sí mismos. Sin embargo, los sitios que brindan altos niveles de múltiples servicios ecosistémicos podrían ser considerados de más valor que aquellos que brindan un solo servicio ecosistémico. Es de esperar que la protección de estos lugares de alto valor de biodiversidad, que también brindan altos niveles de gestión natural de inundaciones, sea una buena inversión."
+                    }
+                },
+                {
+                    "section_title": {
+                        "en": "How the map was created:",
+                        "es": "Cómo se creó el mapa:"
+                    },
+                    "section_content": {
+                        "en": "This map was derived by combining information from two other ecosystem service maps in this series: \"Ability of the land to moderate surface water runoff\" and \"Places with habitat of key importance for biodiversity\".",
+                        "es": "Este mapa se generó de la combinación de información de otros dos mapas de servicios ecosistémicos en estas series: \"La habilidad del suelo para regular la escorrentía superficial\" y \"Sitios con hábitat de importancia clave para la biodiversidad\"."
+                    }
+                }
+            ],
+            "attribution": {
+                "en": "Data and maps created by Environment Systems Ltd (2019)",
+                "es": "Datos y mapas creados por Environment Systems Ltd (2019). Datos de suelo: Instituto Geográfico Agustín Codazzi"
+            }
+        },
         "ecological_opportunities": {
+            "wms_name": "colombia_eo4_cultivar:colombia_all_habitat_opportunities",
+            "legend_styles": [],
             "short_title": {
                 "en": "Opportunities to strengthen ecological networks",
                 "es": "Oportunidades para fortalecer las redes ecológicas"
@@ -747,6 +773,8 @@
             }
         },
         "priority_ecological_opportunities": {
+            "wms_name": "colombia_eo4_cultivar:colombia_habitat_opportunities_next_to_existing_source_habitat",
+            "legend_styles": [],
             "short_title": {
                 "en": "Opportunities to strengthen ecological networks: priority places for action (those adjoining existing key habitats of high-biodiversity value)",
                 "es": "Oportunidades para fortalecer las redes ecológicas: lugares prioritarios para tomar acción (sitios adyacentes a hábitats clave existentes de alto valor de biodiversidad)"
@@ -799,6 +827,8 @@
             }
         },
         "multi_benefit_ecological_opportunities": {
+            "wms_name": "colombia_eo4_cultivar:colombia_multibenefit_opportunities_habitat_water_regulation",
+            "legend_styles": [],
             "short_title": {
                 "en": "Opportunities to deliver multiple ecosystem services: ecological connectivity and surface water regulation",
                 "es": "Oportunidades para generar múltiples servicios ecosistémicos: conectividad ecológica y regulación de las aguas superficiales"
@@ -862,7 +892,24 @@
         }
     },
     "overlay_layers": {
+        "grid_5k": {
+            "wms_name": "",
+            "display_legend": false,
+            "display_sidebar": false,
+            "short_title": {
+                "en": "5k grid square with summary data",
+                "es": "Cuadrícula de 5k con datos de resumen"
+            },
+            "info_sections": [],
+            "attribution": {
+                "en": "JNCC",
+                "es": "JNCC"
+            }
+        },
         "zona_bananera": {
+            "wms_name": "colombia_eo4_cultivar:colombia_aoi_main_catchment",
+            "display_legend": false,
+            "display_sidebar": true,
             "short_title": {
                 "en": "Zona bananera",
                 "es": "Zona bananera"
@@ -874,6 +921,9 @@
             }
         },
         "rio_frio": {
+            "wms_name": "colombia_eo4_cultivar:opportunities_aoi_rio_frio_catchment",
+            "display_legend": false,
+            "display_sidebar": true,
             "short_title": {
                 "en": "Rio Frio catchment",
                 "es": "Rio Frio catchment"
@@ -883,22 +933,12 @@
                 "en": "JNCC and Environment Systems with Assistance from ASBAMA, Tecbaco and Fundeban",
                 "es": "???"
             }
-        },
-        "grid_5k": {
-            "short_title": {
-                "en": "Focal Area of Interest (5Km²) – Summary of data",
-                "es": "Área focal de interés (5Km²) - Resumen de datos"
-            },
-            "info_sections": [],
-            "attribution": {
-                "en": "JNCC",
-                "es": "JNCC"
-            }
-            
         }
     },
     "underlay_layers": {
         "satellite_imagery": {
+            "wms_name": "colombia_eo4_cultivar:satellite_imagery",
+            "display_legend": false,
             "short_title": {
                 "en": "Satellite imagery",
                 "es": "Capa satelital"

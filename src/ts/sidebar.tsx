@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 import { Config, getConfig } from './config'
-import * as layers from './layers'
 import * as content from '../content.json'
 import * as legends from '../legends.json'
 import * as map from './map'
@@ -147,7 +146,7 @@ function GridTab(props: MapLegendGroup) {
 export class LayerControls extends React.Component {
   state = {
     hideBaseLayer: true,
-    baseLayer: 'no_layer' as keyof typeof layers.baseLayers,
+    baseLayer: 'no_layer' as keyof typeof content.base_layers,
     overlays: {
       'zona_bananera': false
     } as any,
@@ -174,10 +173,10 @@ export class LayerControls extends React.Component {
         hideBaseLayer: false,
         baseLayer: event.target.value
       })
-      map.updateBaseLayer(event.target.value as keyof typeof layers.baseLayers, opacitySliderValue)
+      map.updateBaseLayer(event.target.value as keyof typeof content.base_layers, opacitySliderValue)
       for (let overlay of keys(this.state.overlays)) {
         if (this.state.overlays[overlay]) {
-          map.refreshOverlay(overlay as keyof typeof layers.overlayLayers)
+          map.refreshOverlay(overlay as keyof typeof content.overlay_layers)
         }
       }
     }
@@ -190,7 +189,7 @@ export class LayerControls extends React.Component {
     this.setState({
       overlays: updatedOverlays
     })
-    map.updateOverlay(event.target.value as keyof typeof layers.overlayLayers, event.target.checked)
+    map.updateOverlay(event.target.value as keyof typeof content.overlay_layers, event.target.checked)
   }
 
   changeUnderlay = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -200,11 +199,11 @@ export class LayerControls extends React.Component {
     this.setState({
       underlays: updatedUnderlays
     })
-    map.updateUnderlay(event.target.value as keyof typeof layers.underlayLayers, event.target.checked)
+    map.updateUnderlay(event.target.value as keyof typeof content.underlay_layers, event.target.checked)
     map.refreshBaseLayer(this.state.baseLayer)
     for (let overlay of keys(this.state.overlays)) {
       if (this.state.overlays[overlay]) {
-        map.refreshOverlay(overlay as keyof typeof layers.overlayLayers)
+        map.refreshOverlay(overlay as keyof typeof content.overlay_layers)
       }
     }
   }
@@ -221,7 +220,7 @@ export class LayerControls extends React.Component {
 
   render() {
     let baseLayerOptions = []
-    for (let layer of keys(layers.baseLayers)) {
+    for (let layer of keys(content.base_layers)) {
       baseLayerOptions.push(
         <option key={layer} value={layer}>
           {content.base_layers[layer].short_title[getConfig(window.location.search).language]}
@@ -230,22 +229,24 @@ export class LayerControls extends React.Component {
     }
 
     let overlayOptions = []
-    for (let layer of keys(layers.overlayLayers)) {
-      overlayOptions.push(
-        <div key={layer} className="checkbox">
-          <div className="form-inline">
-            <label className="form-check-label">
-              <input id={layer + '-checkbox'} className="form-check-input" type="checkbox"
-                onChange={this.changeOverlay} value={layer} checked={this.state.overlays[layer]} />
-              {content.overlay_layers[layer].short_title[getConfig(window.location.search).language]}
-            </label>
+    for (let layer of keys(content.overlay_layers)) {
+      if (content.overlay_layers[layer].display_sidebar) {
+        overlayOptions.push(
+          <div key={layer} className="checkbox">
+            <div className="form-inline">
+              <label className="form-check-label">
+                <input id={layer + '-checkbox'} className="form-check-input" type="checkbox"
+                  onChange={this.changeOverlay} value={layer} checked={this.state.overlays[layer]} />
+                {content.overlay_layers[layer].short_title[getConfig(window.location.search).language]}
+              </label>
+            </div>
           </div>
-        </div>
-      )
+        )
+      }
     }
 
     let underlayOptions = []
-    for (let layer of keys(layers.underlayLayers)) {
+    for (let layer of keys(content.underlay_layers)) {
       underlayOptions.push(
         <div key={layer} className="checkbox">
           <div className="form-inline">
@@ -305,14 +306,11 @@ export class LayerControls extends React.Component {
       <div className="sidebar-layers">
         <h3><span id="close-layers" className="sidebar-close"><i className="fas fa-caret-left"></i></span></h3>
         <div className="layer-select">
-          <div key="grid" className="checkbox">
-            <div className="form-inline">
-              <label className="form-check-label">
-                <input id="grid-checkbox" className="form-check-input" type="checkbox"
-                  onChange={this.changeGridLayer} value="grid" checked={this.state.showGridLayer} />
-                {content.overlay_layers['grid_5k'].short_title[getConfig(window.location.search).language]}
-              </label>
-            </div>
+          <div key="grid" id="grid-button">
+            <label>
+              <input type="checkbox" value="1" onChange={this.changeGridLayer} checked={this.state.showGridLayer} />
+              <span>{content.overlay_layers['grid_5k'].short_title[getConfig(window.location.search).language]}</span>
+            </label>
           </div>
           {underlayOptions}
           {overlayOptions}

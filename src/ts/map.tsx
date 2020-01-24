@@ -2,7 +2,7 @@
 import * as L from 'leaflet'
 import { Config } from './config.js'
 import * as content from '../content.json'
-import * as layers from './layers'
+//import * as layers from './layers'
 import * as grid from '../grid.json'
 import * as legends from '../legends.json'
 import '../js/leaflet-sidebar.min.js'
@@ -46,12 +46,12 @@ export function createMap(container: HTMLElement, config: Config) {
 
           let currentGroupLegendEntries = feature.properties.legends[layerKey]
           let layer: MapLegend = {
-            layerName: content.base_layers[layerKey as keyof typeof layers.baseLayers].short_title[config.language],
+            layerName: content.base_layers[layerKey as keyof typeof content.base_layers].short_title[config.language],
             legendEntries: []
           }
           gridLayers.push(layer)
 
-          let legend = legends[layerKey as keyof typeof layers.baseLayers]
+          let legend = legends[layerKey as keyof typeof content.base_layers]
           let entries: Array<LegendEntry> = legend.legend_entries
 
           if ('vector' in currentGroupLegendEntries) {
@@ -85,9 +85,9 @@ export function createMap(container: HTMLElement, config: Config) {
   })
 
   // setup base maps
-  for (let baseLayer of keys(layers.baseLayers)) {
+  for (let baseLayer of keys(content.base_layers)) {
     let layer = L.tileLayer.wms(process.env.GEOSERVER_URL + '/colombia_eo4_cultivar/wms?tiled=true', {
-      layers: layers.baseLayers[baseLayer].wms_name,
+      layers: content.base_layers[baseLayer].wms_name,
       transparent: true,
       format: 'image/png',
       opacity: 1,
@@ -97,9 +97,9 @@ export function createMap(container: HTMLElement, config: Config) {
   }
 
   // setup overlays  
-  for (let overlay of keys(layers.overlayLayers)) {
+  for (let overlay of keys(content.overlay_layers)) {
     let layer = L.tileLayer.wms(process.env.GEOSERVER_URL + '/colombia_eo4_cultivar/wms?tiled=true', {
-      layers: layers.overlayLayers[overlay].wms_name,
+      layers: content.overlay_layers[overlay].wms_name,
       transparent: true,
       format: 'image/png',
       opacity: 1,
@@ -109,9 +109,9 @@ export function createMap(container: HTMLElement, config: Config) {
   }
 
   // setup underlays  
-  for (let underlay of keys(layers.underlayLayers)) {
+  for (let underlay of keys(content.underlay_layers)) {
     let layer = L.tileLayer.wms(process.env.GEOSERVER_URL + '/colombia_eo4_cultivar/wms?tiled=true', {
-      layers: layers.underlayLayers[underlay].wms_name,
+      layers: content.underlay_layers[underlay].wms_name,
       transparent: true,
       format: 'image/png',
       opacity: 1,
@@ -180,15 +180,15 @@ function zoomToFeature(e: L.LeafletEvent) {
   map.fitBounds(e.target.getBounds(), { maxZoom: 13 })
 }
 
-export function refreshOverlay(layer: keyof typeof layers.overlayLayers) {
+export function refreshOverlay(layer: keyof typeof content.overlay_layers) {
   overlayMaps[layer].bringToFront()
 }
 
-export function refreshBaseLayer(layer: keyof typeof layers.baseLayers) {
+export function refreshBaseLayer(layer: keyof typeof content.base_layers) {
   baseMaps[layer].bringToFront()
 }
 
-export function updateOverlay(layer: keyof typeof layers.overlayLayers, checked: boolean) {
+export function updateOverlay(layer: keyof typeof content.overlay_layers, checked: boolean) {
   if (checked) {
     overlayMaps[layer].addTo(map)
   } else {
@@ -196,7 +196,7 @@ export function updateOverlay(layer: keyof typeof layers.overlayLayers, checked:
   }
 }
 
-export function updateUnderlay(layer: keyof typeof layers.underlayLayers, checked: boolean) {
+export function updateUnderlay(layer: keyof typeof content.underlay_layers, checked: boolean) {
   if (checked) {
     underlayMaps[layer].addTo(map)
   } else {
@@ -204,7 +204,7 @@ export function updateUnderlay(layer: keyof typeof layers.underlayLayers, checke
   }
 }
 
-export function updateBaseLayer(layer: keyof typeof layers.baseLayers, opacity: number) {
+export function updateBaseLayer(layer: keyof typeof content.base_layers, opacity: number) {
   // for (let baseLayer of keys(baseMaps)) {
   //   map.removeLayer(baseMaps[baseLayer])
   // }  
