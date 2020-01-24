@@ -42,33 +42,35 @@ export function createMap(container: HTMLElement, config: Config) {
 
       if (feature.properties.legends) {
         let layerKeys = keys(feature.properties.legends)
-        layerKeys.forEach(layerKey => {
+        let orderedLayerKeys = keys(content.base_layers)
+        orderedLayerKeys.forEach(layerKey => {
+          if (layerKeys.lastIndexOf(layerKey) > 0) {
+            let currentGroupLegendEntries = feature.properties.legends[layerKey]
+            let layer: MapLegend = {
+              layerName: content.base_layers[layerKey as keyof typeof content.base_layers].short_title[config.language],
+              legendEntries: []
+            }
+            gridLayers.push(layer)
 
-          let currentGroupLegendEntries = feature.properties.legends[layerKey]
-          let layer: MapLegend = {
-            layerName: content.base_layers[layerKey as keyof typeof content.base_layers].short_title[config.language],
-            legendEntries: []
-          }
-          gridLayers.push(layer)
+            let legend = legends[layerKey as keyof typeof content.base_layers]
+            let entries: Array<LegendEntry> = legend.legend_entries
 
-          let legend = legends[layerKey as keyof typeof content.base_layers]
-          let entries: Array<LegendEntry> = legend.legend_entries
+            if ('vector' in currentGroupLegendEntries) {
+              currentGroupLegendEntries['vector'].forEach((entryId: string) => {
+                let entry = entries.filter(entry => entry.entry_id === entryId)[0]
+                layer.legendEntries.push(entry)
+              })
+            }
 
-          if ('vector' in currentGroupLegendEntries) {
-            currentGroupLegendEntries['vector'].forEach((entryId: string) => {
-              let entry = entries.filter(entry => entry.entry_id === entryId)[0]
-              layer.legendEntries.push(entry)
-            })
-          }
-
-          if ('ramp' in currentGroupLegendEntries) {
-            keys(currentGroupLegendEntries['ramp']).forEach((rampId: string) => {
-              let entry = entries.filter(entry => entry.entry_id === rampId)[0]
-              let newEntry: LegendEntry = Object.assign({}, entry)
-              newEntry.min = currentGroupLegendEntries['ramp'][rampId]['min']
-              newEntry.max = currentGroupLegendEntries['ramp'][rampId]['max']
-              layer.legendEntries.push(newEntry)
-            })
+            if ('ramp' in currentGroupLegendEntries) {
+              keys(currentGroupLegendEntries['ramp']).forEach((rampId: string) => {
+                let entry = entries.filter(entry => entry.entry_id === rampId)[0]
+                let newEntry: LegendEntry = Object.assign({}, entry)
+                newEntry.min = currentGroupLegendEntries['ramp'][rampId]['min']
+                newEntry.max = currentGroupLegendEntries['ramp'][rampId]['max']
+                layer.legendEntries.push(newEntry)
+              })
+            }
           }
         })
       }
