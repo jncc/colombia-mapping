@@ -3,6 +3,13 @@ import json
 import processing
 import re
 
+# A Zone file (i.e. grids) that we want to scan through when, could be practically any standard 
+# polygon/multipolygon, the only requirement is that each zone/grid must have a unique id attribute
+# field, example for this project is stored alongside this script
+zoneFile = './grids.geojson'
+# Output file location
+output = './gridsout.geojson'
+
 def fullMergeDict(D1, D2):
   for key, value in D1.items():
     if key in D2:
@@ -20,8 +27,8 @@ def fullMergeDict(D1, D2):
       D1[key] = value
 
 def formatStr(input):
-    input = re.sub(r'([^a-zA-Z0-9\(\)\{\}\[\]])', '_', input.lower())
     input = re.sub(r'([\(\)\{\}\[\]])', '', input)
+    input = re.sub(r'([^\w])', '_', input.lower())
     return input
 
 def getVectorFeaturesInLocation(input, zones, attributeField, strFormattingFunction):
@@ -336,10 +343,10 @@ maps = [
         'ramp': {}
     },
     {
-        'name': None,
+        'name': 'Map_14',
         'output_name': 'habitat_map',
         'vector': {
-            'Colombia_habitat_map_20190326_Final': 'Summary'
+            'Colombia_habitat_map_20191127_Final-fixed-unicode': 'Summary'
         },
         'ramp': {}
     }
@@ -353,10 +360,6 @@ root = proj.layerTreeRoot()
 # Get the root of the data groups that we want to scan from (may be `root` no nested groups)
 dataRoot = root.findGroup("English")
 
-# A Zone file (i.e. grids) that we want to scan through when, could be practically any standard 
-# polygon/multipolygon, the only requirement is that each zone/grid must have a unique id attribute
-# field, example for this project is stored alongside this script
-zoneFile = './grids.geojson'
 zones = QgsVectorLayer(zoneFile, 'zones', 'ogr')
 proj.addMapLayer(zones)
 
@@ -385,9 +388,9 @@ outputs = {}
 
 for mapGroup in maps:
     if (mapGroup['name'] is None):
-        print('##### Extracing Group - ROOT')
+        print('##### Extracting Group - ROOT')
     else:
-        print('##### Extracing Group - ' + mapGroup['name'])
+        print('##### Extracting Group - ' + mapGroup['name'])
     
     # Setup output structure
     outputs[mapGroup['output_name']] = {}
@@ -418,13 +421,10 @@ for mapGroup in maps:
             else:
                 print('Skipping layer ' + layer.name())
         else:
-            print('Skipping layer group' + layer.name())
+            print('Skipping layer group ' + layer.name())
         
 
-proj.removeMapLayer(zones)        
-#print(json.dumps(outputs))
-
-output = './gridsout.geojson'
+proj.removeMapLayer(zones)
   
 with open(zoneFile, 'r') as gridData:
     grids = json.load(gridData)
@@ -455,4 +455,4 @@ with open(zoneFile, 'r') as gridData:
         feature['properties']['legends'] = legends
         
     with open(output, 'w') as out:
-        json.dump(grids, out)
+        json.dump(grids, out, ensure_ascii=False)

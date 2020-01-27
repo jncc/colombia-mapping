@@ -65,7 +65,7 @@
             }
         },
         "habitat_map": {
-            "wms_name": "colombia_eo4_cultivar:colombia_habitat_map_20190326_final",
+            "wms_name":"colombia_eo4_cultivar:Colombia_habitat_map_20191127_Final",
             "legend_styles": [],
             "short_title": {
                 "en": "Habitat map",
