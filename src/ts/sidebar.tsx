@@ -39,22 +39,23 @@ export function createSidebar(map: L.Map, config: Config) {
         }
       }
 
-      let getStartedButton = L.DomUtil.create('button', 'btn btn-primary start')
+      let getStartedButton = L.DomUtil.create('button', 'btn btn-primary start mb-4')
       getStartedButton.innerHTML += content.info_panel.button_text[config.language]
       getStartedButton.addEventListener('click', function () {
         sidebarLeft.open('layers')
       })
+
       homeContainer.appendChild(getStartedButton)
 
-      let sponsorLinks = L.DomUtil.create('div', 'row')
+      let sponsorLinks = L.DomUtil.create('div', '')
 
-      let eo4cLink = L.DomUtil.create('div', 'col-3 nopadding')
-      eo4cLink.innerHTML = '<a href=""><img class="sidebar-sponsor-img" title="EO4 Cultivar" alt="EO4 Cultivar" src="'
+      let eo4cLink = L.DomUtil.create('span', '')
+      eo4cLink.innerHTML = '<a href=""><img class="mr-4" style="width: 5rem; height: 5rem;" title="EO4 Cultivar" alt="EO4 Cultivar" src="'
         + require('../images/eo4c.jpg') + '"></img></a>'
       sponsorLinks.appendChild(eo4cLink)
 
-      let uksaLink = L.DomUtil.create('div', 'col-4 nopadding')
-      uksaLink.innerHTML = '<a href=""><img class="sidebar-sponsor-img" title="UK Space Agency" '
+      let uksaLink = L.DomUtil.create('span', '')
+      uksaLink.innerHTML = '<a href=""><img class="mr-4" style="width: 7rem;" title="UK Space Agency" '
         + 'alt="UK Space Agency" src="' + require('../images/uksa.jpg') + '" /></a>'
       sponsorLinks.appendChild(uksaLink)
 

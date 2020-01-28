@@ -199,13 +199,6 @@
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
 
-.sidebar-sponsor-img {
-  width: 100%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .checkbox {
   clear: both;
 }
