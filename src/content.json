@@ -830,14 +830,14 @@
             "wms_name": "colombia_eo4_cultivar:colombia_multibenefit_opportunities_habitat_water_regulation",
             "legend_styles": [],
             "short_title": {
-                "en": "Opportunities to deliver multiple ecosystem services: ecological connectivity and surface water regulation",
-                "es": "Oportunidades para generar múltiples servicios ecosistémicos: conectividad ecológica y regulación de las aguas superficiales"
+                "en": "Opportunities to deliver multiple ecosystems services in the Rio Frio catchment: ecological connectivity and surface water regulation",
+                "es": "Oportunidades para entregar servicios de ecosistemas múltiples en la cuenca del río Frio: conectividad ecológica y regulación de aguas superficiales"
             },
             "info_sections": [
                 {
                     "section_title": {
-                        "en": "Opportunities to deliver multiple ecosystem services: ecological connectivity and surface water regulation",
-                        "es": "Oportunidades para generar múltiples servicios ecosistémicos: conectividad ecológica y regulación de las aguas superficiales"
+                        "en": "Opportunities to deliver multiple ecosystems services in the Rio Frio catchment: ecological connectivity and surface water regulation",
+                        "es": "Oportunidades para entregar servicios de ecosistemas múltiples en la cuenca del río Frio: conectividad ecológica y regulación de aguas superficiales"
                     },
                     "section_content": {
                         "en": "<i>Ecosystem services: Regulation of overland flow. Population maintenance & genetic diversity.</i>",
