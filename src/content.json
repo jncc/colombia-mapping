@@ -12,7 +12,7 @@
                 },
                 "section_content": {
                     "en": "<p>Welcome to Magdalena, Northern Colombia. Here, EO4cultivar, funded through the  International Partnership Programme, run by UKSA, has identified places to focus action to deliver sustainable land management within river catchments of the Zona Bananera, reaching into the Sierra Nevada de Santa Marta.</p><p>The mapping concerns local priorities to reduce the risk of flooding and soil erosion and to improve ecological connectivity. Places where a land management intervention can benefit ecosystem services (e.g. by slowing runoff or restoring habitats) are identified. Deploying action in places that deliver multiple benefits is likely to be most cost-effective. The outputs of this work are suitable for any organisations aiming to undertake environmental improvement work in the area.</p><p>More information on the <a href=\"#\">project is available</a>, as are <a href=\"#\">reports detailing the mapping process</a>. Data used in the mapping and modelling process are available from the <a href=\"#\">JNCC Data Hub</a>.</p>",
-                    "es": "Mapeador de colombia"
+                    "es": "<p>Bienvenidos al Magdalena, al norte de Colombia. Aquí, EO4cultivar, a través de la financiación del IPP (International Partnership Programme), dirigido por UKSA, ha identificado lugares donde se puede centrar la acción a fin de lograr una gestión sostenible de la tierra dentro de las cuencas fluviales de la Zona Bananera alcanzando la Sierra Nevada de Santa Marta. </p><p>El mapeo aborda las prioridades locales para reducir el riesgo de inundaciones y de erosión del suelo, así como mejorar la conectividad ecológica. Se identificaron los lugares en donde una intervención de gestión de suelos puede beneficiar a los servicios ecosistémicos (por ejemplo; al frenar la escorrentía o al restaurar los hábitats). Es probable que el despliegue de la acción en lugares que ofrecen múltiples beneficios sea lo más eficaz en función de los costos. Los productos de este trabajo son adecuados para cualquier organización que tenga la intención de emprender trabajos de mejora medioambiental en el área.</p><p>Environment Systems utilizó su sistema de modelado de mapas SENCE (Evidencia Espacial para la Evaluación del Capital Natural, por sus siglas en inglés) para mapear el capital natural existente y las oportunidades para mejorarlo produciendo mapas que se pueden explorar y descargar. JNCC produjo una guía sobre las medidas de gestión que utilizan soluciones prácticas basadas en la naturaleza, también lideró la participación de los grupos de interés y la creación de capacidad local en asociación con un socio del proyecto, ASBAMA, así como sus partes interesadas.</p><p>Encontrará más información sobre el <a href=\"#\">proyecto aquí</a>, así como los <a href=\"#\">reportes que detallan el proceso del mapeo</a>. Los datos utilizados en el proceso de mapeo y modelado están disponibles en el <a href=\"#\">JNCC Data Hub</a>.</p>"
                 }
             }
         ],
@@ -30,11 +30,11 @@
             {
                 "section_title": {
                     "en": "A summary of the data available in the selected area on the map",
-                    "es": "Un resumen de los datos disponibles en el área seleccionada en el mapa"
+                    "es": "Resumen de los datos disponibles en el área seleccionada en el mapa"
                 },
                 "section_content": {
                     "en": "Use the layer selection on the left of the map to view the individual datasets in more detail. A thicker black outline represents the range of values present in a selected square for a given data layer. <svg class=\"legend-iconography\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"8\" height=\"8\" x=\"1\" y=\"1\" rx=\"1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\"></rect></svg>",
-                    "es": "Use la selección de capas a la izquierda del mapa para ver los conjuntos de datos individuales con más detalle. Un contorno negro más grueso representa el rango de valores presentes en un cuadrado seleccionado para una capa de datos dada. <svg class=\"legend-iconography\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"8\" height=\"8\" x=\"1\" y=\"1\" rx=\"1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\"></rect></svg>"
+                    "es": "Usa la selección de capas a la izquierda del mapa para observar con mayor detalle los datasets individuales. El delineado más grueso color negro representa el rango de valores presentes en un recuadro seleccionado para una capa de datos determinada. <svg class=\"legend-iconography\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"8\" height=\"8\" x=\"1\" y=\"1\" rx=\"1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"2\"></rect></svg>"
                 }
             }
         ]
@@ -55,7 +55,7 @@
                     },
                     "section_content": {
                         "en": "<p>Select a layer from the drop down to explore ecosystem service delivery and identify opportunities for enhancing ecosystem services in the region.</p><p><b>5k grid square with summary data:</b> This function splits the area of interest into 5km2 grids.  Select a 5km2 area you are interested in to display a summary of the ecosystem service delivery and enhancement opportunities within that 5km2.</p><p><b>Satellite Imagery:</b> This function shows the satellite images of the area of interest.</p><p><b>Zona Bananera:</b> This highlights the project's area of interest (outlined in red). The broad case study region was identified in consultation with key local stakeholders and is located within the Magdalena region in northern Colombia.</p><p><b>Rio Frio Catchment:</b> This highlights the sub-catchment area for the Rio Frio 'Cold River' (outlined in red).  This sub-catchment has been defined using modelling that identifies interconnected hydrological units within the overall area of interest.</p>",
-                        "es": "<p>Select a layer from the drop down to explore ecosystem service delivery and identify opportunities for enhancing ecosystem services in the region.</p><p><b>Cuadrícula de 5k con datos de resumen:</b> This function splits the area of interest into 5km2 grids.  Select a 5km2 area you are interested in to display a summary of the ecosystem service delivery and enhancement opportunities within that 5km2.</p><p><b>Satellite Imagery:</b> This function shows the satellite images of the area of interest.</p><p><b>Zona Bananera:</b> This highlights the project's area of interest (outlined in red). The broad case study region was identified in consultation with key local stakeholders and is located within the Magdalena region in northern Colombia.</p><p><b>Rio Frio Catchment:</b> This highlights the sub-catchment area for the Rio Frio 'Cold River' (outlined in red).  This sub-catchment has been defined using modelling that identifies interconnected hydrological units within the overall area of interest.</p>"
+                        "es": "<p>Seleccione una capa de la lista que se muestra a continuación para explorar la oferta de los servicios ecosistémicos y las oportunidades en la región.</p><p>Marque la casilla correspondiente:</p><p><b>Área de interés central (5km2) – Resumen de la data</b>: Esta función divide el mapa en una cuadrícula de 5km2. Seleccione una cuadrícula de 5km2 para mostrar un resumen de oferta y oportunidades de servicios ecosistémicos dentro de esos 5km2. Al seleccionar distintas capas en la lista desplegable podrá ver la ubicación de estos servicios en dicha cuadrícula.</p><p><b>Imágenes satelitales</b>: Esta función muestra las imágenes satelitales del área de interés.</p><p><b>Zona Bananera</b>: Se resalta el área de interés (delineado en rojo). La amplitud de la región del estudio de caso fue identificada en consulta con los grupos de interés locales clave y se ubica dentro de la región del Magdalena en la zona norte de Colombia. Se definió en base a los límites de la cuenca hidrológica, la cual incluye la Zona Bananera. La Zona Bananera es de gran importancia económica en la región del Magdalena y contiene varios productores tanto de escala comercial como pequeños.</p><p><b>Cuenca del Río Frío</b>: Aquí se resalta el área de la cuenca para el Río Frío (delineado en rojo). La Cuenca del Río Frío se intersecta con las municipalidades de la Ciénaga, la Zona Bananera y Pueblo Viejo. Además, abastece las actividades agrícolas de la región.</p>"
                     }
                 }
             ],
@@ -898,7 +898,7 @@
             "display_sidebar": false,
             "short_title": {
                 "en": "5k grid square with summary data",
-                "es": "Cuadrícula de 5k con datos de resumen"
+                "es": "Área de interés central (5km2) – Resumen de la data"
             },
             "info_sections": [],
             "attribution": {
@@ -911,13 +911,13 @@
             "display_legend": false,
             "display_sidebar": true,
             "short_title": {
-                "en": "Zona bananera",
-                "es": "Zona bananera"
+                "en": "Zona Bananera",
+                "es": "Zona Bananera"
             },
             "info_sections": [],
             "attribution": {
                 "en": "JNCC and Environment Systems with Assistance from ASBAMA, Tecbaco and Fundeban",
-                "es": "???"
+                "es": "JNCC and Environment Systems with Assistance from ASBAMA, Tecbaco and Fundeban"
             }
         },
         "rio_frio": {
@@ -926,12 +926,12 @@
             "display_sidebar": true,
             "short_title": {
                 "en": "Rio Frio catchment",
-                "es": "Rio Frio catchment"
+                "es": "Cuenca del Río Frío"
             },
             "info_sections": [],
             "attribution": {
                 "en": "JNCC and Environment Systems with Assistance from ASBAMA, Tecbaco and Fundeban",
-                "es": "???"
+                "es": "JNCC and Environment Systems with Assistance from ASBAMA, Tecbaco and Fundeban"
             }
         }
     },
@@ -941,7 +941,7 @@
             "display_legend": false,
             "short_title": {
                 "en": "Satellite imagery",
-                "es": "Capa satelital"
+                "es": "Imágenes satelitales"
             },
             "attribution": {
                 "en": "Landsat-8 image courtesy of the USGS",
