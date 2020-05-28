@@ -50,8 +50,8 @@ export function createSidebar(map: L.Map, config: Config) {
       let sponsorLinks = L.DomUtil.create('div', '')
 
       let eo4cLink = L.DomUtil.create('span', '')
-      eo4cLink.innerHTML = '<a href=""><img class="mr-4 p-1 centered" style="width: 4rem; height: 4rem;" title="EO4 Cultivar" ' +
-        'alt="EO4 Cultivar" src="' + require('../images/eo4c.jpg') + '"></img></a>'
+      eo4cLink.innerHTML = '<a href=""><img class="mr-4 p-1 centered" style="width: 4rem; height: 4rem;"' +
+        'title="EO4 Cultivar" alt="EO4 Cultivar" src="' + require('../images/eo4c.jpg') + '"></img></a>'
       sponsorLinks.appendChild(eo4cLink)
 
       let uksaLink = L.DomUtil.create('span', '')
