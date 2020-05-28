@@ -85,7 +85,7 @@
             ],
             "attribution": {
                 "en": "Data and maps created by Environment Systems Ltd (2019) Derived from: Sentinel-1 and Sentinel-2 imagery: European Space Agency Elevation data: USGS Shuttle Radar Topography Mission",
-                "es": "???"
+                "es": "Data and maps created by Environment Systems Ltd (2019) Derived from: Sentinel-1 and Sentinel-2 imagery: European Space Agency Elevation data: USGS Shuttle Radar Topography Mission"
             }
         },
         "water_runoff_moderation": {
