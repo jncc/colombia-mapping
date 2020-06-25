@@ -153,7 +153,7 @@ def getRasterStatsByLocation(input, zones, min=None, max=None):
         'INPUT_RASTER': input,
         'INPUT_VECTOR': zones_output,
         'RASTER_BAND': 1,
-        'STATS': [5, 6]}
+        'STATISTICS': [5, 6]}
     )
     output = {}
 
