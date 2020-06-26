@@ -86,6 +86,15 @@
                 }
             },
             {
+                "entry_id": "páramo",
+                "fill": "#c398cb",
+                "type": "value",
+                "label": {
+                    "en": "Páramo",
+                    "es": "Páramo"
+                }
+            },
+            {
                 "entry_id": "rivers",
                 "fill": "#480df8",
                 "type": "value",

@@ -199,9 +199,78 @@
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
 
-.sidebar-sponsor-img {
-  width: 100%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.checkbox {
+  clear: both;
+}
+
+.sidebar-button-checkbox {
+  background-color:#2D7A29;
+  padding: 4px;
+  border-radius:4px;
+  border:1px solid black;
+  overflow:auto;
+  float:left;
+  color: white;
+}
+
+.sidebar-button-checkbox :hover { 
+  background-color:rgb(34, 88, 31);
+}
+
+.sidebar-button-checkbox :checked { 
+  background-color: aqua;
+}
+
+.sidebar-button-checkbox .form-inline .form-check-label .sidebar-button-checkbox-input {
+  position: absolute;
+  top: -20px;
+}
+
+#grid-button {
+   background-color:#2D7A29;
+   border-radius:4px;
+   border:1px solid #2D7A29;
+   overflow:auto;
+   float:left;
+   color: white;
+   display:block;
+   width: 100%;
+}
+
+#grid-button:hover {
+  cursor: pointer;
+}
+
+#grid-button label {
+   float:left;
+   margin-bottom: 0rem;
+   display:block;
+   width: 100%;
+}
+
+#grid-button label span {
+   text-align:center;
+   display:block;
+   border-radius:4px;
+   padding: 0.2em;
+}
+
+#grid-button label input {
+   position:absolute;
+   top:-20px;
+}
+
+#grid-button input:hover + span {
+   background-color:#246221;
+   cursor: pointer;
+}
+
+#grid-button input:checked + span {
+   background-color:#245221;
+   color:#fff;
+}
+
+#grid-button input:checked:hover + span {
+   background-color:#246221;
+   color:#fff;
 }
