@@ -11,10 +11,12 @@ pipeline {
                     submoduleCfg: [], 
                     userRemoteConfigs: [[url: 'https://github.com/jncc/colombia-mapping.git']]])
                 dir('./master') {
-                    sh 'node -v'
-                    sh 'yarn -v'
-                    sh 'yarn'
-                    sh 'yarn build'
+                    nvm('v14.4.0') {
+                        sh 'node -v'
+                        sh 'yarn -v'
+                        sh 'yarn'
+                        sh 'yarn build'
+                    }
                 }
             }
         }
