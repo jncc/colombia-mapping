@@ -55,7 +55,8 @@ export function createSidebar(map: L.Map, config: Config) {
       sponsorLinks.appendChild(eo4cLink)
 
       let uksaLink = L.DomUtil.create('span', '')
-      uksaLink.innerHTML = '<a href="https://spaceforsmartergovernment.uk/about-us/"><img class="mr-4 p-1 centered" style="height: 4rem;" title="UK Space Agency" '
+      uksaLink.innerHTML = '<a href="https://spaceforsmartergovernment.uk/about-us/"> '
+        + '<img class="mr-4 p-1 centered" style="height: 4rem;" title="UK Space Agency" '
         + 'alt="UK Space Agency" src="' + require('../images/uksa.jpg') + '" /></a>'
       sponsorLinks.appendChild(uksaLink)
 
