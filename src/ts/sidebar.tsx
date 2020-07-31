@@ -50,12 +50,19 @@ export function createSidebar(map: L.Map, config: Config) {
       let sponsorLinks = L.DomUtil.create('div', '')
 
       let eo4cLink = L.DomUtil.create('span', '')
-      eo4cLink.innerHTML = '<img class="mr-4 p-1 centered" style="width: 4rem; height: 4rem;"' +
-        'title="EO4 Cultivar" alt="EO4 Cultivar" src="' + require('../images/eo4c.jpg') + '"></img>'
+      if (config.language === 'es') { // todo: add images to content.json?
+        eo4cLink.innerHTML = '<a href="https://jncc.gov.uk/our-work/eo4cultivar-lengua-espanola/">'
+        + '<img class="mr-4 p-1 centered" style="width: 4rem; height: 4rem;"'
+        + 'title="EO4 Cultivar" alt="EO4 Cultivar" src="' + require('../images/eo4c.jpg') + '" /></a>'
+      } else {
+        eo4cLink.innerHTML = '<a href="https://jncc.gov.uk/our-work/eo4cultivar/">'
+        + '<img class="mr-4 p-1 centered" style="width: 4rem; height: 4rem;"'
+        + 'title="EO4 Cultivar" alt="EO4 Cultivar" src="' + require('../images/eo4c.jpg') + '" /></a>'
+      }
       sponsorLinks.appendChild(eo4cLink)
 
       let uksaLink = L.DomUtil.create('span', '')
-      uksaLink.innerHTML = '<a href="https://spaceforsmartergovernment.uk/about-us/"> '
+      uksaLink.innerHTML = '<a href="https://spaceforsmartergovernment.uk/about-us/">'
         + '<img class="mr-4 p-1 centered" style="height: 4rem;" title="UK Space Agency" '
         + 'alt="UK Space Agency" src="' + require('../images/uksa.jpg') + '" /></a>'
       sponsorLinks.appendChild(uksaLink)
